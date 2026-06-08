@@ -104,3 +104,8 @@ Provider logo badges were added for Bluehost, Hostinger, IONOS, SiteGround, Name
 ## Logo update
 
 Provider card and table logos were updated to use official/site-sourced brand assets where available. Bluehost, HostGator, and Namecheap are loaded from their own external logo/favicon sources; the others are stored in `assets/providers/`.
+
+
+## New article added
+
+Added `best-free-web-hosting.html` and linked it from the homepage, footer money guides, and sitemap.
