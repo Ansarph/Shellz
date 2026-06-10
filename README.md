@@ -142,3 +142,13 @@ The promo codes page was updated so the coupon intro and coupon cards display in
 ## Coupon style cache fix
 
 Added `coupon-cards.css` and cache-busted `style.css` / `script.js` links so the coupon card layout loads correctly on the live website even if the browser cached the older stylesheet.
+
+
+## NameSilo E-E-A-T review update
+
+Improved `namesilo-review.html` with a human-style review, E-E-A-T notes, official source links, coupon reveal cards, buyer checklist, pros/cons, FAQ schema, Review schema, and updated sitemap lastmod.
+
+
+## HostGator E-E-A-T review update
+
+Improved `hostgator-review.html` with a human-style review, E-E-A-T notes, official source links, GATORMODEL coupon reveal card, pricing checklist, pros/cons, FAQ schema, Review schema, and updated sitemap lastmod.

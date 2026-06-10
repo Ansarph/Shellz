@@ -2310,3 +2310,28 @@ td a { color: var(--primary); font-weight: 900; text-decoration: none; }
   }
 }
 
+
+/* E-E-A-T article improvements */
+.eeat-review-meta,
+.source-box,
+.verdict-box {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 22px;
+  margin: 26px 0;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, .06);
+}
+.verdict-box {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border-left: 6px solid #00bf63;
+}
+.eeat-review-meta h2,
+.source-box h2,
+.verdict-box h2 {
+  margin-top: 0;
+}
+.source-box a {
+  color: #2563eb;
+  font-weight: 800;
+}
