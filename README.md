@@ -452,3 +452,48 @@ Examples:
 - "How this Rocket.net review follows the Shellz E-E-A-T blueprint" changed to "How Shellz reviewed Rocket.net"
 
 The site can still follow E-E-A-T principles internally, but the wording is now more natural for readers.
+
+
+## Public layout and content cleanup
+
+Fixed visitor-facing layout and wording issues:
+- Replaced homepage internal CTA text with public trust wording.
+- Updated footer description across all pages.
+- Added footer year fallback across all pages.
+- Cleaned New-Gen Hosting wording to remove SEO/admin language.
+- Replaced harsh Kinsta coupon warning with reader-friendly wording.
+- Improved New-Gen deal/review button labels.
+- Improved Reviews page jump-link spacing and source readability.
+- Reduced repeated Rocket.net testing disclaimer wording.
+- Cache-busted CSS/JS links with `20260614-public-cleanup`.
+
+
+## Proper cleanup before publishing
+
+Fixed:
+- Broken internal links and missing anchors
+- Privacy placeholder text
+- Public "human-style" wording
+- New-Gen Hosting admin-style wording
+- Kinsta harsh coupon warning
+- Footer wording and year fallback
+- Affiliate link `rel` attributes
+- Article-specific OG images for major articles
+- Legal/trust page navigation consistency
+
+Validation performed:
+- No broken internal `.html` links or anchors detected
+- No public internal/SEO wording hits detected
+- No affiliate-link buttons missing `sponsored nofollow noopener noreferrer`
+- Footer and navigation consistent across pages
+
+
+## Final audit fixes
+
+Final audit updates:
+- Homepage now has exactly one H1.
+- Homepage H1 uses the same visual styling as the previous hero heading.
+- Public score labels changed from provisional wording to editorial wording.
+- New-Gen same-page review buttons changed to Provider notes.
+- Main article social images are now visible inside the articles and used as OG images.
+- CSS/JS cache-busted with `20260614-final-audit`.

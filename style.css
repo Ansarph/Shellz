@@ -3052,6 +3052,7 @@ td a { color: var(--primary); font-weight: 900; text-decoration: none; }
   text-align: center;
 }
 
+.shellz-category-head h1,
 .shellz-category-head h2 {
   margin: 8px 0 12px;
   color: #0f172a;
@@ -3188,7 +3189,8 @@ td a { color: var(--primary); font-weight: 900; text-decoration: none; }
     gap: 14px;
   }
 
-  .shellz-category-head h2 {
+  .shellz-category-head h1,
+.shellz-category-head h2 {
     font-size: clamp(1.9rem, 9vw, 2.75rem);
     letter-spacing: -0.035em;
   }
@@ -3227,6 +3229,7 @@ body.homepage-category-first .site-header {
   max-width: 900px;
 }
 
+.shellz-category-head h1,
 .shellz-category-head h2 {
   max-width: 860px;
   margin-left: auto;
@@ -3857,4 +3860,77 @@ body.homepage-category-first .site-header {
   background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
   border: 1px solid #bfe4dc;
   box-shadow: 0 16px 36px rgba(15, 23, 42, .07);
+}
+
+
+/* Public layout/content cleanup - June 2026 */
+.review-jump-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.review-jump-grid a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, .05);
+}
+
+.review-jump-grid a:hover {
+  border-color: rgba(15, 118, 110, .35);
+  color: #0f766e;
+  transform: translateY(-1px);
+}
+
+.site-footer p {
+  line-height: 1.65;
+}
+
+
+/* Proper public cleanup validation - June 2026 */
+.site-footer p {
+  line-height: 1.65;
+}
+
+
+/* Homepage H1 SEO fix - June 2026 */
+.shellz-category-head h1 {
+  margin: 8px auto 12px;
+  color: #0f172a;
+  font-size: clamp(2.05rem, 4.4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  max-width: 860px;
+}
+@media (max-width: 640px) {
+  .shellz-category-head h1 {
+    font-size: clamp(1.9rem, 9vw, 2.75rem);
+    letter-spacing: -0.035em;
+  }
+}
+
+
+/* Article feature image cards - June 2026 */
+.article-feature-image {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.article-feature-image img {
+  display: block;
+  width: min(100%, 980px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, .12);
 }
