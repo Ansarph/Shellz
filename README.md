@@ -387,3 +387,68 @@ Updated `new-gen-hosting.html` with a visitor-facing deals section:
 - Netlify: View Plan / free plan and open-source plan
 
 Also added quick deal jump buttons to New-Gen provider cards and a pointer section on `promo-codes.html`.
+
+
+## Trending archive public cleanup
+
+Updated `trending-hosting-june-2026.html` to remove internal planning content and turn the page into a clean public monthly archive.
+
+Fixes:
+- Removed internal "Monthly actions" section.
+- Replaced crowded provider table with responsive provider cards.
+- Added deal/coupon status for each New-Gen provider.
+- Removed misleading "Review notes" wording for providers without full review pages.
+- Added visitor-friendly archive explanation and current hub CTA.
+- Added footer year fallback.
+
+
+## Cheap Hosting Checkout Trap article
+
+Added `cheap-hosting-checkout-trap.html` as a Shellz E-E-A-T buyer guide.
+
+Updated internal links from:
+- Homepage
+- Best Cheap Web Hosting
+- Best Hosting Under $25
+- Start a Website Under $25
+- How to Start a Website for Beginners
+- Domain vs Hosting vs Email
+- Promo Codes
+- Footer money guide links
+- `sitemap.xml`
+
+Article target:
+- cheap hosting hidden costs
+- hosting checkout add-ons
+- web hosting renewal price
+- hosting coupon traps
+- domain hosting email cost
+
+
+## Rocket.net Review article
+
+Added `rocket-net-review.html` as a Shellz E-E-A-T managed WordPress hosting review.
+
+Updated:
+- Homepage latest review section
+- Reviews page and review jump links
+- New-Gen Hosting page and Rocket.net provider card
+- Trending Hosting June 2026 archive
+- Promo Codes page pointer
+- Related provider pages
+- Footer review links
+- `sitemap.xml`
+- CSS styling
+
+Also cleaned public HTML pages to remove internal planning-style phrases from visitor-facing sections.
+
+
+## Public E-E-A-T wording cleanup
+
+Updated public-facing article sections so visitors see natural trust-focused wording instead of SEO/editorial jargon.
+
+Examples:
+- "How this guide follows the Shellz E-E-A-T blueprint" changed to "How Shellz checks this hosting advice"
+- "How this Rocket.net review follows the Shellz E-E-A-T blueprint" changed to "How Shellz reviewed Rocket.net"
+
+The site can still follow E-E-A-T principles internally, but the wording is now more natural for readers.

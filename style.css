@@ -3728,3 +3728,133 @@ body.homepage-category-first .site-header {
     border-top: 6px solid #0f766e;
   }
 }
+
+
+/* Trending archive public card layout - June 2026 */
+.archive-summary-panel,
+.archive-provider-section {
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+
+.archive-provider-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.archive-provider-card {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 230px;
+  gap: 18px;
+  align-items: stretch;
+  padding: 20px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, .07);
+}
+
+.archive-rank {
+  display: grid;
+  place-items: center;
+  min-height: 84px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0f766e, #2563eb);
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 950;
+}
+
+.archive-provider-main h2 {
+  margin: 2px 0 8px;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+.archive-provider-main p:not(.eyebrow) {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+.archive-deal-pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 999px;
+  padding: 7px 12px;
+  background: #f0fdfa;
+  color: #0f766e;
+  font-size: .86rem;
+  font-weight: 900;
+}
+
+.archive-provider-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.archive-provider-actions .btn,
+.archive-provider-actions .details-link {
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .archive-provider-card {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-rank {
+    min-height: 54px;
+  }
+}
+
+
+/* Cheap hosting checkout trap article */
+.checkout-trap-article .content-panel {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.checkout-trap-article h3 {
+  margin-top: 28px;
+}
+
+.checkout-trap-article .indexed-cluster-callout {
+  border-left: 6px solid #0f766e;
+}
+
+.checkout-trap-article .pros-cons {
+  margin: 22px 0;
+}
+
+
+/* Rocket.net review page */
+.rocket-review .inline-score {
+  width: fit-content;
+  margin-top: 18px;
+}
+
+.rocket-review .review-sidebar .sidebar-card a {
+  display: block;
+  margin: 8px 0;
+  color: #0f766e;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.rocket-review .review-sidebar .sidebar-card a:hover {
+  text-decoration: underline;
+}
+
+.rocket-promo-callout {
+  margin-top: 34px;
+  margin-bottom: 34px;
+  padding: 24px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0fdfa 100%);
+  border: 1px solid #bfe4dc;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, .07);
+}
