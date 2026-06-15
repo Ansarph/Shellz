@@ -56,7 +56,7 @@ Before publishing:
 
 HostGator affiliate link added: `https://partners.hostgator.com/OR6JeP`
 
-HostGator promo code added: `GATORMODEL`
+HostGator promo code added: `SNAPPY`
 
 NameSilo referral link added: `https://www.namesilo.com/?rid=ac84314wi`
 
@@ -151,7 +151,7 @@ Improved `namesilo-review.html` with a human-style review, E-E-A-T notes, offici
 
 ## HostGator E-E-A-T review update
 
-Improved `hostgator-review.html` with a human-style review, E-E-A-T notes, official source links, GATORMODEL coupon reveal card, pricing checklist, pros/cons, FAQ schema, Review schema, and updated sitemap lastmod.
+Improved `hostgator-review.html` with a human-style review, E-E-A-T notes, official source links, SNAPPY coupon reveal card, pricing checklist, pros/cons, FAQ schema, Review schema, and updated sitemap lastmod.
 
 
 ## June 10 coupon scan update
@@ -161,7 +161,7 @@ Updated coupon pages with the latest checked deals:
 - Hostinger official coupon-page code: COUPONSPAGE
 - Bluehost official June deal note: up to 60% off selected hosting / many deals auto-apply
 - DreamHost official promo page note: up to 83% off selected plans
-- HostGator added SNAPPY as a reported code to test, while keeping GATORMODEL
+- HostGator added SNAPPY as a reported code to test, while keeping SNAPPY
 - NameSilo codes kept: DISCOUNT10, NAMESILO10, A10
 
 
@@ -541,3 +541,65 @@ Validation after cleanup:
 - Remaining provisional score wording removed.
 - Kinsta/Rocket title tags shortened.
 - No broken internal links/assets detected.
+
+
+## Privacy and localStorage disclosure fix
+
+Fixed:
+- Removed privacy policy starter-template wording from `privacy.html`.
+- Added public disclosure for local browser storage used by `script.js`.
+- Mentioned the `shellz_affiliate_clicks` browser storage key and what it stores.
+- Clarified affiliate links, cookies, analytics, external links, and contact email.
+- Added CSS safety so `.source-box` remains centered.
+- Cache-busted public CSS/JS links with `20260615-privacy-localstorage`.
+
+
+## HostGator official SNAPPY coupon update
+
+Updated HostGator coupon wording:
+- Replaced the old HostGator code with official coupon code `SNAPPY`.
+- Updated `hostgator-coupon.html`, `promo-codes.html`, `hostgator-review.html`, homepage, reviews page, and related pages.
+- Added official source notes and coupon restrictions:
+  - Official coupons page lists SNAPPY for up to 70% off web hosting.
+  - Example shown is Baby Plan for a 36-month term.
+  - Hosting coupons apply to new hosting orders and the hosting portion only.
+  - They do not apply to domains, add-ons, renewals, or existing hosting packages.
+- Cache-busted CSS/JS links with `20260615-hostgator-snappy`.
+
+
+## Kinsta vs Rocket.net vs Cloudways comparison article
+
+Added `kinsta-vs-rocket-net-vs-cloudways.html`.
+
+Updated:
+- Homepage latest comparison block
+- Footer comparison links across public pages
+- Best WordPress Hosting related comparison link
+- New-Gen Hosting related comparison link
+- Kinsta, Rocket.net, and Cloudways review pages
+- Promo Codes related comparison link
+- `sitemap.xml`
+- `assets/kinsta-vs-rocket-net-vs-cloudways.png`
+- CSS styling and cache-busting with `20260615-premium-comparison`
+
+The article uses public buyer-facing wording only and avoids internal planning text.
+
+
+## Public wording and SEO cleanup
+
+Fixed:
+- Removed public-facing internal Zalvis wording from `zalvis-coupon.html` and `zalvis-review.html`.
+- Replaced “before publishing” source-box wording with buyer-facing wording.
+- Cleaned `promo-codes.html` source-box markup.
+- Shortened selected review/comparison title tags and meta descriptions.
+- Added canonical tags to any pages that were missing them.
+- Cache-busted CSS/JS links with `20260615-public-wording-seo-cleanup`.
+
+
+## Second pass SEO metadata cleanup
+
+Fixed:
+- Removed remaining “before publishing” wording.
+- Shortened long title tags on older reviews, coupon pages, and guides.
+- Shortened long meta descriptions on older reviews, coupon pages, and guides.
+- Cache-busted CSS/JS links with `20260615-public-wording-seo-cleanup2`.

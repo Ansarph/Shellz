@@ -3962,3 +3962,34 @@ body.homepage-category-first .site-header {
   gap: 12px;
   align-items: center;
 }
+
+
+/* Privacy and localStorage disclosure update - June 2026 */
+.container.source-box,
+.source-box {
+  margin-left: auto;
+  margin-right: auto;
+}
+.legal-page code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-size: .94em;
+}
+
+
+/* Premium WordPress comparison article - June 2026 */
+.premium-comparison-article .verdict-box ul {
+  margin-top: 14px;
+}
+.premium-comparison-article .review-sidebar .sidebar-card a {
+  display: block;
+  margin: 8px 0;
+  color: #0f766e;
+  font-weight: 900;
+  text-decoration: none;
+}
+.premium-comparison-article .review-sidebar .sidebar-card a:hover {
+  text-decoration: underline;
+}
