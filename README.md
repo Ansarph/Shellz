@@ -497,3 +497,47 @@ Final audit updates:
 - New-Gen same-page review buttons changed to Provider notes.
 - Main article social images are now visible inside the articles and used as OG images.
 - CSS/JS cache-busted with `20260614-final-audit`.
+
+
+## Kinsta Review article
+
+Added `kinsta-review.html` as a Shellz trust-compatible premium managed WordPress hosting review.
+
+Updated:
+- Homepage latest review section
+- Reviews page provider list and review card
+- New-Gen Hosting Kinsta provider card
+- New-Gen deal section Kinsta review link
+- Trending Hosting June 2026 archive
+- Promo Codes page Kinsta no-code policy callout
+- Cloudways/Rocket.net related links where relevant
+- Footer review links
+- `sitemap.xml`
+- `assets/kinsta-review-2026.png`
+- CSS styling and cache-busting
+
+Also scanned public HTML for visible internal planning wording.
+
+
+## Schema and WordPress page cleanup
+
+Fixed after Kinsta review addition:
+- Updated `reviews.html` ItemList schema to match all visible review cards.
+- Updated `reviews.html` meta description.
+- Updated `promo-codes.html` meta description grammar and deal-status coverage.
+- Added Kinsta as a main premium managed WordPress pick in `best-wordpress-hosting.html`.
+- Added Kinsta to the WordPress hosting comparison table, buying notes, source links, and schema.
+- Removed remaining provisional score wording from public pages.
+- Shortened Kinsta and Rocket.net SEO title tags.
+- Cache-busted CSS/JS links with `20260615-schema-wordpress-cleanup`.
+
+
+## Final schema and WordPress hosting validation passed
+
+Validation after cleanup:
+- Reviews page schema now matches 14 visible review cards.
+- Best WordPress Hosting page now includes Kinsta in main content, table, and schema.
+- Promo code meta description cleaned.
+- Remaining provisional score wording removed.
+- Kinsta/Rocket title tags shortened.
+- No broken internal links/assets detected.

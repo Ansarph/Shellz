@@ -3934,3 +3934,31 @@ body.homepage-category-first .site-header {
   border: 1px solid var(--line);
   box-shadow: 0 18px 44px rgba(15, 23, 42, .12);
 }
+
+
+/* Kinsta review page - June 2026 */
+.kinsta-review .inline-score {
+  width: fit-content;
+  margin-top: 18px;
+}
+
+.kinsta-review .review-sidebar .sidebar-card a {
+  display: block;
+  margin: 8px 0;
+  color: #0f766e;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.kinsta-review .review-sidebar .sidebar-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* Schema and WordPress page cleanup - June 2026 */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
