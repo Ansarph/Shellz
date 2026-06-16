@@ -30,7 +30,7 @@ Last updated: June 2026
 
 ## Coupon page notes
 
-The coupon page includes Bluehost, Hostinger, IONOS, SiteGround, Namecheap, and DreamHost deal cards. Replace affiliate placeholders with your approved affiliate links and update coupon details monthly.
+The coupon page includes Bluehost, Hostinger, IONOS, SiteGround, Namecheap, and DreamHost deal cards. Keep provider links and coupon details updated monthly.
 
 
 ## Professional SEO + monetization upgrade
@@ -45,7 +45,7 @@ Added June 2026:
 
 Before publishing:
 
-1. Optional: replace the official provider website links with approved affiliate links later, if you join those programs.
+1. Optional: update provider links if your affiliate program details change.
 2. Add your real email in contact/privacy pages.
 3. Add Google Analytics 4 if you want affiliate click events sent to GA4.
 4. Verify current prices and coupons on provider sites before promoting them.
@@ -391,7 +391,7 @@ Also added quick deal jump buttons to New-Gen provider cards and a pointer secti
 
 ## Trending archive public cleanup
 
-Updated `trending-hosting-june-2026.html` to remove internal planning content and turn the page into a clean public monthly archive.
+Updated `trending-hosting-june-2026.html` to remove draft-only notes and turn the page into a clean public monthly archive.
 
 Fixes:
 - Removed internal "Monthly actions" section.
@@ -440,7 +440,7 @@ Updated:
 - `sitemap.xml`
 - CSS styling
 
-Also cleaned public HTML pages to remove internal planning-style phrases from visitor-facing sections.
+Also cleaned public HTML pages to remove draft-only phrases from visitor-facing sections.
 
 
 ## Public E-E-A-T wording cleanup
@@ -516,7 +516,7 @@ Updated:
 - `assets/kinsta-review-2026.png`
 - CSS styling and cache-busting
 
-Also scanned public HTML for visible internal planning wording.
+Also scanned public HTML for visible draft-only wording.
 
 
 ## Schema and WordPress page cleanup
@@ -582,7 +582,7 @@ Updated:
 - `assets/kinsta-vs-rocket-net-vs-cloudways.png`
 - CSS styling and cache-busting with `20260615-premium-comparison`
 
-The article uses public buyer-facing wording only and avoids internal planning text.
+The article uses public buyer-facing wording only and avoids draft-only text.
 
 
 ## Public wording and SEO cleanup
@@ -650,3 +650,12 @@ Updated:
 - CSS and cache-busting with `20260616-hosting-test-guide`.
 
 The article uses visitor-facing wording only and explains how to compare hosting providers with identical test websites, uptime monitoring, response time, TTFB, Core Web Vitals, repeated tests, screenshots, and methodology notes.
+
+## 2026-06-16 - Contabo dedicated servers review published
+
+Added `contabo-dedicated-servers-review.html` as a public buyer-focused review for Contabo Ryzen dedicated servers. Updated internal links from the homepage, Reviews page, New-Gen Hosting page, Best VPS Hosting page, footer review links, and sitemap. Also cleaned visible public wording that sounded like draft-only instructions.
+
+
+## 2026-06-16 - Contabo deals page added
+
+Added `contabo-deals.html` as a public buyer-facing Contabo deals page. The page avoids unverified coupon-code claims and explains that no official reusable public Contabo coupon code is listed on Shellz at this time. It links visitors to Contabo dedicated server offers, the Contabo review, VPS comparisons, New-Gen hosting deals, and checkout-fee warnings. Updated internal links from the homepage, promo codes page, reviews page, Contabo review, New-Gen Hosting page, Best VPS page, footer coupon links, and sitemap.
