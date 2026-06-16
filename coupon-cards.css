@@ -101,7 +101,7 @@
 }
 .show-code-btn {
   display: grid;
-  grid-template-columns: 72px 1fr;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   width: 100%;
   min-height: 54px;
@@ -127,6 +127,7 @@
   text-transform: uppercase;
 }
 .show-code-label {
+  grid-column: 1 / -1;
   display: grid;
   place-items: center;
   height: 100%;
@@ -461,7 +462,7 @@
 .show-code-btn {
   position: relative;
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   width: 100%;
   min-height: 54px;
   padding: 0;
@@ -495,6 +496,7 @@
 }
 
 .show-code-label {
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
   justify-content: center;

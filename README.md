@@ -161,7 +161,7 @@ Updated coupon pages with the latest checked deals:
 - Hostinger official coupon-page code: COUPONSPAGE
 - Bluehost official June deal note: up to 60% off selected hosting / many deals auto-apply
 - DreamHost official promo page note: up to 83% off selected plans
-- HostGator added SNAPPY as a reported code to test, while keeping SNAPPY
+- HostGator coupon references updated to the official SNAPPY code across public pages
 - NameSilo codes kept: DISCOUNT10, NAMESILO10, A10
 
 
@@ -603,3 +603,50 @@ Fixed:
 - Shortened long title tags on older reviews, coupon pages, and guides.
 - Shortened long meta descriptions on older reviews, coupon pages, and guides.
 - Cache-busted CSS/JS links with `20260615-public-wording-seo-cleanup2`.
+
+
+## Hosting renewal price guide article
+
+Added `why-hosting-renewal-price-is-higher.html`.
+
+Updated:
+- Homepage latest guide block.
+- Internal links from cheap hosting, promo codes, checkout trap, beginner guides, hosting reviews, and domain/email guide.
+- Footer Money Guides link across public pages.
+- `sitemap.xml`.
+- `assets/hosting-renewal-price-guide.png`.
+- CSS styling and cache-busting with `20260616-renewal-guide`.
+
+The article explains first bill vs renewal bill, free-domain renewals, email costs, backups, add-ons, auto-renewal, and buyer checks using visitor-friendly wording.
+
+
+## ScalaHosting review article
+
+Added `scalahosting-review.html`.
+
+Updated:
+- Homepage latest review block
+- Reviews index card and review ItemList schema
+- New-Gen Hosting ScalaHosting card and schema URL
+- Internal links from VPS, WordPress, Cloudways, Kinsta, Hostinger, renewal guide, promo codes, and related guides
+- Footer review links across public pages
+- `sitemap.xml`
+- `assets/scalahosting-review-2026.png`
+- CSS and cache-busting with `20260616-scalahosting-review`
+
+The page uses visitor-facing wording only and includes official source notes for ScalaHosting, SPanel, SShield, managed cloud hosting, and cloud VPS hosting.
+
+
+## Hosting speed and uptime test guide
+
+Added `hosting-speed-uptime-test.html`.
+
+Updated:
+- Homepage latest testing guide block.
+- Internal links from methodology, hosting reviews, best hosting pages, VPS/WordPress pages, beginner guides, and renewal/checkout guides.
+- Footer trust links across public pages.
+- `sitemap.xml`.
+- `assets/hosting-speed-uptime-test-guide.png`.
+- CSS and cache-busting with `20260616-hosting-test-guide`.
+
+The article uses visitor-facing wording only and explains how to compare hosting providers with identical test websites, uptime monitoring, response time, TTFB, Core Web Vitals, repeated tests, screenshots, and methodology notes.
