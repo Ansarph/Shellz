@@ -659,3 +659,9 @@ Added `contabo-dedicated-servers-review.html` as a public buyer-focused review f
 ## 2026-06-16 - Contabo deals page added
 
 Added `contabo-deals.html` as a public buyer-facing Contabo deals page. The page avoids unverified coupon-code claims and explains that no official reusable public Contabo coupon code is listed on Shellz at this time. It links visitors to Contabo dedicated server offers, the Contabo review, VPS comparisons, New-Gen hosting deals, and checkout-fee warnings. Updated internal links from the homepage, promo codes page, reviews page, Contabo review, New-Gen Hosting page, Best VPS page, footer coupon links, and sitemap.
+
+
+Updated June 16, 2026: Added WPX Hosting Review page and internal links.
+
+
+WPX coupon page added: wpx-coupon.html. Official WPX code displayed on WPX site at update time: SAVE79 for 79% off the first month on monthly WordPress hosting plans. Verify at checkout before publishing paid traffic.
