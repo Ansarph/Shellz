@@ -193,3 +193,82 @@
     });
   });
 })();
+// Shellz Quick Tools copy-link button
+(function () {
+  function copyIconMarkup(label) {
+    return '' +
+      '<span class="qt-icon" aria-hidden="true">' +
+        '<svg viewBox="0 0 24 24" aria-hidden="true">' +
+          '<path d="M10.59 13.41a.75.75 0 0 1 0-1.06l3.76-3.76a3 3 0 1 1 4.24 4.24l-2.82 2.83a3 3 0 0 1-4.24 0 .75.75 0 1 1 1.06-1.06 1.5 1.5 0 0 0 2.12 0l2.82-2.82a1.5 1.5 0 1 0-2.12-2.12l-3.76 3.76a.75.75 0 0 1-1.06 0Z"></path>' +
+          '<path d="M13.41 10.59a.75.75 0 0 1 0 1.06l-3.76 3.76a3 3 0 1 1-4.24-4.24l2.82-2.83a3 3 0 0 1 4.24 0 .75.75 0 1 1-1.06 1.06 1.5 1.5 0 0 0-2.12 0L6.47 12.22a1.5 1.5 0 1 0 2.12 2.12l3.76-3.76a.75.75 0 0 1 1.06 0Z"></path>' +
+        '</svg>' +
+      '</span>' +
+      '<span class="sr-only">' + label + '</span>';
+  }
+
+  function setCopiedState(button, copied) {
+    if (!button || !copied) return;
+
+    var sr = button.querySelector('.sr-only');
+    var originalLabel = (sr && sr.textContent) ? sr.textContent : 'Copy link';
+
+    button.classList.add('copied');
+    button.setAttribute('aria-label', 'Copied');
+    button.setAttribute('title', 'Copied');
+    button.textContent = 'Copied';
+
+    window.setTimeout(function () {
+      button.classList.remove('copied');
+      button.setAttribute('aria-label', originalLabel);
+      button.setAttribute('title', originalLabel);
+      button.innerHTML = copyIconMarkup(originalLabel);
+    }, 1800);
+  }
+
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest('[data-copy-link]');
+    if (!button) return;
+
+    var url = button.getAttribute('data-copy-url') || window.location.href;
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () {
+        setCopiedState(button, true);
+      }).catch(function () {
+        window.prompt('Copy this link:', url);
+      });
+    } else {
+      window.prompt('Copy this link:', url);
+    }
+  });
+})();
+// Shellz CTA tracking-ready attributes
+(function () {
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest('.shellz-track-cta');
+    if (!link) return;
+
+    var payload = {
+      event: 'shellz_cta_click',
+      cta: link.getAttribute('data-cta') || 'cta-click',
+      provider: link.getAttribute('data-provider') || 'unknown',
+      pageType: link.getAttribute('data-page-type') || 'unknown',
+      offerType: link.getAttribute('data-offer-type') || 'unknown',
+      href: link.getAttribute('href') || '',
+      page: window.location.pathname
+    };
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+
+    if (window.gtag) {
+      window.gtag('event', 'shellz_cta_click', {
+        cta: payload.cta,
+        provider: payload.provider,
+        page_type: payload.pageType,
+        offer_type: payload.offerType,
+        link_url: payload.href
+      });
+    }
+  });
+})();

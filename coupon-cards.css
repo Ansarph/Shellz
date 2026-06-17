@@ -654,3 +654,126 @@ body.coupon-modal-open {
     grid-template-columns: 1fr;
   }
 }
+/* ===== Shellz warm neutral coupon theme override | 2026-06-17 ===== */
+.couponfollow-style-note {
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(230, 220, 211, 0.45) 100%);
+  border-color: #B4A79E;
+  box-shadow: 0 14px 32px rgba(63, 53, 44, 0.08);
+}
+.shellz-coupon-card {
+  background: #FFFFFF;
+  border: 1px solid #B4A79E;
+  box-shadow: 0 16px 40px rgba(63, 53, 44, 0.10);
+}
+.shellz-coupon-card::before {
+  background: linear-gradient(180deg, #BDA18C, #3F352C);
+}
+.coupon-discount-badge {
+  border: 2px dashed #B4A79E;
+  background: linear-gradient(180deg, rgba(230, 220, 211, 0.72) 0%, rgba(255,255,255,0.95) 100%);
+}
+.coupon-discount-badge strong,
+.coupon-review-link,
+.coupon-details-toggle,
+.code-peek,
+.coupon-store {
+  color: #3F352C;
+}
+.coupon-discount-badge span,
+.coupon-main p,
+.coupon-extra-details {
+  color: #6E6259;
+}
+.coupon-tag {
+  background: #E6DCD3;
+  border: 1px solid #B4A79E;
+  color: #3F352C;
+}
+.show-code-btn { box-shadow: 0 12px 24px rgba(63, 53, 44, 0.18); }
+.code-peek {
+  background: #E6DCD3;
+  border: 1px dashed #B4A79E;
+}
+.show-code-label {
+  background: linear-gradient(135deg, #3F352C, #000000);
+  color: #FFFFFF;
+}
+.coupon-modal-backdrop {
+  background: rgba(0, 0, 0, 0.62);
+}
+.coupon-modal {
+  border: 1px solid rgba(180, 167, 158, 0.8);
+}
+.coupon-modal-head {
+  background: linear-gradient(135deg, #3F352C, #000000);
+}
+.revealed-code-box {
+  background: rgba(230, 220, 211, 0.48);
+  border: 2px dashed #B4A79E;
+}
+.revealed-code {
+  color: #3F352C;
+}
+.copy-modal-code {
+  background: #3F352C;
+  color: #FFFFFF;
+}
+.copy-modal-code:hover {
+  background: #000000;
+}
+/* ===== Clean Trust Tech coupon overrides | 2026-06-17 ===== */
+.shellz-coupon-card,
+.coupon-card,
+.copy-modal,
+.coupon-modal,
+.coupon-modal-content {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  color: #0F172A !important;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.shellz-coupon-card::before {
+  background: linear-gradient(180deg, #2563EB, #1D4ED8) !important;
+}
+
+.coupon-discount-badge,
+.coupon-tag,
+.verified-badge,
+.last-checked,
+.deal-status {
+  background: #ECFDF5 !important;
+  border-color: #BBF7D0 !important;
+  color: #166534 !important;
+}
+
+.coupon-discount-badge strong,
+.coupon-review-link,
+.coupon-details-toggle,
+.code-peek,
+.coupon-store {
+  color: #2563EB !important;
+}
+
+.show-code-label,
+.copy-modal-code,
+.coupon-cta,
+button.copy-code {
+  background: #2563EB !important;
+  color: #FFFFFF !important;
+  border-color: #2563EB !important;
+}
+
+.show-code-label:hover,
+.coupon-cta:hover,
+button.copy-code:hover {
+  background: #1D4ED8 !important;
+  border-color: #1D4ED8 !important;
+}
+
+.coupon-fineprint,
+.coupon-details,
+.coupon-meta,
+.coupon-description {
+  color: #475569 !important;
+}
