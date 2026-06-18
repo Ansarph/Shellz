@@ -777,3 +777,13 @@ button.copy-code:hover {
 .coupon-description {
   color: #475569 !important;
 }
+
+
+/* shellz-coupon-logo-system-20260618: provider identity inside coupon cards */
+.coupon-logo-wrap { display: grid; place-items: center; width: 100%; min-height: 42px; margin-bottom: 10px; }
+.coupon-logo-wrap img { width: 96px; max-width: 100%; max-height: 38px; object-fit: contain; display: block; }
+.shellz-coupon-card .coupon-discount-badge { align-content: center; }
+@media (max-width: 760px) {
+  .coupon-logo-wrap { margin-bottom: 8px; }
+  .coupon-logo-wrap img { width: 88px; max-height: 34px; }
+}
