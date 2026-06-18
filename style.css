@@ -9725,3 +9725,107 @@ body.all-reviews-seo-updated.review-single-column-fixed .review-main .table-wrap
     grid-template-columns: 1fr !important;
   }
 }
+/* ===== Homepage latest updates lowered/reduced | 2026-06-18 ===== */
+.latest-shellz-updates.compact-latest-updates {
+  margin-top: 34px !important;
+  margin-bottom: 34px !important;
+  padding: 26px !important;
+  border-radius: 24px !important;
+  background: #FFFFFF !important;
+  border: 1px solid #DDE7F3 !important;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.06) !important;
+}
+
+.latest-shellz-updates.compact-latest-updates .section-heading.compact {
+  max-width: 780px;
+  margin-bottom: 18px;
+}
+
+.latest-shellz-updates.compact-latest-updates .section-heading h2 {
+  margin-bottom: 8px !important;
+}
+
+.compact-updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.compact-update-card {
+  display: grid;
+  gap: 6px;
+  min-height: 94px;
+  padding: 16px;
+  border-radius: 18px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  text-decoration: none;
+  transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+}
+
+.compact-update-card:hover {
+  transform: translateY(-2px);
+  border-color: #BFD3F0;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+}
+
+.compact-update-card strong {
+  font-size: 1rem;
+  line-height: 1.18;
+  color: #0F172A;
+}
+
+.compact-update-card span {
+  font-size: .82rem;
+  font-weight: 850;
+  color: #0F766E;
+}
+
+@media (max-width: 900px) {
+  .compact-updates-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .latest-shellz-updates.compact-latest-updates {
+    padding: 20px !important;
+  }
+
+  .compact-updates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Shellz SEO trust upgrades - 2026-06-18 */
+.about-strengthened .about-proof-grid,
+.shellz-proof-status .human-grid,
+.coupon-verification-rules .human-grid {
+  margin-top: 1rem;
+}
+.shellz-proof-status,
+.coupon-verification-rules,
+.about-strengthened {
+  scroll-margin-top: 92px;
+}
+.coupon-trust-enhanced .deal-status-grid article,
+.shellz-proof-status .article-table table,
+.about-strengthened .article-table table {
+  font-size: 0.95rem;
+}
+.coupon-trust-points {
+  margin: 0.85rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted, #64748b);
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+.coupon-trust-points strong {
+  color: var(--text, #0f172a);
+}
+.human-note {
+  margin-top: 1rem;
+  color: var(--muted, #64748b);
+}
