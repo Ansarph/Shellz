@@ -274,59 +274,57 @@
 })();
 
 
-// Shellz CRO mobile nav 20260619
-// Replaced by the safer 20260619 mobile nav safety fix below.
-
-// Shellz mobile nav safety fix 20260619
-(function () {
-  function ready(fn) {
-    if (document.readyState !== 'loading') fn();
+// SHELLZ CRO AUDIT FINAL: single safe mobile nav + body state 20260619
+(function(){
+  function ready(fn){
+    if(document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
   }
-
-  ready(function () {
+  ready(function(){
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.getElementById('primary-navigation');
-    if (!toggle || !nav) return;
+    if(!toggle || !nav) return;
 
-    function closeNav() {
+    nav.setAttribute('data-mobile-nav-ready','true');
+
+    function closeNav(){
       document.body.classList.remove('nav-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Open menu');
+      toggle.setAttribute('aria-expanded','false');
+      toggle.setAttribute('aria-label','Open menu');
     }
-
-    function openNav() {
+    function openNav(){
       document.body.classList.add('nav-open');
-      toggle.setAttribute('aria-expanded', 'true');
-      toggle.setAttribute('aria-label', 'Close menu');
+      toggle.setAttribute('aria-expanded','true');
+      toggle.setAttribute('aria-label','Close menu');
     }
+    function isDesktop(){ return window.matchMedia('(min-width: 761px)').matches; }
 
-    // Always start closed. This prevents a cached/open class from creating a large blank card.
     closeNav();
 
-    toggle.addEventListener('click', function (event) {
-      event.preventDefault();
-      event.stopPropagation();
-      if (document.body.classList.contains('nav-open')) closeNav();
-      else openNav();
+    toggle.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      if(isDesktop()) return;
+      document.body.classList.contains('nav-open') ? closeNav() : openNav();
     });
 
-    nav.addEventListener('click', function (event) {
-      if (event.target.closest('a')) closeNav();
+    nav.addEventListener('click', function(e){
+      if(e.target.closest('a')) closeNav();
     });
 
-    document.addEventListener('click', function (event) {
-      if (!document.body.classList.contains('nav-open')) return;
-      if (event.target.closest('.site-header')) return;
+    document.addEventListener('click', function(e){
+      if(!document.body.classList.contains('nav-open')) return;
+      if(e.target.closest('.site-header')) return;
       closeNav();
     });
 
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') closeNav();
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeNav();
     });
 
-    window.addEventListener('resize', function () {
-      if (window.innerWidth > 760) closeNav();
-    }, { passive: true });
+    window.addEventListener('resize', function(){
+      if(isDesktop()) closeNav();
+    }, {passive:true});
   });
 })();
+
