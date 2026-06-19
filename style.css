@@ -9961,3 +9961,56 @@ body.all-reviews-seo-updated.review-single-column-fixed .review-main .table-wrap
     font-size: .72rem !important;
   }
 }
+
+
+/* AI website builders tested page | 2026-06-19 */
+body.ai-builder-tested-page .ai-builder-article-hero .container {
+  max-width: 1040px;
+}
+body.ai-builder-tested-page .ai-builder-article-hero h1 {
+  max-width: 1000px;
+}
+body.ai-builder-tested-page .ai-article-trust,
+body.ai-builder-tested-page .ai-tested-summary,
+body.ai-builder-tested-page .ai-tested-intro,
+body.ai-builder-tested-page .ai-comparison-section,
+body.ai-builder-tested-page .ai-builder-tests,
+body.ai-builder-tested-page .ai-final-picks,
+body.ai-builder-tested-page .ai-disclosure-box,
+body.ai-builder-tested-page .shellz-category-faq,
+body.ai-builder-tested-page .category-related-guides {
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+body.ai-builder-tested-page .ai-two-column {
+  align-items: stretch;
+}
+body.ai-builder-tested-page .ai-comparison-section .table-wrap {
+  margin-top: 16px;
+}
+body.ai-builder-tested-page .ai-comparison-section td:first-child,
+body.ai-builder-tested-page .ai-comparison-section th:first-child {
+  min-width: 160px;
+}
+body.ai-builder-tested-page .ai-builder-grid article {
+  min-height: 100%;
+}
+body.ai-builder-tested-page .ai-builder-grid h3 {
+  color: var(--dark);
+}
+body.ai-builder-tested-page .ai-builder-grid .details-link {
+  text-align: left !important;
+  display: inline-block !important;
+  margin-right: 14px !important;
+}
+body.ai-builder-tested-page .ai-seo-warning {
+  max-width: 1120px;
+}
+body.ai-builder-tested-page .ai-disclosure-box {
+  max-width: 1120px;
+}
+@media (max-width: 900px) {
+  body.ai-builder-tested-page .ai-builder-article-hero h1 {
+    font-size: clamp(2.1rem, 10vw, 3.3rem);
+  }
+}
