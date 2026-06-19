@@ -272,3 +272,33 @@
     }
   });
 })();
+
+
+// Shellz CRO mobile nav 20260619
+(function () {
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+  ready(function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-navigation');
+    if (!toggle || !nav) return;
+    function closeNav() {
+      document.body.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open menu');
+    }
+    toggle.addEventListener('click', function () {
+      var open = document.body.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    nav.addEventListener('click', function (event) {
+      if (event.target.closest('a')) closeNav();
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeNav();
+    });
+  });
+})();
