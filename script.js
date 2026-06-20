@@ -330,76 +330,95 @@
 
 
 
-// SHELLZ PROOF TOOLS: hosting calculator + click tracking 20260620
+
+// SHELLZ CALCULATOR FIX: robust hosting cost calculator 20260620
 (function(){
-  function ready(fn){ if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
-  function money(value){
-    var n = Number(value || 0);
-    return '$' + n.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+  function ready(fn){
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', fn);
+    } else {
+      fn();
+    }
   }
+
   ready(function(){
-    var calc = document.getElementById('hosting-cost-calculator');
-    if(calc){
-      var ids = ['introPrice','renewalPrice','billingMonths','domainCost','emailCost','addonCost'];
-      function val(id){ var el = document.getElementById(id); return el ? Number(el.value || 0) : 0; }
-      function runCalc(){
-        var months = Math.max(1, val('billingMonths'));
-        var first = (val('introPrice') * months) + val('domainCost') + val('emailCost') + val('addonCost');
-        var renewal = (val('renewalPrice') * months) + val('domainCost') + val('emailCost') + val('addonCost');
-        var increase = first > 0 ? ((renewal - first) / first) * 100 : 0;
-        var firstEl = document.getElementById('firstYearCost');
-        var renewalEl = document.getElementById('renewalYearCost');
-        var incEl = document.getElementById('renewalIncrease');
-        var summary = document.getElementById('calcSummary');
-        if(firstEl) firstEl.textContent = money(first);
-        if(renewalEl) renewalEl.textContent = money(renewal);
-        if(incEl) incEl.textContent = (increase > 0 ? '+' : '') + increase.toFixed(1) + '%';
-        if(summary) summary.textContent = renewal > first ? 'Renewal may cost more than the first bill' : 'Renewal estimate is not higher than first bill';
-      }
-      calc.addEventListener('submit', function(e){ e.preventDefault(); runCalc(); });
-      ids.forEach(function(id){
-        var el = document.getElementById(id);
-        if(el) el.addEventListener('input', runCalc);
-      });
-      runCalc();
+    var form = document.getElementById('hosting-cost-calculator');
+    if(!form) return;
+
+    function getNumber(id){
+      var el = document.getElementById(id);
+      if(!el) return 0;
+      var raw = String(el.value || '').replace(/,/g, '').trim();
+      var num = parseFloat(raw);
+      return isNaN(num) || num < 0 ? 0 : num;
     }
 
-    // Stronger click tracking: pushes to dataLayer, GA4 if present, and stores a local backup for debugging.
-    document.addEventListener('click', function(e){
-      var link = e.target.closest('a, button');
-      if(!link) return;
-      var isTracked = link.classList.contains('shellz-track-cta') || link.classList.contains('affiliate-link') || link.classList.contains('show-code-btn') || link.matches('[data-cta]');
-      if(!isTracked) return;
-      var payload = {
-        event: 'shellz_cta_click',
-        cta: link.dataset.cta || (link.classList.contains('show-code-btn') ? 'show-code' : 'click'),
-        provider: link.dataset.provider || 'shellz',
-        page_type: link.dataset.pageType || document.body.className || 'page',
-        offer_type: link.dataset.offerType || '',
-        placement: link.dataset.placement || '',
-        text: (link.innerText || link.getAttribute('aria-label') || '').trim().slice(0,120),
-        href: link.href || link.dataset.url || '',
-        path: location.pathname,
-        ts: new Date().toISOString()
-      };
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push(payload);
-      if(window.gtag){
-        window.gtag('event', 'shellz_cta_click', {
-          cta: payload.cta,
-          provider: payload.provider,
-          page_type: payload.page_type,
-          offer_type: payload.offer_type,
-          placement: payload.placement,
-          link_url: payload.href
-        });
+    function money(value){
+      return '$' + Number(value || 0).toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    }
+
+    function setText(id, value){
+      var el = document.getElementById(id);
+      if(el) el.textContent = value;
+    }
+
+    function calculateHostingCost(){
+      var intro = getNumber('introPrice');
+      var renewalMonthly = getNumber('renewalPrice');
+      var months = Math.max(1, Math.round(getNumber('billingMonths') || 1));
+      var domain = getNumber('domainCost');
+      var email = getNumber('emailCost');
+      var addon = getNumber('addonCost');
+
+      var firstTerm = (intro * months) + domain + email + addon;
+      var renewalTerm = (renewalMonthly * months) + domain + email + addon;
+      var increase = firstTerm > 0 ? ((renewalTerm - firstTerm) / firstTerm) * 100 : 0;
+      var savingsLost = renewalTerm - firstTerm;
+
+      // Support both old and new possible result IDs.
+      setText('firstYearCost', money(firstTerm));
+      setText('firstTermCost', money(firstTerm));
+      setText('totalFirstCost', money(firstTerm));
+      setText('renewalYearCost', money(renewalTerm));
+      setText('renewalTermCost', money(renewalTerm));
+      setText('renewalIncrease', (increase > 0 ? '+' : '') + increase.toFixed(1) + '%');
+
+      var summary = document.getElementById('calcSummary');
+      if(summary){
+        if(renewalTerm > firstTerm){
+          summary.textContent = 'Renewal may cost ' + money(savingsLost) + ' more than the first term';
+        } else if(renewalTerm < firstTerm){
+          summary.textContent = 'Renewal estimate is lower than the first term';
+        } else {
+          summary.textContent = 'Renewal estimate is the same as the first term';
+        }
       }
-      try {
-        var key = 'shellz_click_log';
-        var current = JSON.parse(localStorage.getItem(key) || '[]');
-        current.push(payload);
-        localStorage.setItem(key, JSON.stringify(current.slice(-50)));
-      } catch(err) {}
-    }, true);
+
+      var warning = document.getElementById('calcWarning');
+      if(warning){
+        warning.textContent = renewalTerm > firstTerm
+          ? 'Warning: the renewal bill is higher. Check the provider checkout and renewal terms before choosing a long billing period.'
+          : 'Still verify the provider checkout total, renewal terms, taxes, and add-ons before payment.';
+      }
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      calculateHostingCost();
+    });
+
+    ['introPrice','renewalPrice','billingMonths','domainCost','emailCost','addonCost'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el){
+        el.addEventListener('input', calculateHostingCost);
+        el.addEventListener('change', calculateHostingCost);
+      }
+    });
+
+    calculateHostingCost();
   });
 })();
+
