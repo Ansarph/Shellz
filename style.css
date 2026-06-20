@@ -11257,3 +11257,274 @@ img, svg, video, iframe { max-width: 100%; height: auto; }
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===== Shellz New-Gen color theme applied globally | 2026-06-20 =====
+   Reference palette from new-gen-hosting.html:
+   white-to-soft-blue hero, teal + blue accents, warm amber CTA, white cards, soft slate borders.
+*/
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --ink: #14213d;
+  --muted: #5f6f89;
+  --line: #dbe3ef;
+  --primary: #0f766e;
+  --primary-dark: #0b4f4a;
+  --primary-soft: #e6fffb;
+  --shellz-blue: #2563eb;
+  --shellz-blue-soft: #eef7ff;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --soft: #e6fffb;
+  --shadow: 0 18px 40px rgba(20, 33, 61, 0.08);
+}
+
+body {
+  color: var(--ink) !important;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(15, 118, 110, .055), transparent 28%),
+    radial-gradient(circle at 90% 4%, rgba(37, 99, 235, .055), transparent 30%),
+    var(--bg) !important;
+}
+
+.site-header {
+  background: rgba(255,255,255,.94) !important;
+  border-bottom: 1px solid rgba(219, 227, 239, .95) !important;
+  box-shadow: 0 10px 28px rgba(20, 33, 61, .06) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.main-nav a,
+.site-nav a {
+  color: #334155 !important;
+}
+
+.main-nav a:hover,
+.site-nav a:hover,
+.main-nav a[aria-current="page"],
+.site-nav a[aria-current="page"] {
+  color: var(--primary) !important;
+  background: #ecfdf5 !important;
+}
+
+.page-hero,
+.hero,
+.review-hero,
+.comparison-hero,
+.human-comparison-hero,
+.newgen-hero {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(15, 118, 110, .18), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(37, 99, 235, .16), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #eef7ff 100%) !important;
+  border-bottom: 1px solid rgba(219, 227, 239, .90) !important;
+}
+
+.page-hero h1,
+.hero h1,
+.review-hero h1,
+.comparison-hero h1 {
+  color: #10203d !important;
+}
+
+.hero-text,
+.page-hero p,
+.review-hero p {
+  color: #475569 !important;
+}
+
+.eyebrow,
+.badge,
+.category-tag,
+.coupon-store,
+.newgen-tagline {
+  color: var(--primary) !important;
+}
+
+.btn.primary,
+a.btn.primary,
+button.btn.primary,
+.show-code-label,
+.provider-cta,
+.hero-actions .primary,
+.review-actions .primary {
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 16px 34px rgba(15, 118, 110, .20) !important;
+}
+
+.btn.primary:hover,
+a.btn.primary:hover,
+button.btn.primary:hover,
+.hero-actions .primary:hover,
+.review-actions .primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 42px rgba(37, 99, 235, .22) !important;
+}
+
+.btn.secondary,
+a.btn.secondary,
+button.btn.secondary,
+.coupon-review-link,
+.details-link {
+  background: #ffffff !important;
+  color: #0f766e !important;
+  border: 1px solid #bfe4dc !important;
+}
+
+.btn.secondary:hover,
+a.btn.secondary:hover,
+button.btn.secondary:hover,
+.coupon-review-link:hover,
+.details-link:hover {
+  background: #f0fdfa !important;
+  color: #0b4f4a !important;
+  border-color: #99d6ca !important;
+}
+
+.card,
+.human-card,
+.review-card,
+.deal-card,
+.provider-card,
+.winner-card,
+.human-provider-card,
+.related-card,
+.related-link-card,
+.cluster-link-card,
+.buyer-flow-card,
+.topic-cluster-panel,
+.related-shellz-guides,
+.buyer-flow-panel,
+.coupon-hub-upgrade-panel,
+.comparison-editor-note,
+.human-comparison-intro,
+.human-final-verdict,
+.trust-proof-panel,
+.author-proof-card,
+.calculator-card,
+.calculator-result-card,
+.coupon-status-summary,
+.proof-pending-block,
+.verdict-box,
+.newgen-provider-card,
+.newgen-coupon-hub-cta {
+  background: #ffffff !important;
+  border-color: #dbe3ef !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, .07) !important;
+}
+
+.human-card:hover,
+.review-card:hover,
+.deal-card:hover,
+.provider-card:hover,
+.cluster-link-card:hover,
+.related-link-card:hover,
+.buyer-flow-card:hover,
+.newgen-provider-card:hover {
+  border-color: #bfe4dc !important;
+  box-shadow: 0 22px 48px rgba(15, 118, 110, .10) !important;
+}
+
+.table-wrap,
+.article-table,
+.comparison-table,
+.renewal-database-table,
+.testing-status-table {
+  border-color: #dbe3ef !important;
+}
+
+table th {
+  background: linear-gradient(180deg, #f8fbff 0%, #eef7ff 100%) !important;
+  color: #14213d !important;
+}
+
+table td {
+  color: #334155 !important;
+}
+
+.status-pill.ok {
+  background: #ecfdf5 !important;
+  color: #166534 !important;
+  border-color: #bbf7d0 !important;
+}
+
+.status-pill.pending,
+.status-pill.warning {
+  background: #fff7ed !important;
+  color: #9a3412 !important;
+  border-color: #fed7aa !important;
+}
+
+.status-pill.planned,
+.status-pill.caution {
+  background: #eff6ff !important;
+  color: #1d4ed8 !important;
+  border-color: #bfdbfe !important;
+}
+
+.shellz-coupon-card,
+.shellz-coupon-card.compact {
+  background: #ffffff !important;
+  border-color: #dbe3ef !important;
+  box-shadow: 0 18px 42px rgba(15, 23, 42, .08) !important;
+}
+
+.shellz-coupon-card::before {
+  background: linear-gradient(180deg, #0f766e 0%, #2563eb 100%) !important;
+}
+
+.coupon-discount-badge,
+.newgen-rank {
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+}
+
+.coupon-discount-badge span {
+  background: rgba(255,255,255,.14) !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,.25) !important;
+}
+
+.provider-logo,
+.provider-hero-lockup .provider-logo.large {
+  background: #ffffff !important;
+  border-color: #dbe3ef !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .08) !important;
+}
+
+.site-footer {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(15, 118, 110, .18), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(37, 99, 235, .18), transparent 30%),
+    linear-gradient(180deg, #10203d 0%, #081426 100%) !important;
+  color: #e2e8f0 !important;
+}
+
+.site-footer a {
+  color: #dbeafe !important;
+}
+
+.site-footer a:hover {
+  color: #ffffff !important;
+}
+
+.copyright {
+  color: #cbd5e1 !important;
+}
+
+@media (max-width: 760px) {
+  .page-hero,
+  .hero,
+  .review-hero,
+  .comparison-hero,
+  .human-comparison-hero {
+    background:
+      radial-gradient(circle at 12% 14%, rgba(15, 118, 110, .18), transparent 30%),
+      radial-gradient(circle at 88% 8%, rgba(37, 99, 235, .14), transparent 32%),
+      linear-gradient(180deg, #ffffff 0%, #eef7ff 100%) !important;
+  }
+}
