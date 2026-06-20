@@ -10737,3 +10737,120 @@ img, svg, video, canvas { max-width: 100%; height: auto; }
     max-width: 136px !important;
   }
 }
+
+
+/* ===== Shellz provider hero professional refresh | 2026-06-20 =====
+   Fixes the top logo/provider block on coupon and review pages:
+   - better contrast on dark hero backgrounds
+   - cleaner compact card
+   - safer mobile wrapping
+*/
+.provider-hero-lockup {
+  display: inline-grid !important;
+  grid-template-columns: 160px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin: 0 0 22px !important;
+  padding: 14px 16px !important;
+  max-width: min(100%, 480px) !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  border-radius: 24px !important;
+  background: linear-gradient(135deg, rgba(255,255,255,.15), rgba(255,255,255,.08)) !important;
+  box-shadow: 0 18px 42px rgba(2, 8, 23, .16) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+.provider-hero-lockup > div:last-child {
+  min-width: 0 !important;
+}
+.provider-hero-lockup .provider-logo.large {
+  width: 160px !important;
+  height: 78px !important;
+  border-radius: 20px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(226,232,240,.95) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 14px !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .10) !important;
+}
+.provider-hero-lockup .provider-logo img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+}
+.provider-logo-label {
+  display: block !important;
+  font-weight: 900 !important;
+  font-size: 1.06rem !important;
+  line-height: 1.2 !important;
+  color: #ffffff !important;
+  letter-spacing: -.01em !important;
+}
+.provider-logo-label::before {
+  content: 'Provider';
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(226, 232, 240, .78);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.provider-logo-note {
+  display: block !important;
+  margin-top: 5px !important;
+  color: rgba(226, 232, 240, .84) !important;
+  font-size: .80rem !important;
+  line-height: 1.45 !important;
+  max-width: 24ch !important;
+}
+@media (max-width: 720px) {
+  .provider-hero-lockup {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    padding: 14px !important;
+    border-radius: 22px !important;
+    max-width: min(100%, 340px) !important;
+  }
+  .provider-hero-lockup .provider-logo.large {
+    width: 100% !important;
+    max-width: 176px !important;
+    height: 76px !important;
+  }
+  .provider-logo-label {
+    font-size: 1rem !important;
+  }
+  .provider-logo-note {
+    font-size: .78rem !important;
+    max-width: none !important;
+  }
+}
+
+/* Extra mobile guardrails against horizontal overflow */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video, iframe { max-width: 100%; height: auto; }
+.page-hero h1, .review-main h1, .review-main h2, .verdict-box h2, .human-card h3 {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+@media (max-width: 760px) {
+  .container, .page-hero .container, .review-detail, .review-main, .review-layout, .verdict-box, .human-card {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .page-hero h1 {
+    font-size: clamp(2.05rem, 11.5vw, 3.15rem) !important;
+    line-height: 1.04 !important;
+  }
+  .hero-actions, .review-actions, .coupon-action-panel {
+    width: 100% !important;
+  }
+  .hero-actions .btn, .review-actions .btn, .show-code-btn, .coupon-review-link {
+    max-width: 100% !important;
+  }
+}
