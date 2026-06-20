@@ -328,3 +328,78 @@
   });
 })();
 
+
+
+// SHELLZ PROOF TOOLS: hosting calculator + click tracking 20260620
+(function(){
+  function ready(fn){ if(document.readyState !== 'loading') fn(); else document.addEventListener('DOMContentLoaded', fn); }
+  function money(value){
+    var n = Number(value || 0);
+    return '$' + n.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+  ready(function(){
+    var calc = document.getElementById('hosting-cost-calculator');
+    if(calc){
+      var ids = ['introPrice','renewalPrice','billingMonths','domainCost','emailCost','addonCost'];
+      function val(id){ var el = document.getElementById(id); return el ? Number(el.value || 0) : 0; }
+      function runCalc(){
+        var months = Math.max(1, val('billingMonths'));
+        var first = (val('introPrice') * months) + val('domainCost') + val('emailCost') + val('addonCost');
+        var renewal = (val('renewalPrice') * months) + val('domainCost') + val('emailCost') + val('addonCost');
+        var increase = first > 0 ? ((renewal - first) / first) * 100 : 0;
+        var firstEl = document.getElementById('firstYearCost');
+        var renewalEl = document.getElementById('renewalYearCost');
+        var incEl = document.getElementById('renewalIncrease');
+        var summary = document.getElementById('calcSummary');
+        if(firstEl) firstEl.textContent = money(first);
+        if(renewalEl) renewalEl.textContent = money(renewal);
+        if(incEl) incEl.textContent = (increase > 0 ? '+' : '') + increase.toFixed(1) + '%';
+        if(summary) summary.textContent = renewal > first ? 'Renewal may cost more than the first bill' : 'Renewal estimate is not higher than first bill';
+      }
+      calc.addEventListener('submit', function(e){ e.preventDefault(); runCalc(); });
+      ids.forEach(function(id){
+        var el = document.getElementById(id);
+        if(el) el.addEventListener('input', runCalc);
+      });
+      runCalc();
+    }
+
+    // Stronger click tracking: pushes to dataLayer, GA4 if present, and stores a local backup for debugging.
+    document.addEventListener('click', function(e){
+      var link = e.target.closest('a, button');
+      if(!link) return;
+      var isTracked = link.classList.contains('shellz-track-cta') || link.classList.contains('affiliate-link') || link.classList.contains('show-code-btn') || link.matches('[data-cta]');
+      if(!isTracked) return;
+      var payload = {
+        event: 'shellz_cta_click',
+        cta: link.dataset.cta || (link.classList.contains('show-code-btn') ? 'show-code' : 'click'),
+        provider: link.dataset.provider || 'shellz',
+        page_type: link.dataset.pageType || document.body.className || 'page',
+        offer_type: link.dataset.offerType || '',
+        placement: link.dataset.placement || '',
+        text: (link.innerText || link.getAttribute('aria-label') || '').trim().slice(0,120),
+        href: link.href || link.dataset.url || '',
+        path: location.pathname,
+        ts: new Date().toISOString()
+      };
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(payload);
+      if(window.gtag){
+        window.gtag('event', 'shellz_cta_click', {
+          cta: payload.cta,
+          provider: payload.provider,
+          page_type: payload.page_type,
+          offer_type: payload.offer_type,
+          placement: payload.placement,
+          link_url: payload.href
+        });
+      }
+      try {
+        var key = 'shellz_click_log';
+        var current = JSON.parse(localStorage.getItem(key) || '[]');
+        current.push(payload);
+        localStorage.setItem(key, JSON.stringify(current.slice(-50)));
+      } catch(err) {}
+    }, true);
+  });
+})();
