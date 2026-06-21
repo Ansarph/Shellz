@@ -422,3 +422,123 @@
   });
 })();
 
+
+// Shellz coupon button hard-fix: reliable show-code / get-deal behavior on mobile and desktop.
+(function () {
+  function trackCoupon(provider, action, url) {
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'shellz_coupon_click', { provider: provider, action: action, link_url: url });
+      }
+    } catch (e) {}
+  }
+
+  function safeOpen(url) {
+    if (!url || url === '#') return null;
+    var opened = window.open(url, '_blank', 'noopener,noreferrer');
+    return opened;
+  }
+
+  function copyText(text, onDone) {
+    if (!text) { if (onDone) onDone(false); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () {
+        if (onDone) onDone(true);
+      }).catch(function () {
+        if (onDone) onDone(false);
+      });
+    } else {
+      if (onDone) onDone(false);
+    }
+  }
+
+  function ensureFixedCouponModal() {
+    var modal = document.getElementById('shellz-fixed-coupon-modal');
+    if (modal) return modal;
+
+    modal = document.createElement('div');
+    modal.id = 'shellz-fixed-coupon-modal';
+    modal.className = 'shellz-fixed-coupon-modal';
+    modal.innerHTML = '' +
+      '<div class="shellz-fixed-coupon-dialog" role="dialog" aria-modal="true" aria-labelledby="shellz-fixed-coupon-title">' +
+        '<button class="shellz-fixed-coupon-close" type="button" aria-label="Close coupon popup">×</button>' +
+        '<p class="shellz-fixed-coupon-provider" id="shellz-fixed-coupon-provider">Shellz coupon</p>' +
+        '<h2 id="shellz-fixed-coupon-title">Coupon code</h2>' +
+        '<p class="shellz-fixed-coupon-note" id="shellz-fixed-coupon-note">Copy this code and apply it during checkout.</p>' +
+        '<div class="shellz-fixed-code-row">' +
+          '<strong id="shellz-fixed-coupon-code">CODE</strong>' +
+          '<button type="button" id="shellz-fixed-copy-code">Copy</button>' +
+        '</div>' +
+        '<div class="shellz-fixed-coupon-actions">' +
+          '<a class="btn primary" id="shellz-fixed-visit" href="#" target="_blank" rel="sponsored nofollow noopener noreferrer">Visit provider</a>' +
+          '<a class="btn secondary" id="shellz-fixed-review" href="reviews.html">Read review</a>' +
+        '</div>' +
+      '</div>';
+
+    document.body.appendChild(modal);
+
+    function close() {
+      modal.classList.remove('active');
+      document.body.classList.remove('coupon-modal-open');
+    }
+    modal.querySelector('.shellz-fixed-coupon-close').addEventListener('click', close);
+    modal.addEventListener('click', function (event) { if (event.target === modal) close(); });
+    document.addEventListener('keydown', function (event) { if (event.key === 'Escape') close(); });
+
+    return modal;
+  }
+
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest('.show-code-btn');
+    if (!button) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    if (event.stopImmediatePropagation) event.stopImmediatePropagation();
+
+    var provider = button.getAttribute('data-provider') || 'Provider';
+    var title = button.getAttribute('data-title') || 'Coupon code';
+    var code = button.getAttribute('data-code') || '';
+    var url = button.getAttribute('data-url') || button.getAttribute('href') || '#';
+    var review = button.getAttribute('data-review') || 'reviews.html';
+    var realCode = String(button.getAttribute('data-real-code') || '').toLowerCase() === 'true';
+    var label = button.querySelector('.show-code-label');
+    var originalLabel = label ? label.textContent : button.textContent;
+
+    trackCoupon(provider, realCode ? 'show_code' : 'get_deal', url);
+
+    if (!realCode) {
+      if (label) label.textContent = 'Opening deal...';
+      var opened = safeOpen(url);
+      window.setTimeout(function () {
+        if (label) label.textContent = originalLabel;
+        if (!opened && url && url !== '#') window.location.href = url;
+      }, 500);
+      return;
+    }
+
+    var modal = ensureFixedCouponModal();
+    modal.querySelector('#shellz-fixed-coupon-provider').textContent = provider;
+    modal.querySelector('#shellz-fixed-coupon-title').textContent = title;
+    modal.querySelector('#shellz-fixed-coupon-code').textContent = code || 'CHECK DEAL';
+    modal.querySelector('#shellz-fixed-visit').href = url || '#';
+    modal.querySelector('#shellz-fixed-review').href = review || 'reviews.html';
+    modal.querySelector('#shellz-fixed-coupon-note').textContent = 'Code revealed. Copy it, then verify the final checkout total before paying.';
+
+    var copyBtn = modal.querySelector('#shellz-fixed-copy-code');
+    copyBtn.textContent = 'Copy';
+    copyBtn.onclick = function () {
+      copyText(code, function (ok) {
+        copyBtn.textContent = ok ? 'Copied!' : 'Copy manually';
+        window.setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1600);
+      });
+    };
+
+    copyText(code, function () {});
+    safeOpen(url);
+
+    modal.classList.add('active');
+    document.body.classList.add('coupon-modal-open');
+    modal.querySelector('.shellz-fixed-coupon-close').focus();
+  }, true);
+})();

@@ -1194,3 +1194,31 @@
     padding: 10px 8px !important;
   }
 }
+
+/* Shellz coupon button hard-fix duplicate override for pages loading coupon-cards.css after style.css */
+.show-code-btn,
+.coupon-action-panel .show-code-btn,
+.coupon-grid-section .show-code-btn {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  width: 100% !important;
+  min-height: 54px !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  padding: 0 !important;
+  touch-action: manipulation;
+}
+.show-code-btn .show-code-label,
+.show-code-label {
+  grid-column: 1 / -1 !important;
+  display: grid !important;
+  place-items: center !important;
+  min-height: 54px !important;
+  width: 100% !important;
+  padding: 0 16px !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+}
