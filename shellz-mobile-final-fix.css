@@ -471,3 +471,201 @@
     font-size: .9rem !important;
   }
 }
+
+
+/* ===== Shellz mobile center alignment repair | 2026-06-21 =====
+   Previous overflow fix prevented sideways scroll but also forced several
+   containers to margin-left:0. This restores centered mobile layout while
+   keeping all cards within the viewport.
+*/
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  main,
+  #main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Full-width sections can remain full width, but their inner content must be centered. */
+  section,
+  .page-hero,
+  .review-hero,
+  .comparison-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .container,
+  [class*="container"],
+  .content-page,
+  .sources-card,
+  .review-detail,
+  .review-layout,
+  .review-main,
+  .review-sidebar,
+  .shellz-review-page,
+  .eeat-article,
+  .all-reviews-seo-updated,
+  .all-reviews-seo-updated.review-single-column-fixed,
+  .human-detail-section,
+  .shellz-proof-status,
+  .shellz-review-decision-stack,
+  .shellz-review-snapshot,
+  .coupon-grid-section,
+  .coupon-offer-list,
+  .coupon-priority-section,
+  .single-column-coupon-layout,
+  .article-layout,
+  .article-content,
+  .guide,
+  .faq-section,
+  .final-cta,
+  .related-card-grid {
+    width: min(100% - 28px, 1120px) !important;
+    max-width: min(100% - 28px, 1120px) !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: visible !important;
+  }
+
+  .page-hero > .container,
+  .review-hero > .container,
+  .comparison-hero > .container,
+  .site-header .container,
+  .site-footer .container {
+    width: min(100% - 28px, 1120px) !important;
+    max-width: min(100% - 28px, 1120px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .indexed-cluster-callout,
+  .provider-pricing-renewal-block,
+  .provider-testing-plan,
+  .provider-proof-plan,
+  .provider-alternatives-block,
+  .editorial-review-card,
+  .review-decision-card,
+  .feature-snapshot-card,
+  .proof-status-card,
+  .how-we-evaluate-card,
+  .sidebar-card,
+  .verdict-box,
+  .proof-pending-block,
+  .trust-proof-panel,
+  .coupon-status-summary,
+  .shellz-deal-status-box,
+  .shellz-editorial-trust-box,
+  .ads-safe-buyer-box,
+  .couponfollow-style-note,
+  .rocket-promo-callout,
+  .newgen-coupon-hub-cta,
+  .newgen-coupon-cta,
+  .card,
+  .human-card,
+  .deal-card,
+  .provider-card,
+  .review-card,
+  .winner-card,
+  .human-provider-card,
+  .topic-cluster-panel,
+  .related-shellz-guides,
+  .buyer-flow-panel,
+  .calculator-card,
+  .calculator-result-card,
+  .shellz-coupon-card,
+  .shellz-coupon-card.compact {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Cards inside already-centered containers should not add viewport-wide offsets. */
+  .review-detail .indexed-cluster-callout,
+  .review-detail .provider-pricing-renewal-block,
+  .review-detail .provider-testing-plan,
+  .review-detail .provider-proof-plan,
+  .review-detail .provider-alternatives-block,
+  .review-detail .editorial-review-card,
+  .review-detail .review-decision-card,
+  .review-detail .feature-snapshot-card,
+  .review-detail .proof-status-card,
+  .review-detail .sidebar-card,
+  .review-detail .verdict-box,
+  .content-page .indexed-cluster-callout,
+  .content-page .provider-pricing-renewal-block,
+  .content-page .provider-testing-plan {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .review-hero {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .review-hero-cta-row,
+  .hero-actions,
+  .review-actions,
+  .deal-card-actions {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .btn,
+  .details-link,
+  .affiliate-link {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .container,
+  [class*="container"],
+  .content-page,
+  .sources-card,
+  .review-detail,
+  .review-layout,
+  .review-main,
+  .review-sidebar,
+  .shellz-review-page,
+  .eeat-article,
+  .human-detail-section,
+  .shellz-proof-status,
+  .shellz-review-decision-stack,
+  .shellz-review-snapshot,
+  .coupon-grid-section,
+  .coupon-offer-list,
+  .coupon-priority-section,
+  .single-column-coupon-layout,
+  .article-content,
+  .guide,
+  .faq-section,
+  .final-cta,
+  .related-card-grid,
+  .page-hero > .container,
+  .review-hero > .container,
+  .comparison-hero > .container,
+  .site-header .container,
+  .site-footer .container {
+    width: min(100% - 24px, 1120px) !important;
+    max-width: min(100% - 24px, 1120px) !important;
+  }
+}
