@@ -350,3 +350,124 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* ===== Shellz final mobile readability patch | 2026-06-21 =====
+   Screen-recording check showed tables were no longer pushing the page wide,
+   but they were squeezed too tightly. This patch makes tables scroll inside
+   their own card and keeps text readable.
+*/
+@media (max-width: 900px) {
+  .table-wrap,
+  .article-table,
+  .provider-renewal-table,
+  .snapshot-mini-table,
+  .proof-provider-table,
+  .renewal-database-wrap,
+  .testing-status-table-wrap {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
+    max-width: 100% !important;
+    border-radius: 18px !important;
+  }
+
+  .table-wrap table,
+  .article-table table,
+  .provider-renewal-table table,
+  .snapshot-mini-table table,
+  .proof-provider-table table,
+  .renewal-database-wrap table,
+  .testing-status-table-wrap table {
+    width: max-content !important;
+    min-width: 640px !important;
+    max-width: none !important;
+    table-layout: auto !important;
+  }
+
+  .table-wrap th,
+  .table-wrap td,
+  .article-table th,
+  .article-table td,
+  .provider-renewal-table th,
+  .provider-renewal-table td,
+  .snapshot-mini-table th,
+  .snapshot-mini-table td,
+  .proof-provider-table th,
+  .proof-provider-table td,
+  .renewal-database-wrap th,
+  .renewal-database-wrap td,
+  .testing-status-table-wrap th,
+  .testing-status-table-wrap td {
+    max-width: 260px !important;
+    min-width: 150px !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    line-height: 1.45 !important;
+    padding: 12px 14px !important;
+  }
+
+  .provider-renewal-table th:first-child,
+  .provider-renewal-table td:first-child,
+  .article-table th:first-child,
+  .article-table td:first-child {
+    min-width: 170px !important;
+  }
+
+  .table-wrap::after,
+  .article-table::after,
+  .provider-renewal-table::after {
+    content: "Swipe table sideways";
+    display: block;
+    padding: 8px 10px;
+    font-size: .76rem;
+    color: #64748b;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .indexed-cluster-callout,
+  .provider-pricing-renewal-block,
+  .provider-testing-plan,
+  .provider-proof-plan,
+  .provider-alternatives-block {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .indexed-cluster-callout .btn,
+  .provider-pricing-renewal-block .btn,
+  .provider-testing-plan .btn,
+  .provider-proof-plan .btn {
+    min-height: 48px !important;
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .table-wrap table,
+  .article-table table,
+  .provider-renewal-table table,
+  .snapshot-mini-table table,
+  .proof-provider-table table,
+  .renewal-database-wrap table,
+  .testing-status-table-wrap table {
+    min-width: 600px !important;
+  }
+
+  .table-wrap th,
+  .table-wrap td,
+  .article-table th,
+  .article-table td,
+  .provider-renewal-table th,
+  .provider-renewal-table td,
+  .snapshot-mini-table th,
+  .snapshot-mini-table td,
+  .proof-provider-table th,
+  .proof-provider-table td {
+    min-width: 145px !important;
+    padding: 11px 12px !important;
+    font-size: .9rem !important;
+  }
+}
