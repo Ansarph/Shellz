@@ -113,7 +113,19 @@
   background: transparent;
   padding: 0;
 }
-
+.code-peek {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 0 10px;
+  background: #eef5ff;
+  color: #1d4ed8;
+  border: 1px dashed #9bb8ff;
+  border-right: 0;
+  font-weight: 900;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
 .show-code-label {
   grid-column: 1 / -1;
   display: grid;
@@ -134,27 +146,125 @@
   font-weight: 800;
   text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.coupon-details-toggle {
+  margin-top: 12px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: #2563eb;
+  font-weight: 900;
+  cursor: pointer;
+}
+.coupon-extra-details {
+  margin-top: 10px;
+  color: var(--muted);
+}
+.coupon-extra-details ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.coupon-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(15, 23, 42, .62);
+  backdrop-filter: blur(6px);
+}
+.coupon-modal-backdrop.active {
+  display: flex;
+}
+.coupon-modal {
+  width: min(540px, 100%);
+  background: #fff;
+  border-radius: 26px;
+  box-shadow: 0 30px 90px rgba(2, 6, 23, .35);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.55);
+}
+.coupon-modal-head {
+  padding: 22px 24px;
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: #fff;
+  position: relative;
+}
+.coupon-modal-head p {
+  margin: 0 0 4px;
+  color: rgba(255,255,255,.78);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .76rem;
+}
+.coupon-modal-head h2 {
+  margin: 0;
+  color: #fff;
+}
+.coupon-modal-close {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.14);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.coupon-modal-body {
+  padding: 24px;
+}
+.revealed-code-box {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  background: #f8fbff;
+  border: 2px dashed #9bb8ff;
+  border-radius: 16px;
+  padding: 10px;
+  margin: 16px 0;
+}
+.revealed-code {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 52px;
+  color: #0f172a;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-weight: 900;
+  letter-spacing: .08em;
+  overflow-wrap: anywhere;
+}
+.copy-modal-code {
+  border: 0;
+  border-radius: 12px;
+  padding: 0 16px;
+  background: #00bf63;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+.coupon-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
 .coupon-modal-actions .btn {
   flex: 1 1 180px;
 }
-
-@media  (max-width: 820px) {
-  .shellz-coupon-card, .shellz-coupon-card.compact {
+.coupon-modal-note {
+  color: var(--muted);
+  margin: 0;
+}
+@media (max-width: 820px) {
+  .shellz-coupon-card,
+  .shellz-coupon-card.compact {
     grid-template-columns: 1fr;
   }
   .coupon-discount-badge {
@@ -190,7 +300,7 @@
   width: 100%;
   grid-template-columns: 120px minmax(0, 1fr) 210px;
 }
-@media  (max-width: 820px) {
+@media (max-width: 820px) {
   .coupon-grid-section .shellz-coupon-card {
     grid-template-columns: 1fr;
   }
@@ -223,7 +333,7 @@
   appearance: none !important;
   -webkit-appearance: none !important;
 }
-@media  (max-width: 820px) {
+@media (max-width: 820px) {
   .coupon-grid-section .shellz-coupon-card {
     grid-template-columns: 1fr !important;
   }
@@ -232,6 +342,7 @@
 
 
 /* Shellz coupon layout refresh - June 2026 */
+.coupon-page-shell,
 .couponfollow-style-note {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
 }
@@ -326,7 +437,8 @@
   font-weight: 900;
 }
 
-.coupon-main h2, .coupon-main h3 {
+.coupon-main h2,
+.coupon-main h3 {
   margin: 0 0 8px;
   color: #0f172a;
   font-size: clamp(1.1rem, 2vw, 1.38rem);
@@ -365,13 +477,23 @@
   font-weight: 900;
 }
 
-.show-code-btn:hover, .show-code-btn:focus-visible {
+.show-code-btn:hover,
+.show-code-btn:focus-visible {
   transform: translateY(-1px);
   box-shadow: 0 16px 32px rgba(15, 118, 110, .28);
   outline: none;
 }
 
-
+.code-peek {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(-45deg, #fef3c7, #fef3c7 8px, #fde68a 8px, #fde68a 16px);
+  color: #78350f;
+  border-right: 1px dashed rgba(120, 53, 15, .35);
+  font-size: .82rem;
+  letter-spacing: .04em;
+}
 
 .show-code-label {
   grid-column: 1 / -1;
@@ -402,36 +524,119 @@
 }
 
 /* Modal */
+.coupon-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  place-items: center;
+  padding: 18px;
+  background: rgba(15, 23, 42, .62);
+  backdrop-filter: blur(8px);
+}
 
+.coupon-modal-backdrop.active {
+  display: grid;
+}
 
+.coupon-modal {
+  width: min(520px, 100%);
+  overflow: hidden;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 28px 80px rgba(2, 6, 23, .35);
+  border: 1px solid rgba(255,255,255,.45);
+}
 
+.coupon-modal-head {
+  position: relative;
+  padding: 22px 58px 20px 24px;
+  background: linear-gradient(135deg, #0f766e, #2563eb);
+  color: #ffffff;
+}
 
+.coupon-modal-head p {
+  margin: 0 0 4px;
+  font-size: .82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  opacity: .9;
+}
 
+.coupon-modal-head h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  line-height: 1.1;
+}
 
+.coupon-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  color: #ffffff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
 
+.coupon-modal-body {
+  padding: 24px;
+}
 
+.coupon-modal-note {
+  margin: 0 0 18px;
+  color: #516173;
+}
 
+.revealed-code-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 110px;
+  gap: 10px;
+  margin-bottom: 18px;
+}
 
+.revealed-code {
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 0 16px;
+  border-radius: 16px;
+  border: 2px dashed #0f766e;
+  background: #f0fdfa;
+  color: #0b4f4a;
+  font-size: clamp(1.2rem, 4vw, 1.65rem);
+  font-weight: 950;
+  letter-spacing: .05em;
+  overflow-wrap: anywhere;
+}
 
+.copy-modal-code {
+  border: 0;
+  border-radius: 16px;
+  background: #0f172a;
+  color: #ffffff;
+  font-weight: 900;
+  cursor: pointer;
+}
 
+.coupon-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 
+body.coupon-modal-open {
+  overflow: hidden;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media  (max-width: 860px) {
-  .shellz-coupon-card, .shellz-coupon-card.compact {
+@media (max-width: 860px) {
+  .shellz-coupon-card,
+  .shellz-coupon-card.compact {
     grid-template-columns: 1fr;
     padding: 16px;
   }
@@ -444,7 +649,10 @@
     width: 100%;
   }
 
-  
+  .coupon-modal-actions,
+  .revealed-code-box {
+    grid-template-columns: 1fr;
+  }
 }
 /* ===== Shellz warm neutral coupon theme override | 2026-06-17 ===== */
 .couponfollow-style-note {
@@ -464,10 +672,16 @@
   border: 2px dashed #B4A79E;
   background: linear-gradient(180deg, rgba(230, 220, 211, 0.72) 0%, rgba(255,255,255,0.95) 100%);
 }
-.coupon-discount-badge strong, .coupon-review-link, .coupon-store {
+.coupon-discount-badge strong,
+.coupon-review-link,
+.coupon-details-toggle,
+.code-peek,
+.coupon-store {
   color: #3F352C;
 }
-.coupon-discount-badge span, .coupon-main p {
+.coupon-discount-badge span,
+.coupon-main p,
+.coupon-extra-details {
   color: #6E6259;
 }
 .coupon-tag {
@@ -476,20 +690,43 @@
   color: #3F352C;
 }
 .show-code-btn { box-shadow: 0 12px 24px rgba(63, 53, 44, 0.18); }
-
+.code-peek {
+  background: #E6DCD3;
+  border: 1px dashed #B4A79E;
+}
 .show-code-label {
   background: linear-gradient(135deg, #3F352C, #000000);
   color: #FFFFFF;
 }
-
-
-
-
-
-
-
+.coupon-modal-backdrop {
+  background: rgba(0, 0, 0, 0.62);
+}
+.coupon-modal {
+  border: 1px solid rgba(180, 167, 158, 0.8);
+}
+.coupon-modal-head {
+  background: linear-gradient(135deg, #3F352C, #000000);
+}
+.revealed-code-box {
+  background: rgba(230, 220, 211, 0.48);
+  border: 2px dashed #B4A79E;
+}
+.revealed-code {
+  color: #3F352C;
+}
+.copy-modal-code {
+  background: #3F352C;
+  color: #FFFFFF;
+}
+.copy-modal-code:hover {
+  background: #000000;
+}
 /* ===== Clean Trust Tech coupon overrides | 2026-06-17 ===== */
-.shellz-coupon-card {
+.shellz-coupon-card,
+.coupon-card,
+.copy-modal,
+.coupon-modal,
+.coupon-modal-content {
   background: #FFFFFF !important;
   border-color: #E2E8F0 !important;
   color: #0F172A !important;
@@ -500,35 +737,53 @@
   background: linear-gradient(180deg, #2563EB, #1D4ED8) !important;
 }
 
-.coupon-discount-badge, .coupon-tag {
+.coupon-discount-badge,
+.coupon-tag,
+.verified-badge,
+.last-checked,
+.deal-status {
   background: #ECFDF5 !important;
   border-color: #BBF7D0 !important;
   color: #166534 !important;
 }
 
-.coupon-discount-badge strong, .coupon-review-link, .coupon-store {
+.coupon-discount-badge strong,
+.coupon-review-link,
+.coupon-details-toggle,
+.code-peek,
+.coupon-store {
   color: #2563EB !important;
 }
 
-.show-code-label {
+.show-code-label,
+.copy-modal-code,
+.coupon-cta,
+button.copy-code {
   background: #2563EB !important;
   color: #FFFFFF !important;
   border-color: #2563EB !important;
 }
 
-.show-code-label:hover {
+.show-code-label:hover,
+.coupon-cta:hover,
+button.copy-code:hover {
   background: #1D4ED8 !important;
   border-color: #1D4ED8 !important;
 }
 
-
+.coupon-fineprint,
+.coupon-details,
+.coupon-meta,
+.coupon-description {
+  color: #475569 !important;
+}
 
 
 /* shellz-coupon-logo-system-20260618: provider identity inside coupon cards */
 .coupon-logo-wrap { display: grid; place-items: center; width: 100%; min-height: 42px; margin-bottom: 10px; }
 .coupon-logo-wrap img { width: 96px; max-width: 100%; max-height: 38px; object-fit: contain; display: block; }
 .shellz-coupon-card .coupon-discount-badge { align-content: center; }
-@media  (max-width: 760px) {
+@media (max-width: 760px) {
   .coupon-logo-wrap { margin-bottom: 8px; }
   .coupon-logo-wrap img { width: 88px; max-height: 34px; }
 }
@@ -537,7 +792,8 @@
 /* ===== Shellz professional offer/coupon card refresh | 2026-06-20 =====
    Fixes coupon/deal cards across coupon pages and review sections.
 */
-.shellz-coupon-card, .shellz-coupon-card.compact {
+.shellz-coupon-card,
+.shellz-coupon-card.compact {
   grid-template-columns: 140px minmax(0, 1fr) 220px !important;
   gap: 20px !important;
   padding: 22px !important;
@@ -602,7 +858,8 @@
   min-height: 30px !important;
   font-size: .76rem !important;
 }
-.coupon-main h2, .coupon-main h3 {
+.coupon-main h2,
+.coupon-main h3 {
   margin: 0 0 10px !important;
   font-size: clamp(1.25rem, 1.85vw, 1.6rem) !important;
   line-height: 1.18 !important;
@@ -634,7 +891,8 @@
   font-weight: 900 !important;
   letter-spacing: -.01em !important;
 }
-.show-code-btn:hover, .show-code-btn:focus-visible {
+.show-code-btn:hover,
+.show-code-btn:focus-visible {
   transform: translateY(-2px) !important;
   box-shadow: 0 18px 32px rgba(15, 118, 110, 0.22) !important;
 }
@@ -647,13 +905,16 @@
   font-weight: 900 !important;
   transition: background-color .18s ease, border-color .18s ease, transform .18s ease !important;
 }
-.coupon-review-link:hover, .coupon-review-link:focus-visible {
+.coupon-review-link:hover,
+.coupon-review-link:focus-visible {
   background: #f8fafc !important;
   border-color: #94a3b8 !important;
   transform: translateY(-1px) !important;
 }
-@media  (max-width: 860px) {
-  .shellz-coupon-card, .shellz-coupon-card.compact, .coupon-grid-section .shellz-coupon-card {
+@media (max-width: 860px) {
+  .shellz-coupon-card,
+  .shellz-coupon-card.compact,
+  .coupon-grid-section .shellz-coupon-card {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
     padding: 18px !important;
@@ -665,532 +926,16 @@
     padding: 14px !important;
     gap: 6px !important;
   }
-  .coupon-main h2, .coupon-main h3 {
+  .coupon-main h2,
+  .coupon-main h3 {
     font-size: clamp(1.18rem, 5vw, 1.38rem) !important;
     line-height: 1.22 !important;
   }
   .coupon-main p {
     font-size: .96rem !important;
   }
-  .show-code-btn, .coupon-review-link {
-    width: 100% !important;
-  }
-}
-
-
-/* ===== Shellz mobile horizontal overflow final hard fix | 2026-06-21 =====
-   Fixes coupon/review pages still wider than the phone viewport.
-   Main cause: coupon cards and supporting cards had desktop grid widths,
-   long headings, and inline panels that could exceed 100vw.
-*/
-@media (max-width: 820px) {
-  html,
-  body {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: clip !important;
-  }
-
-  body {
-    position: relative !important;
-  }
-
-  body > *,
-  main,
-  section,
-  article,
-  aside,
-  header,
-  footer,
-  div {
-    max-width: 100% !important;
-  }
-
-  .container,
-  [class*="container"],
-  .page-hero,
-  .page-hero .container,
-  .review-hero,
-  .review-hero .container,
-  .coupon-grid-section,
-  .single-column-coupon-layout,
-  .coupon-priority-section,
-  .coupon-offer-list,
-  .coupon-offer-list.single-page,
-  .couponfollow-style-note,
-  .coupon-status-summary,
-  .shellz-deal-status-box,
-  .shellz-editorial-trust-box,
-  .ads-safe-buyer-box,
-  .content-page,
-  .sources-card,
-  .review-detail,
-  .review-layout,
-  .review-sidebar,
-  .review-main,
-  .guide,
-  .faq-section,
-  .human-detail-section,
-  .indexed-page-boost,
-  .final-cta,
-  .rocket-promo-callout,
-  .newgen-coupon-hub-cta,
-  .newgen-coupon-cta {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    overflow-x: hidden !important;
-  }
-
-  .page-hero h1,
-  .review-hero h1,
-  .content-page h1,
-  .content-page h2,
-  .sources-card h1,
-  .sources-card h2,
-  .review-detail h1,
-  .review-detail h2,
-  .coupon-main h2,
-  .couponfollow-style-note h2,
-  .section-heading h2,
-  .shellz-coupon-card h2,
-  .coupon-card h2,
-  h1,
-  h2,
-  h3,
-  p,
-  li,
-  a,
-  span,
-  strong {
-    max-width: 100% !important;
-    min-width: 0 !important;
-    overflow-wrap: anywhere !important;
-    word-break: normal !important;
-  }
-
-  .shellz-coupon-card,
-  .shellz-coupon-card.compact {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 14px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 16px !important;
-    border-radius: 22px !important;
-    overflow: hidden !important;
-  }
-
-  .shellz-coupon-card::before {
-    width: 4px !important;
-  }
-
-  .coupon-discount-badge {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    min-height: auto !important;
-    padding: 12px !important;
-    border-radius: 18px !important;
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    place-items: center !important;
-    text-align: center !important;
-  }
-
-  .coupon-discount-badge strong {
-    font-size: clamp(1.35rem, 9vw, 2.1rem) !important;
-    line-height: 1.05 !important;
-    white-space: normal !important;
-  }
-
-  .coupon-logo-wrap,
-  .coupon-logo-wrap img {
-    max-width: 100% !important;
-  }
-
-  .coupon-main,
-  .coupon-provider-row,
-  .coupon-trust-points,
-  .coupon-proof-meta,
-  .coupon-action-panel {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    overflow: hidden !important;
-  }
-
-  .coupon-provider-row {
-    display: flex !important;
-    flex-wrap: wrap !important;
-  }
-
-  .coupon-tag,
-  .coupon-store,
-  .coupon-proof-meta span,
-  .coupon-trust-points li {
-    white-space: normal !important;
-  }
-
-  .coupon-proof-meta {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 8px !important;
-  }
-
-  .coupon-proof-meta span {
-    justify-content: center !important;
-    text-align: center !important;
-  }
-
-  .coupon-action-panel {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 10px !important;
-  }
-
   .show-code-btn,
-  .coupon-action-panel a,
-  .coupon-review-link,
-  .btn,
-  .details-link {
+  .coupon-review-link {
     width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    white-space: normal !important;
-    text-align: center !important;
-  }
-
-  .show-code-btn {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) !important;
-    min-height: 54px !important;
-  }
-
-  .show-code-label {
-    grid-column: 1 / -1 !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    padding: 12px 14px !important;
-    line-height: 1.15 !important;
-  }
-
-  .show-code-peel,
-  .code-peel,
-  .coupon-code-hidden {
-    display: none !important;
-  }
-
-  .table-wrap,
-  .article-table,
-  .proof-provider-table,
-  .renewal-database-wrap,
-  .testing-status-table-wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  table {
-    min-width: 620px !important;
-  }
-
-  .provider-hero-lockup,
-  .provider-hero-card,
-  .provider-card,
-  .review-card,
-  .deal-card,
-  .human-card,
-  .topic-cluster-panel,
-  .related-shellz-guides,
-  .buyer-flow-panel,
-  .proof-pending-block,
-  .trust-proof-panel,
-  .calculator-card,
-  .calculator-result-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    overflow: hidden !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .container,
-  [class*="container"],
-  .page-hero .container,
-  .review-hero .container,
-  .coupon-grid-section,
-  .content-page,
-  .sources-card,
-  .review-detail {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
-
-  .shellz-coupon-card,
-  .shellz-coupon-card.compact {
-    padding: 14px !important;
-    border-radius: 20px !important;
-  }
-
-  .page-hero h1,
-  .review-hero h1,
-  h1 {
-    font-size: clamp(1.6rem, 8vw, 2.1rem) !important;
-    line-height: 1.12 !important;
-  }
-
-  .coupon-main h2,
-  .shellz-coupon-card h2,
-  h2 {
-    font-size: clamp(1.28rem, 6.8vw, 1.75rem) !important;
-    line-height: 1.18 !important;
-  }
-
-  table {
-    min-width: 560px !important;
-  }
-}
-
-
-/* ===== Shellz mobile viewport clamp fix for review/coupon pages | 2026-06-21 =====
-   This is stricter than overflow hiding. It forces the document, main area,
-   review cards, coupon warning boxes, and tables to render within 100vw.
-*/
-@media (max-width: 820px) {
-  html {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-
-  body {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    min-width: 0 !important;
-    overflow-x: hidden !important;
-    position: relative !important;
-  }
-
-  #main-content,
-  main,
-  .site-main,
-  .page,
-  .page-wrap,
-  .content-wrap {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    min-width: 0 !important;
-    overflow-x: hidden !important;
-  }
-
-  main > *,
-  #main-content > *,
-  .page-hero,
-  .review-hero,
-  .section,
-  section {
-    width: 100% !important;
-    max-width: 100vw !important;
-    min-width: 0 !important;
-    overflow-x: hidden !important;
-  }
-
-  .container,
-  .container.review-detail,
-  .container.content-page,
-  .container.sources-card,
-  .review-detail,
-  .content-page,
-  .sources-card,
-  .review-layout,
-  .review-main,
-  .review-sidebar,
-  .shellz-review-page,
-  .eeat-article,
-  .all-reviews-seo-updated,
-  .all-reviews-seo-updated.review-single-column-fixed,
-  .human-detail-section,
-  .shellz-proof-status,
-  .shellz-review-decision-stack,
-  .shellz-review-snapshot,
-  .related-card-grid,
-  .faq-section,
-  .final-cta {
-    width: calc(100vw - 32px) !important;
-    max-width: calc(100vw - 32px) !important;
-    min-width: 0 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    overflow-x: hidden !important;
-  }
-
-  .indexed-cluster-callout,
-  .provider-pricing-renewal-block,
-  .provider-testing-plan,
-  .provider-proof-plan,
-  .provider-alternatives-block,
-  .review-decision-card,
-  .feature-snapshot-card,
-  .proof-status-card,
-  .how-we-evaluate-card,
-  .editorial-review-card,
-  .sidebar-card,
-  .verdict-box,
-  .proof-pending-block,
-  .trust-proof-panel,
-  .coupon-status-summary,
-  .shellz-deal-status-box,
-  .shellz-editorial-trust-box,
-  .ads-safe-buyer-box,
-  .rocket-promo-callout,
-  .newgen-coupon-hub-cta,
-  .newgen-coupon-cta,
-  .shellz-coupon-card,
-  .shellz-coupon-card.compact {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    overflow-x: hidden !important;
-  }
-
-  .indexed-cluster-callout .btn,
-  .provider-pricing-renewal-block .btn,
-  .provider-testing-plan .btn,
-  .shellz-coupon-card .btn,
-  .shellz-coupon-card button,
-  .shellz-coupon-card a,
-  .review-detail .btn,
-  .review-detail button,
-  .review-detail .details-link {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    white-space: normal !important;
-    overflow-wrap: anywhere !important;
-    text-align: center !important;
-    justify-content: center !important;
-  }
-
-  .table-wrap,
-  .article-table,
-  .provider-renewal-table,
-  .snapshot-mini-table,
-  .proof-provider-table,
-  .renewal-database-wrap {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  .review-detail table,
-  .content-page table,
-  .sources-card table,
-  .provider-renewal-table table,
-  .snapshot-mini-table table,
-  .proof-provider-table table,
-  table {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    table-layout: fixed !important;
-  }
-
-  th,
-  td {
-    max-width: 1px !important;
-    overflow-wrap: anywhere !important;
-    word-break: normal !important;
-    white-space: normal !important;
-    padding: 12px 10px !important;
-  }
-
-  .coupon-discount-badge,
-  .coupon-main,
-  .coupon-action-panel,
-  .coupon-provider-row,
-  .coupon-trust-points,
-  .coupon-proof-meta,
-  .coupon-logo-wrap {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-  }
-
-  .coupon-main h2,
-  .indexed-cluster-callout h2,
-  .provider-pricing-renewal-block h2,
-  .provider-testing-plan h2,
-  .review-detail h1,
-  .review-detail h2,
-  .review-detail h3 {
-    max-width: 100% !important;
-    overflow-wrap: anywhere !important;
-    word-break: normal !important;
-    white-space: normal !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .container,
-  .container.review-detail,
-  .container.content-page,
-  .container.sources-card,
-  .review-detail,
-  .content-page,
-  .sources-card,
-  .review-layout,
-  .review-main,
-  .shellz-review-page,
-  .eeat-article,
-  .human-detail-section,
-  .shellz-proof-status,
-  .shellz-review-decision-stack,
-  .shellz-review-snapshot,
-  .faq-section,
-  .final-cta {
-    width: calc(100vw - 24px) !important;
-    max-width: calc(100vw - 24px) !important;
-  }
-
-  .indexed-cluster-callout,
-  .provider-pricing-renewal-block,
-  .provider-testing-plan,
-  .provider-proof-plan,
-  .review-decision-card,
-  .feature-snapshot-card,
-  .proof-status-card,
-  .sidebar-card,
-  .verdict-box,
-  .shellz-coupon-card,
-  .shellz-coupon-card.compact {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
-
-  th,
-  td {
-    font-size: .86rem !important;
-    padding: 10px 8px !important;
   }
 }
