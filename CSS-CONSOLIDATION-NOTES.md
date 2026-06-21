@@ -87,3 +87,73 @@ rewrite live ones). A second pass to standardize breakpoints and reduce
 !important reliance would further reduce risk on future edits, but
 touches live, currently-rendering rules and needs visual QA on a staging
 environment rather than code-only verification.
+
+---
+
+# Verdict Card Mobile Overflow Fix — 2026-06-20 (follow-up)
+
+## The bug (reported with screenshot)
+
+On mobile, the "Shellz Verdict" card on review pages (the card with the
+quick-verdict heading and "Check Current Price" / "Coupon" buttons) was
+overflowing the right edge of the screen — heading text and the primary
+CTA button were getting clipped, not wrapping.
+
+## Root cause
+
+The global `h2 { font-size: clamp(1.8rem, 3.6vw, 2.55rem) }` rule has no
+mobile-specific override and no media query guard. On narrow phones the
+`3.6vw` term shrinks toward nothing, so the clamp floors out at its
+minimum, 1.8rem (~29px) — too large for the verdict card's narrower
+column width on a ~360-390px-wide phone. Combined with no explicit
+word-wrap rule on that specific heading, long words in headings like
+"WordPress" pushed the card wider than the viewport. Because `html, body`
+have `overflow-x: hidden`, the overflow wasn't scrollable — it was
+silently clipped, which is what produced the cut-off look in the
+screenshot.
+
+The "Check Current Price" button appearing clipped in the same screenshot
+was a downstream symptom of the same cause, not a separate bug — the
+button's own CSS was already correctly width-constrained
+(`width: 100%; max-width: 100%`); it only looked cut off because its
+parent container had been forced wider than the screen by the heading.
+
+## Fix applied
+
+Added one new rule (in both style.css and lovable-theme.css, inside the
+existing `@media (max-width: 760px)` block, for cascade safety):
+
+```css
+.shellz-cro-verdict h2, .cro-verdict-main h2 {
+  font-size: clamp(1.3rem, 7vw, 1.7rem) !important;
+  line-height: 1.25 !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+```
+
+This affects all 17 review pages that use the `.shellz-cro-verdict` /
+`.cro-verdict-main` structure (one fix, applied site-wide via the shared
+stylesheets — no per-page HTML edits needed).
+
+## On the sticky-bar overlap also visible in the screenshot
+
+The mobile sticky CTA bar (View Deal / Compare) is `position: fixed`,
+so it always renders on top of whatever content is scrolled underneath
+it — that part is working as designed, the same way sticky CTA bars
+work on most e-commerce/review sites. It only looked like a bug here
+because it was overlapping a verdict card that was itself rendered too
+wide; once the heading no longer overflows, the in-card CTA renders
+fully within the card above the sticky bar's strip, and the overlap
+reads as normal scroll behavior rather than a glitch.
+
+## Verification
+
+Re-ran the cascade-equivalence check after this change: the new rule
+resolves as the winning declaration for `.shellz-cro-verdict h2` and
+`.cro-verdict-main h2` font-size/wrap properties at the 760px breakpoint,
+confirmed via the same cascade-resolution script used for the original
+consolidation. Both stylesheets re-parsed with zero errors after the edit.
+Cache-busting version bumped to `20260620-verdict-overflow-fix` on all
+91 HTML references.
+

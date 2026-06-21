@@ -7407,6 +7407,7 @@ body { padding-bottom: 0; }
   .section-heading { margin: 32px 0 16px; }
   .need-card, .buyer-guide-grid a, .testing-status-grid article, .alternative-grid a { min-height: auto; padding: 18px; }
   .cro-verdict-main, .cro-verdict-side, .shellz-cro-bottom-cta { padding: 18px; border-radius: 20px; }
+  .shellz-cro-verdict h2, .cro-verdict-main h2 { font-size: clamp(1.3rem, 7vw, 1.7rem) !important; line-height: 1.25 !important; overflow-wrap: break-word !important; word-break: break-word !important; }
   .review-trust-chips { gap: 6px; }
   .review-trust-chips span { font-size: .78rem; min-height: 28px; }
   body:has(.mobile-sticky-cta) { padding-bottom: 76px; }
