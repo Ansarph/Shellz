@@ -9016,3 +9016,290 @@ table td {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* ===== Shellz all-pages mobile layout hard fix | 2026-06-21 =====
+   Based on screen recording review:
+   - fixed/sticky bottom CTA was covering page content and footer
+   - review heroes needed tighter mobile spacing
+   - provider lockup/logo blocks needed safer mobile sizing
+   - tables/cards/buttons needed consistent no-overflow behavior
+*/
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+img, svg, video, canvas {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* Stop mobile CTA bars from covering content on every page */
+.mobile-sticky-cta,
+.mobile-home-sticky-cta,
+.post-mobile-sticky-cta {
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  width: min(100%, 720px) !important;
+  max-width: calc(100% - 28px) !important;
+  margin: 18px auto 22px !important;
+  z-index: 1 !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .08) !important;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: 0 !important;
+  }
+
+  .container,
+  .page-hero .container,
+  .review-hero .container,
+  .content-page,
+  .sources-card,
+  .review-detail,
+  .article-body,
+  .article-shell,
+  .review-layout,
+  .coupon-grid-section,
+  .shellz-deal-status-box,
+  .shellz-editorial-trust-box,
+  .ads-safe-buyer-box,
+  .human-detail-section,
+  .faq-section,
+  .guide,
+  .final-cta,
+  .home-cro-top5,
+  .home-cro-needs,
+  .home-cro-coupons,
+  .home-cro-testing,
+  .home-cro-guides,
+  .latest-shellz-updates,
+  .home-methodology-cta {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .page-hero,
+  .review-hero,
+  .comparison-hero,
+  .human-comparison-hero {
+    overflow: hidden !important;
+    padding-top: 26px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .page-hero h1,
+  .review-hero h1,
+  .comparison-hero h1,
+  .human-comparison-hero h1 {
+    font-size: clamp(1.85rem, 8.2vw, 2.55rem) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    max-width: 100% !important;
+  }
+
+  .page-hero .hero-text,
+  .review-hero .hero-text,
+  .comparison-hero .hero-text,
+  .human-comparison-hero .hero-text,
+  .hero-text {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    max-width: 100% !important;
+  }
+
+  .provider-hero-lockup {
+    display: grid !important;
+    grid-template-columns: 116px minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 12px !important;
+    padding: 12px !important;
+    border-radius: 20px !important;
+  }
+
+  .provider-hero-lockup .provider-logo,
+  .provider-hero-lockup .provider-logo.large {
+    width: 108px !important;
+    height: 58px !important;
+    min-width: 0 !important;
+    padding: 8px 10px !important;
+  }
+
+  .provider-hero-lockup p,
+  .provider-hero-lockup span,
+  .provider-hero-lockup strong {
+    overflow-wrap: break-word !important;
+    min-width: 0 !important;
+  }
+
+  .card,
+  .human-card,
+  .review-card,
+  .deal-card,
+  .provider-card,
+  .winner-card,
+  .human-provider-card,
+  .related-card,
+  .related-link-card,
+  .cluster-link-card,
+  .buyer-flow-card,
+  .topic-cluster-panel,
+  .related-shellz-guides,
+  .buyer-flow-panel,
+  .coupon-hub-upgrade-panel,
+  .comparison-editor-note,
+  .human-comparison-intro,
+  .human-final-verdict,
+  .trust-proof-panel,
+  .author-proof-card,
+  .calculator-card,
+  .calculator-result-card,
+  .coupon-status-summary,
+  .proof-pending-block,
+  .verdict-box,
+  .newgen-provider-card,
+  .newgen-coupon-hub-cta,
+  .review-decision-card,
+  .feature-snapshot-card,
+  .proof-status-card,
+  .sidebar-card {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    border-radius: 20px !important;
+  }
+
+  .mobile-sticky-cta,
+  .mobile-home-sticky-cta,
+  .post-mobile-sticky-cta {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    padding: 12px !important;
+    border-radius: 20px !important;
+    background: #ffffff !important;
+    border: 1px solid #dbe3ef !important;
+  }
+
+  .mobile-sticky-cta .btn,
+  .mobile-home-sticky-cta .btn,
+  .post-mobile-sticky-cta .btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 48px !important;
+    padding: 10px 12px !important;
+    border-radius: 16px !important;
+    font-size: .96rem !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .table-wrap,
+  .article-table,
+  .proof-provider-table,
+  .renewal-database-wrap {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    max-width: none !important;
+  }
+
+  .review-layout,
+  .content-grid,
+  .calculator-grid,
+  .winner-grid,
+  .human-grid,
+  .cluster-link-grid,
+  .related-link-grid,
+  .buyer-flow-grid,
+  .coupon-status-columns,
+  .review-decision-grid,
+  .feature-snapshot-grid,
+  .proof-status-grid,
+  .need-card-grid,
+  .home-coupon-grid,
+  .buyer-guide-grid,
+  .testing-status-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .review-actions,
+  .hero-actions,
+  .cro-verdict-actions,
+  .provider-actions,
+  .archive-provider-actions,
+  .coupon-action-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .review-actions .btn,
+  .hero-actions .btn,
+  .cro-verdict-actions .btn,
+  .provider-actions .btn,
+  .archive-provider-actions .btn,
+  .coupon-action-panel .btn,
+  .coupon-action-panel button,
+  .coupon-action-panel a,
+  .review-actions .details-link,
+  .provider-actions .details-link {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .site-footer,
+  .site-footer .container {
+    padding-bottom: 24px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .page-hero h1,
+  .review-hero h1,
+  .comparison-hero h1,
+  .human-comparison-hero h1 {
+    font-size: clamp(1.62rem, 8.7vw, 2.15rem) !important;
+  }
+
+  .provider-hero-lockup {
+    grid-template-columns: 92px minmax(0, 1fr) !important;
+  }
+
+  .provider-hero-lockup .provider-logo,
+  .provider-hero-lockup .provider-logo.large {
+    width: 86px !important;
+    height: 52px !important;
+  }
+
+  .mobile-sticky-cta,
+  .mobile-home-sticky-cta,
+  .post-mobile-sticky-cta {
+    grid-template-columns: 1fr !important;
+  }
+}
