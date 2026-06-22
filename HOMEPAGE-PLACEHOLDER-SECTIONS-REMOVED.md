@@ -1,0 +1,1 @@
+Removed user-facing placeholder/home guidance blocks from index.html: trust strip, decision checklist, and homepage streamlined note. Homepage now flows directly from hero/fast paths to Top 5 hosting picks.
