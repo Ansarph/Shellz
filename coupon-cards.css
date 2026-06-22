@@ -1222,3 +1222,238 @@
   white-space: nowrap !important;
   text-align: center !important;
 }
+
+/* ===== Shellz professional mobile coupon/deal card layout | 2026-06-22 =====
+   Applies the cleaner Hostinger coupon mobile layout: large verification panel,
+   brand row, icon status rows, strong primary CTA, and outline review CTA.
+*/
+.coupon-priority-page .review-detail.coupon-priority-section {
+  padding-top: clamp(18px, 3vw, 36px) !important;
+}
+.coupon-priority-page .coupon-offer-list.single-page {
+  max-width: 900px !important;
+  margin: clamp(18px, 3vw, 34px) auto clamp(28px, 4vw, 48px) !important;
+}
+.coupon-priority-page .shellz-coupon-card.compact,
+.coupon-priority-page .shellz-coupon-card {
+  display: grid !important;
+  grid-template-columns: 240px minmax(0, 1fr) 220px !important;
+  gap: 24px !important;
+  align-items: center !important;
+  padding: clamp(22px, 3vw, 34px) !important;
+  border: 1px solid #d9e5ef !important;
+  border-radius: 32px !important;
+  background: #fff !important;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, .10) !important;
+  overflow: hidden !important;
+}
+.coupon-priority-page .shellz-coupon-card::before {
+  width: 6px !important;
+  background: linear-gradient(180deg, #0f766e 0%, #14b8a6 48%, #2563eb 100%) !important;
+}
+.coupon-priority-page .coupon-discount-badge {
+  position: relative !important;
+  min-height: 190px !important;
+  padding: 28px 18px !important;
+  border: 1px solid #a9dfd8 !important;
+  border-radius: 26px !important;
+  background: radial-gradient(circle at 15% 20%, rgba(255,255,255,.95), transparent 28%), linear-gradient(135deg, #ecfffb 0%, #e6fbf7 54%, #eef8ff 100%) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8) !important;
+}
+.coupon-priority-page .coupon-discount-badge::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: #0f766e;
+  color: #fff;
+  font-weight: 900;
+  font-size: 28px;
+  box-shadow: 0 10px 26px rgba(15,118,110,.22);
+}
+.coupon-priority-page .coupon-discount-badge strong {
+  color: #0b3b3b !important;
+  font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
+  line-height: .95 !important;
+  letter-spacing: -.055em !important;
+}
+.coupon-priority-page .coupon-discount-badge span {
+  margin-top: 12px !important;
+  padding: 10px 20px !important;
+  border-radius: 999px !important;
+  background: #eaf5ff !important;
+  border: 1px solid #bad9ff !important;
+  color: #075985 !important;
+  font-size: .86rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .12em !important;
+}
+.coupon-priority-page .coupon-main {
+  gap: 14px !important;
+}
+.coupon-priority-page .coupon-provider-row {
+  margin: 0 0 12px !important;
+  gap: 12px !important;
+}
+.coupon-priority-page .coupon-store {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem) !important;
+  color: #07142e !important;
+}
+.coupon-priority-page .coupon-tag {
+  min-height: 36px !important;
+  padding: 7px 15px !important;
+  border-radius: 999px !important;
+  background: #f1f5f9 !important;
+  border-color: #dbe3ec !important;
+  color: #334155 !important;
+  font-size: .86rem !important;
+}
+.coupon-priority-page .coupon-main h2,
+.coupon-priority-page .coupon-main h3 {
+  margin: 0 0 10px !important;
+  color: #07142e !important;
+  font-size: clamp(1.55rem, 3.2vw, 2.35rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.045em !important;
+}
+.coupon-priority-page .coupon-main p {
+  color: #536174 !important;
+  font-size: clamp(1rem, 1.4vw, 1.15rem) !important;
+  line-height: 1.78 !important;
+}
+.coupon-priority-page .coupon-proof-meta {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  margin-top: 18px !important;
+}
+.coupon-priority-page .coupon-proof-meta span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  min-height: 44px !important;
+  padding: 8px 12px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(180deg, #f0f8ff 0%, #e9f4ff 100%) !important;
+  border: 1px solid #bdd7f3 !important;
+  color: #1559c7 !important;
+  font-weight: 900 !important;
+  text-align: center !important;
+}
+.coupon-priority-page .coupon-proof-meta span:nth-child(1)::before { content: "📅"; }
+.coupon-priority-page .coupon-proof-meta span:nth-child(2)::before { content: "🛡️"; }
+.coupon-priority-page .coupon-proof-meta span:nth-child(3)::before { content: "🧾"; }
+.coupon-priority-page .coupon-action-panel {
+  align-self: stretch !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 14px !important;
+}
+.coupon-priority-page .show-code-btn {
+  min-height: 64px !important;
+  border-radius: 22px !important;
+  box-shadow: 0 18px 34px rgba(15, 118, 110, .23) !important;
+}
+.coupon-priority-page .show-code-label {
+  position: relative !important;
+  background: linear-gradient(135deg, #0f766e 0%, #0c8b7f 46%, #2563eb 100%) !important;
+  font-size: 1.08rem !important;
+  letter-spacing: -.01em !important;
+}
+.coupon-priority-page .show-code-label::before {
+  content: "🏷";
+  margin-right: 10px;
+  font-size: 1.05em;
+}
+.coupon-priority-page .show-code-label::after {
+  content: "›";
+  position: absolute;
+  right: 22px;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+.coupon-priority-page .coupon-review-link {
+  min-height: 56px !important;
+  border-radius: 18px !important;
+  border: 2px solid #0f766e !important;
+  color: #0f766e !important;
+  background: #fff !important;
+  font-size: 1rem !important;
+}
+.coupon-priority-page .coupon-review-link::before {
+  content: "▤";
+  margin-right: 10px;
+  font-weight: 900;
+}
+@media (max-width: 860px) {
+  .coupon-priority-page .review-layout { display: block !important; }
+  .coupon-priority-page .coupon-offer-list.single-page {
+    margin-top: 16px !important;
+  }
+  .coupon-priority-page .shellz-coupon-card.compact,
+  .coupon-priority-page .shellz-coupon-card {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    padding: clamp(22px, 5vw, 30px) !important;
+    border-radius: 30px !important;
+    box-shadow: 0 18px 48px rgba(15, 23, 42, .11) !important;
+  }
+  .coupon-priority-page .shellz-coupon-card::before {
+    width: 5px !important;
+  }
+  .coupon-priority-page .coupon-discount-badge {
+    min-height: 230px !important;
+    border-radius: 26px !important;
+  }
+  .coupon-priority-page .coupon-discount-badge strong {
+    font-size: clamp(3.1rem, 14vw, 4.8rem) !important;
+  }
+  .coupon-priority-page .coupon-provider-row {
+    align-items: center !important;
+  }
+  .coupon-priority-page .coupon-store {
+    font-size: 1.35rem !important;
+  }
+  .coupon-priority-page .coupon-tag {
+    font-size: .88rem !important;
+  }
+  .coupon-priority-page .coupon-main h2,
+  .coupon-priority-page .coupon-main h3 {
+    font-size: clamp(1.8rem, 8.5vw, 2.55rem) !important;
+    line-height: 1.1 !important;
+  }
+  .coupon-priority-page .coupon-main p {
+    font-size: clamp(1.05rem, 5vw, 1.35rem) !important;
+    line-height: 1.7 !important;
+  }
+  .coupon-priority-page .coupon-proof-meta {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .coupon-priority-page .coupon-proof-meta span {
+    min-height: 54px !important;
+    font-size: 1.02rem !important;
+  }
+  .coupon-priority-page .show-code-btn {
+    min-height: 70px !important;
+    border-radius: 22px !important;
+  }
+  .coupon-priority-page .show-code-label {
+    font-size: 1.18rem !important;
+  }
+  .coupon-priority-page .coupon-review-link {
+    min-height: 62px !important;
+    font-size: 1.05rem !important;
+  }
+}
+@media (max-width: 420px) {
+  .coupon-priority-page .shellz-coupon-card.compact,
+  .coupon-priority-page .shellz-coupon-card { padding: 22px 18px !important; border-radius: 26px !important; }
+  .coupon-priority-page .coupon-discount-badge { min-height: 210px !important; }
+  .coupon-priority-page .coupon-main h2,
+  .coupon-priority-page .coupon-main h3 { font-size: clamp(1.7rem, 9vw, 2.25rem) !important; }
+}
