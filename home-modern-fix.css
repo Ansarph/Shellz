@@ -583,3 +583,186 @@ body.shellz-home-modern .top5-view-deal span{font-size:1.4em!important;line-heig
   body.shellz-home-modern .top5-rating > span{grid-row:auto!important;}
   body.shellz-home-modern .top5-rating em{justify-self:end!important;align-self:center!important;}
 }
+
+/* Professional Best-by-Need cards | 2026-06-22 */
+body.shellz-home-modern .home-cro-needs{
+  max-width:1040px!important;
+  padding-top:clamp(54px,6vw,82px)!important;
+  padding-bottom:8px!important;
+}
+body.shellz-home-modern .home-cro-needs .section-heading{
+  max-width:880px!important;
+  margin:0 auto 34px!important;
+  text-align:center!important;
+}
+body.shellz-home-modern .home-cro-needs .section-heading .eyebrow{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:18px!important;
+  margin:0 0 12px!important;
+  color:#1d4ed8!important;
+  font-size:.92rem!important;
+  font-weight:950!important;
+  letter-spacing:.28em!important;
+  text-transform:uppercase!important;
+}
+body.shellz-home-modern .home-cro-needs .section-heading .eyebrow::before,
+body.shellz-home-modern .home-cro-needs .section-heading .eyebrow::after{
+  content:""!important;
+  width:44px!important;
+  height:2px!important;
+  border-radius:999px!important;
+  background:#bfdbfe!important;
+  display:block!important;
+}
+body.shellz-home-modern .home-cro-needs .section-heading h2{
+  max-width:900px!important;
+  margin:0 auto 18px!important;
+  color:#071225!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-size:clamp(2.35rem,5vw,4.75rem)!important;
+  line-height:1.02!important;
+  letter-spacing:-.05em!important;
+  text-wrap:balance!important;
+}
+body.shellz-home-modern .home-cro-needs .section-heading .muted{
+  max-width:760px!important;
+  margin:0 auto!important;
+  color:#64748b!important;
+  font-size:clamp(1.08rem,1.65vw,1.45rem)!important;
+  line-height:1.55!important;
+  text-wrap:balance!important;
+}
+body.shellz-home-modern .need-card-grid-premium,
+body.shellz-home-modern .home-cro-needs .need-card-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:20px!important;
+  max-width:980px!important;
+  margin:0 auto!important;
+}
+body.shellz-home-modern .need-card-premium,
+body.shellz-home-modern .home-cro-needs .need-card{
+  position:relative!important;
+  overflow:hidden!important;
+  min-height:178px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  gap:10px!important;
+  padding:30px 92px 30px 34px!important;
+  border-radius:26px!important;
+  background:linear-gradient(180deg,#fff 0%,#fbfdff 100%)!important;
+  border:1px solid #dfe7f2!important;
+  box-shadow:0 18px 44px rgba(15,23,42,.06)!important;
+  text-decoration:none!important;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease!important;
+}
+body.shellz-home-modern .need-card-premium:hover,
+body.shellz-home-modern .home-cro-needs .need-card:hover{
+  transform:translateY(-3px)!important;
+  border-color:#bfdbfe!important;
+  box-shadow:0 26px 58px rgba(37,99,235,.12)!important;
+}
+body.shellz-home-modern .need-card-premium span,
+body.shellz-home-modern .home-cro-needs .need-card span{
+  width:max-content!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:40px!important;
+  margin:0 0 10px!important;
+  padding:9px 18px!important;
+  border-radius:999px!important;
+  background:#eff6ff!important;
+  color:#1d4ed8!important;
+  border:0!important;
+  font-size:1rem!important;
+  font-weight:950!important;
+  line-height:1!important;
+  box-shadow:none!important;
+}
+body.shellz-home-modern .need-card-premium:nth-child(2) span,
+body.shellz-home-modern .home-cro-needs .need-card:nth-child(2) span{background:#eaffff!important;color:#0891b2!important;}
+body.shellz-home-modern .need-card-premium:nth-child(3) span,
+body.shellz-home-modern .home-cro-needs .need-card:nth-child(3) span{background:#ecfdf5!important;color:#059669!important;}
+body.shellz-home-modern .need-card-premium:nth-child(4) span,
+body.shellz-home-modern .home-cro-needs .need-card:nth-child(4) span{background:#eff6ff!important;color:#1d4ed8!important;}
+body.shellz-home-modern .need-card-premium:nth-child(5) span,
+body.shellz-home-modern .home-cro-needs .need-card:nth-child(5) span{background:#fff7ed!important;color:#ea580c!important;}
+body.shellz-home-modern .need-card-premium:nth-child(6) span,
+body.shellz-home-modern .home-cro-needs .need-card:nth-child(6) span{background:#f5f3ff!important;color:#7c3aed!important;}
+body.shellz-home-modern .need-card-premium strong,
+body.shellz-home-modern .home-cro-needs .need-card strong{
+  display:block!important;
+  color:#071225!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-size:clamp(1.45rem,2.2vw,2rem)!important;
+  line-height:1.12!important;
+  font-weight:950!important;
+  letter-spacing:-.035em!important;
+}
+body.shellz-home-modern .need-card-premium em,
+body.shellz-home-modern .home-cro-needs .need-card em{
+  display:block!important;
+  margin:0!important;
+  max-width:520px!important;
+  color:#64748b!important;
+  font-size:clamp(1.02rem,1.45vw,1.22rem)!important;
+  font-style:normal!important;
+  font-weight:500!important;
+  line-height:1.45!important;
+}
+body.shellz-home-modern .need-card-premium b,
+body.shellz-home-modern .home-cro-needs .need-card b{
+  position:absolute!important;
+  right:34px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  width:58px!important;
+  height:58px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:999px!important;
+  background:#f1f5f9!important;
+  color:#2563eb!important;
+  font-size:2.35rem!important;
+  font-weight:500!important;
+  line-height:.9!important;
+  font-family:Inter,system-ui,sans-serif!important;
+}
+@media (max-width:860px){
+  body.shellz-home-modern .need-card-grid-premium,
+  body.shellz-home-modern .home-cro-needs .need-card-grid{grid-template-columns:1fr!important;gap:16px!important;}
+}
+@media (max-width:760px){
+  body.shellz-home-modern .home-cro-needs{padding-top:52px!important;}
+  body.shellz-home-modern .home-cro-needs .section-heading{margin-bottom:28px!important;}
+  body.shellz-home-modern .home-cro-needs .section-heading .eyebrow{font-size:.8rem!important;gap:13px!important;}
+  body.shellz-home-modern .home-cro-needs .section-heading .eyebrow::before,
+  body.shellz-home-modern .home-cro-needs .section-heading .eyebrow::after{width:34px!important;}
+  body.shellz-home-modern .home-cro-needs .section-heading h2{font-size:clamp(2.05rem,10vw,3.35rem)!important;line-height:1.04!important;}
+  body.shellz-home-modern .home-cro-needs .section-heading .muted{font-size:1.03rem!important;line-height:1.55!important;}
+  body.shellz-home-modern .need-card-premium,
+  body.shellz-home-modern .home-cro-needs .need-card{
+    min-height:154px!important;
+    padding:24px 76px 24px 24px!important;
+    border-radius:24px!important;
+    gap:8px!important;
+  }
+  body.shellz-home-modern .need-card-premium span,
+  body.shellz-home-modern .home-cro-needs .need-card span{font-size:.94rem!important;min-height:36px!important;padding:8px 15px!important;margin-bottom:7px!important;}
+  body.shellz-home-modern .need-card-premium strong,
+  body.shellz-home-modern .home-cro-needs .need-card strong{font-size:1.55rem!important;}
+  body.shellz-home-modern .need-card-premium em,
+  body.shellz-home-modern .home-cro-needs .need-card em{font-size:1.04rem!important;line-height:1.4!important;}
+  body.shellz-home-modern .need-card-premium b,
+  body.shellz-home-modern .home-cro-needs .need-card b{right:22px!important;width:50px!important;height:50px!important;font-size:2.1rem!important;}
+}
+@media (max-width:380px){
+  body.shellz-home-modern .need-card-premium,
+  body.shellz-home-modern .home-cro-needs .need-card{padding-right:66px!important;padding-left:20px!important;}
+  body.shellz-home-modern .need-card-premium b,
+  body.shellz-home-modern .home-cro-needs .need-card b{right:16px!important;width:44px!important;height:44px!important;}
+}
