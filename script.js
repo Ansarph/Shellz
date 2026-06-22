@@ -157,27 +157,28 @@
       const review = button.dataset.review || 'reviews.html';
       const realCode = String(button.dataset.realCode || '').toLowerCase() === 'true';
 
-      // For "Get Deal" cards, open the provider directly.
-      if (!realCode) {
-        trackAffiliateClick(provider, title || document.title, url);
-        if (url && url !== '#') {
-          window.open(url, '_blank', 'noopener,noreferrer');
-        }
-        return;
-      }
-
-      activeCode = code;
+      activeCode = realCode ? code : '';
 
       modal.querySelector('#coupon-modal-provider').textContent = provider;
-      modal.querySelector('#coupon-modal-title').textContent = title;
-      modal.querySelector('#revealed-code').textContent = code || 'Check deal';
+      modal.querySelector('#coupon-modal-title').textContent = title || (realCode ? 'Coupon code' : 'Current deal');
+      modal.querySelector('#revealed-code').textContent = realCode ? (code || 'Check deal') : (code || 'No code required');
       modal.querySelector('#coupon-visit-link').href = url || '#';
       modal.querySelector('#coupon-review-link').href = review || 'reviews.html';
-      modal.querySelector('#coupon-modal-note').textContent = 'Copy this code, open the provider in a new tab, and apply it at checkout. Verify the final total before buying.';
-      modal.querySelector('.copy-modal-code').style.display = '';
-      modal.querySelector('.copy-modal-code').textContent = 'Copy';
 
-      trackAffiliateClick(provider, 'coupon_reveal_' + title, url);
+      const copyButton = modal.querySelector('.copy-modal-code');
+      const visitLink = modal.querySelector('#coupon-visit-link');
+      if (realCode) {
+        modal.querySelector('#coupon-modal-note').textContent = 'Copy this code, then open the provider in a new tab and apply it at checkout. Always verify the final total before buying.';
+        copyButton.style.display = '';
+        copyButton.textContent = 'Copy';
+        visitLink.textContent = 'Visit site';
+      } else {
+        modal.querySelector('#coupon-modal-note').textContent = 'This offer does not need a public coupon code. Open the provider deal page and confirm the final price at checkout.';
+        copyButton.style.display = 'none';
+        visitLink.textContent = 'Open deal';
+      }
+
+      trackAffiliateClick(provider, (realCode ? 'coupon_reveal_' : 'deal_reveal_') + title, url);
 
       modal.classList.add('active');
       document.body.classList.add('coupon-modal-open');
