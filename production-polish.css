@@ -1,0 +1,72 @@
+
+/* Shellz production QA polish — 2026-06-22
+   Final cascade layer for layout consistency, mobile readability, and production cleanup. */
+html,body{max-width:100%;overflow-x:hidden!important;}
+body{min-width:0!important;-webkit-text-size-adjust:100%;}
+img,svg,video,iframe{max-width:100%;height:auto;}
+a,button{touch-action:manipulation;}
+.skip-link{z-index:99999!important;}
+.site-header{z-index:5000!important;}
+.site-header .nav-wrap{width:min(1140px,calc(100% - 24px))!important;margin:0 auto!important;}
+.main-nav a[aria-current="page"]{box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)!important;}
+.shellz-breadcrumbs{font-size:.94rem!important;line-height:1.45!important;overflow-wrap:anywhere!important;}
+.shellz-breadcrumbs a{text-decoration:none!important;}
+.page-hero,.coupon-strip,.newgen-hero,.category-page-hero,.home-cro-hero{margin-top:0!important;margin-bottom:28px!important;}
+.page-hero>.container,.coupon-strip>.container,.newgen-hero>.container,.category-page-hero>.container{padding-block:54px!important;}
+.page-hero h1,.coupon-strip h1,.newgen-hero h1,.category-page-hero h1{max-width:960px!important;}
+.last-updated{display:inline-flex!important;align-items:center!important;gap:8px!important;max-width:100%!important;}
+.provider-hero-lockup{display:inline-flex!important;align-items:center!important;gap:14px!important;}
+.provider-logo img,.provider-hero-logo img{display:block!important;}
+.btn,.details-link,.coupon-review-link,.show-code-btn{white-space:normal!important;text-align:center!important;}
+.table-wrap,.article-table{max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch;}
+table{max-width:100%!important;}
+.review-layout{align-items:start!important;}
+.review-main,.review-sidebar{min-width:0!important;}
+.review-sidebar{position:relative!important;}
+.review-sidebar .sidebar-card{margin-bottom:18px!important;}
+.review-summary-card,.author-proof-mini,.proof-pending-block,.shellz-cro-verdict,.shellz-review-decision-stack,.affiliate-note,.shellz-buyer-next-links{margin-block:22px!important;}
+.shellz-buyer-next-links{background:#fff!important;border:1px solid #e3ebf4!important;border-radius:28px!important;box-shadow:0 18px 44px rgba(15,23,42,.075)!important;padding:24px!important;}
+.shellz-buyer-next-links .buyer-next-grid,.buyer-next-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;}
+.shellz-buyer-next-links a,.buyer-next-grid a{display:flex!important;flex-direction:column!important;gap:6px!important;min-height:112px!important;padding:18px!important;border:1px solid #e3ebf4!important;border-radius:22px!important;background:#f8fbff!important;text-decoration:none!important;color:#0f172a!important;box-shadow:0 8px 20px rgba(15,23,42,.04)!important;}
+.shellz-buyer-next-links a strong,.buyer-next-grid a strong{color:#0f172a!important;font-size:1.03rem!important;}
+.shellz-buyer-next-links a span,.buyer-next-grid a span{color:#64748b!important;font-size:.94rem!important;line-height:1.45!important;}
+.shellz-buyer-next-links a:hover,.buyer-next-grid a:hover{transform:translateY(-1px)!important;box-shadow:0 14px 28px rgba(15,23,42,.08)!important;}
+.coupon-grid-section,.coupon-offer-list{min-width:0!important;}
+.shellz-coupon-card{min-width:0!important;}
+.coupon-action-panel{min-width:0!important;}
+.coupon-proof-meta{align-items:flex-start!important;}
+.quick-tools-actions{flex-wrap:wrap!important;}
+.post-mobile-sticky-cta{z-index:3000!important;}
+.footer-brand .brand-logo{box-shadow:none!important;}
+/* Fix legacy nested container sections that were inserted inside an existing container. */
+.container .container{width:100%!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;}
+/* Score box must never overlap its label on mobile or desktop. */
+.score-box,.score-box.review-score{overflow:hidden!important;}
+.score-box .score{line-height:.95!important;}
+.score-box .score-label{line-height:1.15!important;white-space:normal!important;}
+@media (min-width:981px){
+  .review-sidebar{position:sticky!important;top:98px!important;}
+}
+@media (max-width:980px){
+  .review-layout{grid-template-columns:1fr!important;}
+  .shellz-buyer-next-links .buyer-next-grid,.buyer-next-grid{grid-template-columns:1fr!important;}
+  .provider-hero-lockup{display:flex!important;width:100%!important;}
+}
+@media (max-width:760px){
+  .site-header .nav-wrap{grid-template-columns:1fr auto!important;display:grid!important;min-height:64px!important;align-items:center!important;}
+  .site-header .brand{min-width:0!important;}
+  .site-header .brand-logo{max-width:142px!important;height:40px!important;}
+  .nav-toggle{justify-self:end!important;min-width:44px!important;min-height:44px!important;}
+  .page-hero,.coupon-strip,.newgen-hero,.category-page-hero,.home-cro-hero{border-radius:24px!important;margin-inline:9px!important;}
+  .page-hero>.container,.coupon-strip>.container,.newgen-hero>.container,.category-page-hero>.container{padding-block:34px!important;}
+  .page-hero h1,.coupon-strip h1,.newgen-hero h1,.category-page-hero h1{font-size:clamp(2rem,9vw,3.1rem)!important;letter-spacing:-.045em!important;}
+  .hero-text,.page-hero .hero-text{font-size:1.04rem!important;line-height:1.65!important;}
+  .shellz-breadcrumbs{margin-inline:9px!important;width:auto!important;}
+  .provider-hero-lockup{padding:14px!important;border-radius:20px!important;}
+  .provider-hero-lockup .provider-logo{min-width:92px!important;min-height:64px!important;padding:10px!important;}
+  .review-summary-card,.author-proof-mini,.proof-pending-block,.shellz-cro-verdict,.shellz-review-decision-stack,.affiliate-note,.shellz-buyer-next-links,.sidebar-card,.verdict-box,.shellz-deal-status-box,.shellz-quick-tools,.coupon-status-summary{padding:18px!important;border-radius:22px!important;}
+  .review-card,.shellz-coupon-card,.home-coupon-card,.top5-provider-card,.need-card{border-radius:24px!important;}
+  .btn,.details-link,.coupon-review-link,.show-code-btn{width:100%!important;min-height:52px!important;}
+  .quick-tools-actions{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:8px!important;}
+  .quick-tool-btn{width:100%!important;min-width:0!important;}
+}

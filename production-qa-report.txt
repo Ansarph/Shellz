@@ -1,0 +1,7 @@
+Shellz top developer QA update — 2026-06-22
+Fixed malformed review-page author-proof HTML attributes.
+Normalized navigation active states by page type.
+Converted root breadcrumb links from / to index.html for static package consistency.
+Fixed duplicate H1 on author profile page.
+Removed public internal audit/update files from production package.
+Added production-polish.css for final responsive layout, card, CTA, breadcrumb, sidebar, and table consistency.
