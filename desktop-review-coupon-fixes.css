@@ -1,0 +1,353 @@
+
+/* =====================================================================
+   Shellz Review + Coupon Desktop Layout Fixes — 2026-06-23
+   Purpose: compact desktop review/coupon pages, move deal cards higher,
+   remove desktop CSS conflicts, and keep mobile one-column behavior.
+   ===================================================================== */
+
+/* Limit heavy hero width on desktop instead of full-bleed page sections */
+@media (min-width: 900px) {
+  main > .page-hero,
+  main > .coupon-strip,
+  main > .newgen-hero,
+  main > .category-page-hero {
+    width: min(1140px, calc(100% - 48px)) !important;
+    margin: 18px auto 28px !important;
+    padding: 42px 0 38px !important;
+    border-radius: 32px !important;
+  }
+  main > .page-hero > .container,
+  main > .coupon-strip > .container,
+  main > .newgen-hero > .container,
+  main > .category-page-hero > .container {
+    width: min(1040px, calc(100% - 48px)) !important;
+  }
+  main > .page-hero h1,
+  main > .coupon-strip h1,
+  main > .newgen-hero h1,
+  main > .category-page-hero h1 {
+    font-size: clamp(2.65rem, 4.2vw, 4.6rem) !important;
+    line-height: 1.02 !important;
+    max-width: 900px !important;
+    margin-bottom: 14px !important;
+  }
+  main > .page-hero .hero-text,
+  main > .coupon-strip .hero-text,
+  main > .newgen-hero .hero-text,
+  main > .category-page-hero .hero-text {
+    max-width: 820px !important;
+    font-size: 1.12rem !important;
+  }
+  .provider-hero-lockup {
+    margin: 14px 0 18px !important;
+    padding: 14px 16px !important;
+    max-width: 440px !important;
+  }
+}
+
+/* Review pages: restore a strong desktop article + sidebar layout */
+@media (min-width: 1024px) {
+  .shellz-review-page .review-layout,
+  body.shellz-review-page .review-layout,
+  body.review-single-column-fixed .review-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.68fr) minmax(300px, .72fr) !important;
+    gap: 30px !important;
+    align-items: start !important;
+  }
+  .shellz-review-page .review-main,
+  body.review-single-column-fixed .review-main {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  .shellz-review-page .review-sidebar,
+  body.review-single-column-fixed .review-sidebar {
+    min-width: 0 !important;
+    width: 100% !important;
+    position: sticky !important;
+    top: 96px !important;
+    display: grid !important;
+    gap: 18px !important;
+  }
+}
+
+/* Review page top: keep buyer summary useful but compact on desktop */
+@media (min-width: 900px) {
+  .shellz-review-page .shellz-review-above-fold-summary {
+    margin-top: -8px !important;
+    margin-bottom: 18px !important;
+  }
+  .shellz-review-page .review-summary-card {
+    padding: 24px !important;
+    border-radius: 28px !important;
+  }
+  .shellz-review-page .summary-metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    margin: 16px 0 !important;
+  }
+  .shellz-review-page .summary-metrics > div {
+    padding: 14px !important;
+    border-radius: 18px !important;
+  }
+  .shellz-review-page .author-proof-mini,
+  .shellz-review-page .proof-pending-block,
+  .shellz-review-page .affiliate-note,
+  .shellz-review-page .shellz-cro-verdict,
+  .shellz-review-page .shellz-review-decision-stack,
+  .shellz-review-page .review-main > section,
+  .shellz-review-page .review-sidebar .sidebar-card {
+    padding: 24px !important;
+    border-radius: 26px !important;
+  }
+  .shellz-review-page .author-proof-mini,
+  .shellz-review-page .proof-pending-block {
+    margin-bottom: 18px !important;
+  }
+  .shellz-review-page .proof-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+}
+
+/* Review listing page: cleaner desktop cards, no oversized score/status */
+@media (min-width: 900px) {
+  .reviews-page .review-card,
+  .review-card {
+    padding: 26px !important;
+    border-radius: 28px !important;
+  }
+  .review-card .review-topline,
+  .review-topline {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 155px !important;
+    gap: 20px !important;
+    align-items: start !important;
+  }
+  .review-topline .provider-logo,
+  .review-card .provider-logo {
+    min-width: 135px !important;
+    min-height: 82px !important;
+    padding: 14px !important;
+    border-radius: 20px !important;
+  }
+  .review-topline .provider-logo img,
+  .review-card .provider-logo img {
+    max-width: 118px !important;
+    max-height: 48px !important;
+  }
+  .review-topline h2 {
+    font-size: clamp(1.85rem, 3vw, 2.65rem) !important;
+  }
+  .review-topline p {
+    font-size: 1.03rem !important;
+    line-height: 1.62 !important;
+  }
+  .review-card .pros-cons {
+    margin: 20px 0 !important;
+    gap: 14px !important;
+  }
+  .review-card .pros-cons > div {
+    padding: 18px !important;
+    border-radius: 20px !important;
+  }
+  .review-card .review-actions {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+/* Sidebar and score/status card stability */
+.score-box,
+.score-box.review-score,
+.score-box.inline-score,
+.provider-summary-card .score-box,
+.sidebar-card .score-box,
+.review-sidebar .score-box {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+.review-sidebar .score-box .score,
+.provider-summary-card .score-box .score,
+.sidebar-card .score-box .score {
+  font-size: clamp(2.15rem, 4vw, 3.25rem) !important;
+  line-height: 1 !important;
+  white-space: normal !important;
+  word-break: keep-all !important;
+}
+.review-sidebar .score-box .score-label,
+.provider-summary-card .score-box .score-label,
+.sidebar-card .score-box .score-label {
+  max-width: 100% !important;
+}
+
+/* Coupon pages: deal/coupon section now appears immediately after hero in HTML.
+   Make desktop coupon cards compact and easy to scan. */
+@media (min-width: 980px) {
+  .coupon-priority-page .review-detail.coupon-priority-section {
+    margin-top: 8px !important;
+    padding: 26px !important;
+  }
+  .coupon-priority-page .review-detail.coupon-priority-section .review-layout {
+    grid-template-columns: minmax(0, 1.6fr) minmax(286px, .72fr) !important;
+    gap: 26px !important;
+  }
+  .coupon-priority-page .coupon-status-summary,
+  .coupon-priority-page .affiliate-note,
+  .coupon-priority-page .shellz-deal-status-box,
+  .coupon-priority-page .shellz-quick-tools {
+    margin-top: 18px !important;
+    padding: 20px !important;
+  }
+  .coupon-priority-page .shellz-quick-tools .quick-summary-box,
+  .coupon-priority-page .deal-status-grid article {
+    padding: 16px !important;
+  }
+  .coupon-priority-page .coupon-grid-section,
+  .promo-codes-page .coupon-grid-section.single-column-coupon-layout {
+    padding-top: 18px !important;
+  }
+  .coupon-priority-page .coupon-offer-list,
+  .promo-codes-page .coupon-offer-list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .coupon-priority-page .shellz-coupon-card,
+  .coupon-priority-page .shellz-coupon-card.compact,
+  .promo-codes-page .shellz-coupon-card {
+    display: grid !important;
+    grid-template-columns: 112px minmax(0, 1fr) 178px !important;
+    gap: 18px !important;
+    align-items: center !important;
+    padding: 20px !important;
+    border-radius: 24px !important;
+    min-height: 0 !important;
+  }
+  .coupon-priority-page .shellz-coupon-card .coupon-discount-badge,
+  .promo-codes-page .shellz-coupon-card .coupon-discount-badge {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-height: 92px !important;
+    padding: 12px !important;
+    border-radius: 18px !important;
+  }
+  .coupon-priority-page .shellz-coupon-card .coupon-discount-badge strong,
+  .promo-codes-page .shellz-coupon-card .coupon-discount-badge strong {
+    font-size: 1.05rem !important;
+    line-height: 1.15 !important;
+  }
+  .coupon-priority-page .shellz-coupon-card .coupon-discount-badge span,
+  .promo-codes-page .shellz-coupon-card .coupon-discount-badge span {
+    font-size: .78rem !important;
+  }
+  .coupon-priority-page .shellz-coupon-card .coupon-main,
+  .promo-codes-page .shellz-coupon-card .coupon-main {
+    grid-column: 2 !important;
+    min-width: 0 !important;
+  }
+  .coupon-priority-page .coupon-main h2,
+  .promo-codes-page .coupon-main h2,
+  .coupon-priority-page .coupon-main h3,
+  .promo-codes-page .coupon-main h3 {
+    font-size: clamp(1.26rem, 2vw, 1.72rem) !important;
+    margin: 6px 0 8px !important;
+  }
+  .coupon-priority-page .coupon-main p,
+  .promo-codes-page .coupon-main p {
+    font-size: .98rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 8px !important;
+  }
+  .coupon-priority-page .coupon-provider-row,
+  .promo-codes-page .coupon-provider-row {
+    margin-bottom: 4px !important;
+  }
+  .coupon-priority-page .coupon-store,
+  .promo-codes-page .coupon-store {
+    font-size: 1rem !important;
+  }
+  .coupon-priority-page .coupon-tag,
+  .promo-codes-page .coupon-tag {
+    padding: 6px 10px !important;
+    font-size: .82rem !important;
+  }
+  .coupon-priority-page .coupon-proof-meta,
+  .promo-codes-page .coupon-proof-meta {
+    margin-top: 8px !important;
+    gap: 7px !important;
+  }
+  .coupon-priority-page .coupon-proof-meta span,
+  .promo-codes-page .coupon-proof-meta span {
+    padding: 6px 9px !important;
+    font-size: .78rem !important;
+  }
+  .coupon-priority-page .coupon-action-panel,
+  .promo-codes-page .coupon-action-panel {
+    grid-column: 3 !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    align-self: center !important;
+    justify-content: stretch !important;
+  }
+  .coupon-priority-page .show-code-btn,
+  .promo-codes-page .show-code-btn,
+  .coupon-priority-page .coupon-review-link,
+  .promo-codes-page .coupon-review-link {
+    min-height: 48px !important;
+    width: 100% !important;
+    font-size: .94rem !important;
+    padding: 10px 14px !important;
+  }
+  .promo-codes-page .coupon-grid-section.single-column-coupon-layout .couponfollow-style-note {
+    padding: 18px 20px !important;
+    border-radius: 22px !important;
+  }
+}
+
+/* Keep mobile layout large, clear, and one-column */
+@media (max-width: 979px) {
+  .coupon-priority-page .review-detail.coupon-priority-section .review-layout,
+  .shellz-review-page .review-layout,
+  body.review-single-column-fixed .review-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .shellz-review-page .review-sidebar,
+  .coupon-priority-page .review-sidebar {
+    position: static !important;
+  }
+  .coupon-priority-page .shellz-coupon-card,
+  .coupon-priority-page .shellz-coupon-card.compact,
+  .promo-codes-page .shellz-coupon-card {
+    grid-template-columns: 1fr !important;
+  }
+  .coupon-priority-page .coupon-discount-badge,
+  .coupon-priority-page .coupon-main,
+  .coupon-priority-page .coupon-action-panel,
+  .promo-codes-page .coupon-discount-badge,
+  .promo-codes-page .coupon-main,
+  .promo-codes-page .coupon-action-panel {
+    grid-column: 1 !important;
+  }
+}
+
+/* Safer desktop overflow handling */
+.table-wrap,
+.article-table,
+.comparison-table-wrap {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+.review-main,
+.review-sidebar,
+.coupon-main,
+.shellz-coupon-card,
+.sidebar-card {
+  min-width: 0 !important;
+}
