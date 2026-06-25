@@ -345,3 +345,75 @@
 .author-socials a[href*="x.com"],
 .author-socials a[href*="github.com"]{font-weight:800;}
 @media (max-width:640px){.author-name-note{display:block;margin-top:4px;white-space:normal}.author-profile-note{font-size:.94rem}}
+
+
+/* ---------- Profile social link click fix ---------- */
+.author-profile-page .author-socials.author-social-buttons {
+  position: relative !important;
+  z-index: 20 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 18px !important;
+  pointer-events: auto !important;
+}
+.author-profile-page .author-socials.author-social-buttons .author-social-link {
+  position: relative !important;
+  z-index: 21 !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  min-width: 154px !important;
+  min-height: 62px !important;
+  padding: 12px 16px !important;
+  border: 1px solid rgba(255,255,255,.18) !important;
+  border-radius: 16px !important;
+  background: rgba(255,255,255,.10) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  box-shadow: 0 14px 30px rgba(2,6,23,.20) !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+}
+.author-profile-page .author-socials.author-social-buttons .author-social-link:hover,
+.author-profile-page .author-socials.author-social-buttons .author-social-link:focus-visible {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.16) !important;
+  border-color: rgba(255,255,255,.36) !important;
+  outline: 3px solid rgba(147,197,253,.45) !important;
+  outline-offset: 2px !important;
+}
+.author-profile-page .author-socials.author-social-buttons .author-social-link span {
+  display: block !important;
+  color: #bfdbfe !important;
+  font-size: .78rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .04em !important;
+  text-transform: uppercase !important;
+}
+.author-profile-page .author-socials.author-social-buttons .author-social-link strong {
+  display: block !important;
+  margin-top: 3px !important;
+  color: #fff !important;
+  font-size: .98rem !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+}
+@media (max-width: 760px) {
+  .author-profile-page .author-socials.author-social-buttons {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+  .author-profile-page .author-socials.author-social-buttons .author-social-link {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
+@media (max-width: 420px) {
+  .author-profile-page .author-socials.author-social-buttons {
+    grid-template-columns: 1fr !important;
+  }
+}
