@@ -337,3 +337,11 @@
   .top5-data-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .top5-data-row > div:nth-child(n+3) { display: none; }
 }
+
+/* Profile page social link polish - 2026-06-25 */
+.author-name-note{font-size:.72em;font-weight:700;color:#64748b;white-space:nowrap;}
+.author-profile-note{margin-top:14px;color:#475569;font-size:.98rem;max-width:720px;}
+.author-socials a[href*="linkedin.com"],
+.author-socials a[href*="x.com"],
+.author-socials a[href*="github.com"]{font-weight:800;}
+@media (max-width:640px){.author-name-note{display:block;margin-top:4px;white-space:normal}.author-profile-note{font-size:.94rem}}
