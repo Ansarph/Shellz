@@ -1,0 +1,38 @@
+/* Beginner hosting conversion page upgrade - 2026-06-26 */
+.beginner-hosting-conversion-page .beginner-conversion-hero{background:linear-gradient(135deg,#07182f 0%,#102d57 56%,#f6f9ff 56%,#f6f9ff 100%);}
+.beginner-hero-grid{align-items:center;gap:30px;}
+.beginner-hero-card{background:#fff;border:1px solid rgba(15,23,42,.12);box-shadow:0 24px 60px rgba(15,23,42,.14);border-radius:22px;padding:26px;max-width:430px;margin-left:auto;}
+.beginner-hero-card span,.beginner-provider-card .provider-pill{display:inline-flex;align-items:center;border-radius:999px;background:#eaf2ff;color:#0b4ea2;font-size:.78rem;font-weight:800;letter-spacing:.02em;text-transform:uppercase;padding:7px 10px;margin-bottom:12px;}
+.beginner-hero-card strong{display:block;color:#0f172a;font-size:1.2rem;line-height:1.35;margin-bottom:10px;}
+.beginner-hero-card p{color:#475569;margin:0;}
+.beginner-answer-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px;margin-top:34px;margin-bottom:34px;}
+.beginner-answer-card{background:#fff;border:1px solid rgba(15,23,42,.10);border-radius:20px;padding:22px;box-shadow:0 14px 35px rgba(15,23,42,.07);}
+.beginner-answer-card strong{display:block;color:#0f172a;font-size:1.04rem;margin-bottom:8px;}
+.beginner-answer-card span,.beginner-answer-card p{color:#475569;line-height:1.65;}
+.beginner-answer-card.answer-featured{grid-row:span 2;background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);border-color:rgba(37,99,235,.22);}
+.beginner-answer-card.answer-featured h2{margin-top:0;font-size:clamp(1.55rem,2.2vw,2.2rem);}
+.beginner-cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.beginner-before-pay,.beginner-decision-section,.beginner-provider-comparison,.beginner-human-guide,.beginner-trust-box,.beginner-next-path{margin-top:42px;margin-bottom:42px;}
+.beginner-check-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
+.beginner-check-grid article{background:#fff;border:1px solid rgba(15,23,42,.10);border-radius:18px;padding:20px;box-shadow:0 10px 28px rgba(15,23,42,.06);}
+.beginner-check-grid span{font-weight:900;color:#2563eb;font-size:.86rem;}
+.beginner-check-grid strong{display:block;margin:8px 0;color:#0f172a;font-size:1.04rem;}
+.beginner-check-grid p{margin:0;color:#475569;line-height:1.55;}
+.beginner-decision-table th{background:#0f172a;color:#fff;}
+.beginner-decision-table td{vertical-align:top;line-height:1.55;}
+.beginner-provider-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+.beginner-provider-card{position:relative;background:#fff;border:1px solid rgba(15,23,42,.11);border-radius:22px;padding:22px;box-shadow:0 14px 36px rgba(15,23,42,.075);display:flex;flex-direction:column;gap:12px;min-height:275px;}
+.beginner-provider-card.top-choice{border-color:rgba(37,99,235,.35);box-shadow:0 18px 45px rgba(37,99,235,.14);}
+.beginner-provider-card h3{margin:0;font-size:1.35rem;color:#0f172a;}
+.beginner-provider-card p{color:#475569;line-height:1.62;margin:0;flex:1;}
+.beginner-provider-card div:last-child{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:auto;}
+.beginner-provider-note{margin-top:14px;color:#64748b;font-size:.92rem;}
+.beginner-human-guide .content-card{max-width:980px;margin:auto;}
+.beginner-human-guide h2{margin-top:24px;}
+.beginner-human-guide p{color:#334155;line-height:1.75;font-size:1.02rem;}
+.beginner-trust-box{background:#f8fafc;border:1px solid rgba(15,23,42,.08);border-radius:26px;padding:28px;}
+.beginner-rating-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.beginner-rating-grid span{background:#fff;border:1px solid rgba(15,23,42,.08);border-radius:14px;padding:14px 16px;font-weight:800;color:#0f172a;}
+.beginner-next-path .related-card-grid a{min-height:120px;}
+@media (max-width:900px){.beginner-hosting-conversion-page .beginner-conversion-hero{background:#07182f;}.beginner-answer-grid,.beginner-check-grid,.beginner-provider-grid,.beginner-rating-grid{grid-template-columns:1fr;}.beginner-answer-card.answer-featured{grid-row:auto}.beginner-hero-card{margin:0;}.beginner-provider-card{min-height:auto;}}
+@media (max-width:640px){.beginner-hero-card,.beginner-answer-card,.beginner-provider-card{border-radius:18px;padding:18px}.beginner-before-pay,.beginner-decision-section,.beginner-provider-comparison,.beginner-human-guide,.beginner-trust-box,.beginner-next-path{margin-top:28px;margin-bottom:28px}.beginner-cta-row .btn{width:100%;justify-content:center}.beginner-provider-card div:last-child .btn{width:100%;justify-content:center}}
