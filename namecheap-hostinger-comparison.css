@@ -1,0 +1,19 @@
+/* Namecheap Hosting vs Hostinger comparison upgrade - 2026-06-26 */
+.namecheap-hostinger-page .nh-hero{background:linear-gradient(135deg,#07182f 0%,#102d57 52%,#f7fbff 52%,#f7fbff 100%);}
+.nh-hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:34px;align-items:center;}
+.nh-verdict-card{background:#fff;border:1px solid rgba(15,23,42,.10);border-radius:24px;padding:26px;box-shadow:0 24px 60px rgba(15,23,42,.16);}
+.nh-verdict-card span{display:inline-flex;border-radius:999px;background:#eaf2ff;color:#0b4ea2;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.03em;padding:7px 10px;margin-bottom:14px;}
+.nh-verdict-card strong{display:block;color:#0f172a;font-size:1.3rem;line-height:1.35;margin-bottom:12px;}
+.nh-verdict-card p{margin:0;color:#475569;line-height:1.65;}
+.nh-answer-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:18px;margin:34px 0 42px;}
+.nh-answer-card{background:#fff;border:1px solid rgba(15,23,42,.10);border-radius:20px;padding:22px;box-shadow:0 14px 35px rgba(15,23,42,.065);}
+.nh-answer-card.featured{grid-row:span 2;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);border-color:rgba(37,99,235,.22);}
+.nh-answer-card h2{margin-top:0;font-size:clamp(1.55rem,2.2vw,2.2rem);}
+.nh-answer-card strong{display:block;color:#0f172a;font-size:1.03rem;margin-bottom:8px;}
+.nh-answer-card span,.nh-answer-card p{color:#475569;line-height:1.65;}
+.nh-provider-cards{margin:42px 0;}
+.namecheap-hostinger-page details{background:#fff;border:1px solid rgba(15,23,42,.10);border-radius:16px;padding:16px 18px;margin:12px 0;box-shadow:0 8px 22px rgba(15,23,42,.045);}
+.namecheap-hostinger-page details summary{font-weight:800;color:#0f172a;cursor:pointer;}
+.namecheap-hostinger-page details p{color:#475569;line-height:1.65;}
+@media (max-width:900px){.namecheap-hostinger-page .nh-hero{background:#07182f}.nh-hero-grid,.nh-answer-grid{grid-template-columns:1fr}.nh-answer-card.featured{grid-row:auto}.nh-verdict-card{margin-top:6px}.nh-hero .hero-text{color:#dbeafe}}
+@media (max-width:640px){.nh-verdict-card,.nh-answer-card{border-radius:18px;padding:18px}.nh-answer-grid{margin:24px 0 30px}.namecheap-hostinger-page .review-hero-cta-row .btn{width:100%;justify-content:center}}
