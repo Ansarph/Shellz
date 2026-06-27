@@ -679,3 +679,98 @@ body.shellz-home-modern dd::-moz-selection {
   -webkit-text-fill-color: #ffffff !important;
   text-shadow: none !important;
 }
+
+/* ===================================================================
+   Shellz homepage dark-section heading full contrast fix — 2026-06-27 v5
+   The user-marked homepage headings were inheriting dark text on dark
+   gradient backgrounds. Keep section headings white/cyan and keep cards dark.
+   =================================================================== */
+body.shellz-home-modern .top5-premium-heading h1,
+body.shellz-home-modern .top5-premium-heading h2,
+body.shellz-home-modern .top5-premium-heading h3,
+body.shellz-home-modern .home-cro-needs > .section-heading h1,
+body.shellz-home-modern .home-cro-needs > .section-heading h2,
+body.shellz-home-modern .home-cro-needs > .section-heading h3,
+body.shellz-home-modern .home-cro-coupons > .section-heading h1,
+body.shellz-home-modern .home-cro-coupons > .section-heading h2,
+body.shellz-home-modern .home-cro-coupons > .section-heading h3,
+body.shellz-home-modern .home-cro-testing > .section-heading h1,
+body.shellz-home-modern .home-cro-testing > .section-heading h2,
+body.shellz-home-modern .home-cro-testing > .section-heading h3,
+body.shellz-home-modern .home-cro-guides > .section-heading h1,
+body.shellz-home-modern .home-cro-guides > .section-heading h2,
+body.shellz-home-modern .home-cro-guides > .section-heading h3,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading h1,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading h2,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading h3,
+body.shellz-home-modern .home-proof-tools .section-heading h1,
+body.shellz-home-modern .home-proof-tools .section-heading h2,
+body.shellz-home-modern .home-proof-tools .section-heading h3 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 2px 14px rgba(2, 6, 23, 0.32) !important;
+  mix-blend-mode: normal !important;
+}
+
+body.shellz-home-modern .top5-premium-heading .eyebrow,
+body.shellz-home-modern .home-cro-needs > .section-heading .eyebrow,
+body.shellz-home-modern .home-cro-coupons > .section-heading .eyebrow,
+body.shellz-home-modern .home-cro-testing > .section-heading .eyebrow,
+body.shellz-home-modern .home-cro-guides > .section-heading .eyebrow,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading .eyebrow,
+body.shellz-home-modern .home-proof-tools .section-heading .eyebrow {
+  color: #67e8f9 !important;
+  -webkit-text-fill-color: #67e8f9 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  mix-blend-mode: normal !important;
+}
+
+body.shellz-home-modern .top5-premium-heading p:not(.eyebrow),
+body.shellz-home-modern .top5-premium-heading .muted,
+body.shellz-home-modern .home-cro-needs > .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-cro-needs > .section-heading .muted,
+body.shellz-home-modern .home-cro-coupons > .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-cro-coupons > .section-heading .muted,
+body.shellz-home-modern .home-cro-testing > .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-cro-testing > .section-heading .muted,
+body.shellz-home-modern .home-cro-guides > .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-cro-guides > .section-heading .muted,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading p:not(.eyebrow),
+body.shellz-home-modern .comparison-pages-upgrade .section-heading .muted,
+body.shellz-home-modern .home-proof-tools .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-proof-tools .section-heading .muted {
+  color: #dbeafe !important;
+  -webkit-text-fill-color: #dbeafe !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Keep selected/highlighted text readable too. */
+body.shellz-home-modern .top5-premium-heading *::selection,
+body.shellz-home-modern .home-cro-needs > .section-heading *::selection,
+body.shellz-home-modern .home-cro-coupons > .section-heading *::selection,
+body.shellz-home-modern .home-cro-testing > .section-heading *::selection,
+body.shellz-home-modern .home-cro-guides > .section-heading *::selection,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading *::selection,
+body.shellz-home-modern .home-proof-tools .section-heading *::selection {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+body.shellz-home-modern .top5-premium-heading *::-moz-selection,
+body.shellz-home-modern .home-cro-needs > .section-heading *::-moz-selection,
+body.shellz-home-modern .home-cro-coupons > .section-heading *::-moz-selection,
+body.shellz-home-modern .home-cro-testing > .section-heading *::-moz-selection,
+body.shellz-home-modern .home-cro-guides > .section-heading *::-moz-selection,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading *::-moz-selection,
+body.shellz-home-modern .home-proof-tools .section-heading *::-moz-selection {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
