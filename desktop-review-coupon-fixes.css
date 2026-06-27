@@ -351,3 +351,52 @@
 .sidebar-card {
   min-width: 0 !important;
 }
+
+/* Best hosting ranked-picks score size fix — 2026-06-27
+   Keeps editorial score visible but smaller so it does not dominate the card. */
+.comparison .deal-list .deal-card > .score-box {
+  width: 96px !important;
+  min-width: 96px !important;
+  max-width: 96px !important;
+  min-height: 94px !important;
+  padding: 10px 8px !important;
+  gap: 6px !important;
+  border-radius: 18px !important;
+  justify-self: center !important;
+}
+
+.comparison .deal-list .deal-card > .score-box .score {
+  font-size: clamp(2.05rem, 3.4vw, 3.15rem) !important;
+  line-height: .9 !important;
+  letter-spacing: -.05em !important;
+  padding: 6px 8px !important;
+  border-radius: 14px !important;
+}
+
+.comparison .deal-list .deal-card > .score-box .score-label {
+  max-width: 76px !important;
+  padding: 5px 6px !important;
+  font-size: .62rem !important;
+  line-height: 1.05 !important;
+  letter-spacing: .06em !important;
+}
+
+@media (max-width: 760px) {
+  .comparison .deal-list .deal-card > .score-box {
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    padding: 10px 12px !important;
+  }
+  .comparison .deal-list .deal-card > .score-box .score {
+    font-size: 1.7rem !important;
+    padding: 4px 8px !important;
+  }
+  .comparison .deal-list .deal-card > .score-box .score-label {
+    max-width: 100% !important;
+    font-size: .68rem !important;
+  }
+}

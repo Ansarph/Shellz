@@ -70,3 +70,162 @@ table{max-width:100%!important;}
   .quick-tools-actions{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:8px!important;}
   .quick-tool-btn{width:100%!important;min-width:0!important;}
 }
+
+/* ===================================================================
+   Shellz text contrast fix — 2026-06-27
+   Fixes white/light text appearing on white cards inside dark homepage
+   comparison sections and other reused human-card blocks.
+   =================================================================== */
+.comparison-pages-upgrade .section-heading h2,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(2, 6, 23, .26) !important;
+}
+.comparison-pages-upgrade .section-heading .eyebrow,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading .eyebrow {
+  color: #67e8f9 !important;
+}
+.comparison-pages-upgrade .section-heading p:not(.eyebrow),
+body.shellz-home-modern .comparison-pages-upgrade .section-heading p:not(.eyebrow) {
+  color: #dbeafe !important;
+  opacity: 1 !important;
+}
+.comparison-pages-upgrade .human-card,
+body.shellz-home-modern .comparison-pages-upgrade .human-card {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  opacity: 1 !important;
+}
+.comparison-pages-upgrade .human-card h3,
+body.shellz-home-modern .comparison-pages-upgrade .human-card h3,
+.human-card h3 {
+  color: #0f172a !important;
+  opacity: 1 !important;
+}
+.comparison-pages-upgrade .human-card p,
+.comparison-pages-upgrade .human-card li,
+.comparison-pages-upgrade .human-card span,
+body.shellz-home-modern .comparison-pages-upgrade .human-card p,
+body.shellz-home-modern .comparison-pages-upgrade .human-card li,
+body.shellz-home-modern .comparison-pages-upgrade .human-card span,
+.human-card p,
+.human-card li {
+  color: #475569 !important;
+  opacity: 1 !important;
+}
+.comparison-pages-upgrade .human-card a:not(.btn),
+body.shellz-home-modern .comparison-pages-upgrade .human-card a:not(.btn),
+.comparison-pages-upgrade .details-link,
+body.shellz-home-modern .comparison-pages-upgrade .details-link {
+  color: #8a4b00 !important;
+  opacity: 1 !important;
+}
+.comparison-pages-upgrade .details-link,
+body.shellz-home-modern .comparison-pages-upgrade .details-link {
+  background: #ffffff !important;
+  border-color: #bfe4dc !important;
+}
+
+/* ===================================================================
+   Shellz homepage white-panel text contrast fix — 2026-06-27 v2
+   Fixes white/faint text on white panels such as methodology CTA and
+   topic clusters when they appear inside the dark homepage background.
+   =================================================================== */
+body.shellz-home-modern .home-methodology-cta,
+body.shellz-home-modern .topic-cluster-panel,
+body.shellz-home-modern .related-shellz-guides,
+body.shellz-home-modern .buyer-flow-panel,
+body.shellz-home-modern .coupon-hub-upgrade-panel {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  mix-blend-mode: normal !important;
+}
+
+body.shellz-home-modern .home-methodology-cta h1,
+body.shellz-home-modern .home-methodology-cta h2,
+body.shellz-home-modern .home-methodology-cta h3,
+body.shellz-home-modern .topic-cluster-panel h1,
+body.shellz-home-modern .topic-cluster-panel h2,
+body.shellz-home-modern .topic-cluster-panel h3,
+body.shellz-home-modern .related-shellz-guides h2,
+body.shellz-home-modern .buyer-flow-panel h2,
+body.shellz-home-modern .coupon-hub-upgrade-panel h2,
+body.shellz-home-modern .cluster-link-card strong,
+body.shellz-home-modern .related-link-card strong,
+body.shellz-home-modern .buyer-flow-card strong {
+  color: #0f172a !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.shellz-home-modern .home-methodology-cta p,
+body.shellz-home-modern .home-methodology-cta li,
+body.shellz-home-modern .home-methodology-cta span,
+body.shellz-home-modern .topic-cluster-panel p,
+body.shellz-home-modern .topic-cluster-panel li,
+body.shellz-home-modern .topic-cluster-panel span,
+body.shellz-home-modern .related-shellz-guides p,
+body.shellz-home-modern .related-shellz-guides li,
+body.shellz-home-modern .related-shellz-guides span,
+body.shellz-home-modern .buyer-flow-panel p,
+body.shellz-home-modern .buyer-flow-panel li,
+body.shellz-home-modern .buyer-flow-panel span,
+body.shellz-home-modern .coupon-hub-upgrade-panel p,
+body.shellz-home-modern .coupon-hub-upgrade-panel li,
+body.shellz-home-modern .coupon-hub-upgrade-panel span,
+body.shellz-home-modern .cluster-link-card span,
+body.shellz-home-modern .related-link-card span,
+body.shellz-home-modern .buyer-flow-card span {
+  color: #475569 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.shellz-home-modern .topic-cluster-panel .eyebrow,
+body.shellz-home-modern .home-methodology-cta .eyebrow,
+body.shellz-home-modern .related-shellz-guides .eyebrow,
+body.shellz-home-modern .buyer-flow-panel .eyebrow,
+body.shellz-home-modern .coupon-hub-upgrade-panel .eyebrow {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+  opacity: 1 !important;
+}
+
+body.shellz-home-modern .topic-cluster-panel a:not(.btn),
+body.shellz-home-modern .home-methodology-cta a:not(.btn),
+body.shellz-home-modern .related-shellz-guides a:not(.btn),
+body.shellz-home-modern .buyer-flow-panel a:not(.btn),
+body.shellz-home-modern .coupon-hub-upgrade-panel a:not(.btn) {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+  opacity: 1 !important;
+}
+
+body.shellz-home-modern .topic-cluster-panel .cluster-link-card,
+body.shellz-home-modern .related-shellz-guides .related-link-card,
+body.shellz-home-modern .buyer-flow-panel .buyer-flow-card,
+body.shellz-home-modern .coupon-hub-upgrade-panel .coupon-status-mini {
+  background: #ffffff !important;
+  border-color: #dbe5f0 !important;
+  color: #0f172a !important;
+  opacity: 1 !important;
+}
+
+body.shellz-home-modern .home-methodology-cta .btn.primary,
+body.shellz-home-modern .home-methodology-cta .btn.primary *,
+body.shellz-home-modern .topic-cluster-panel .btn.primary,
+body.shellz-home-modern .topic-cluster-panel .btn.primary * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+body.shellz-home-modern .home-methodology-cta .btn.secondary,
+body.shellz-home-modern .topic-cluster-panel .btn.secondary {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+}
+

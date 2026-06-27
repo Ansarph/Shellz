@@ -10342,3 +10342,282 @@ body.coupon-modal-open {
     border-radius: 16px;
   }
 }
+
+/* ===================================================================
+   Professional reviews hub layout — 2026-06-27
+   Applies only to reviews.html. Converts provider cards into a cleaner
+   review-card layout with compact editorial scores, right-side logos,
+   clear pros/watch-outs, and stronger CTA rows.
+   =================================================================== */
+body.reviews-page {
+  background: #f5f8fc !important;
+}
+body.reviews-page .page-hero {
+  background:
+    radial-gradient(circle at 20% 5%, rgba(37,99,235,.10), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(20,184,166,.10), transparent 28%),
+    #f7fbff !important;
+  border-bottom: 1px solid #e5edf7 !important;
+  padding: 68px 0 44px !important;
+  text-align: center !important;
+}
+body.reviews-page .page-hero h1 {
+  color: #07142f !important;
+  font-size: clamp(2.35rem, 5vw, 4.1rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -.055em !important;
+  max-width: 900px !important;
+  margin-inline: auto !important;
+}
+body.reviews-page .page-hero .hero-text,
+body.reviews-page .page-hero .last-updated {
+  color: #475569 !important;
+  max-width: 760px !important;
+  margin-inline: auto !important;
+}
+body.reviews-page .reviews-stack {
+  max-width: 1120px !important;
+  margin: 34px auto 0 !important;
+  display: grid !important;
+  gap: 28px !important;
+}
+body.reviews-page .reviews-stack > .review-card {
+  background: #ffffff !important;
+  border: 1px solid #dfe8f3 !important;
+  border-radius: 28px !important;
+  padding: 34px !important;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, .07) !important;
+  overflow: hidden !important;
+}
+body.reviews-page .reviews-stack > .review-card:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 30px 86px rgba(15, 23, 42, .10) !important;
+}
+body.reviews-page .review-topline {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 112px 172px !important;
+  gap: 24px !important;
+  align-items: start !important;
+  margin: 0 0 24px !important;
+}
+body.reviews-page .review-topline > div:not(.provider-logo):not(.score-box) {
+  grid-column: 1 / 2 !important;
+  grid-row: 1 !important;
+  min-width: 0 !important;
+  max-width: 720px !important;
+}
+body.reviews-page .review-topline h2 {
+  margin: 0 0 10px !important;
+  color: #07142f !important;
+  font-size: clamp(1.55rem, 2.8vw, 2.25rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.04em !important;
+}
+body.reviews-page .review-topline h2 a {
+  color: #07142f !important;
+  text-decoration: none !important;
+}
+body.reviews-page .review-topline h2 a:hover {
+  color: #1d4ed8 !important;
+}
+body.reviews-page .review-topline p {
+  color: #334155 !important;
+  font-size: 1.02rem !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+}
+body.reviews-page .review-topline > .provider-logo,
+body.reviews-page .review-topline > .provider-logo.large,
+body.reviews-page .review-topline > .provider-logo-wide {
+  grid-column: 3 / 4 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  align-self: start !important;
+  width: 160px !important;
+  min-width: 160px !important;
+  height: 88px !important;
+  padding: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(180deg, #ffffff, #f8fbff) !important;
+  border: 1px solid #dfe8f3 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, .06) !important;
+}
+body.reviews-page .review-topline > .provider-logo img {
+  max-width: 124px !important;
+  max-height: 46px !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+body.reviews-page .review-score,
+body.reviews-page .score-box.review-score {
+  grid-column: 2 / 3 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  align-self: center !important;
+  width: 96px !important;
+  min-width: 96px !important;
+  max-width: 96px !important;
+  min-height: 72px !important;
+  padding: 10px 12px !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  background: linear-gradient(180deg, #ecfffb, #f8fffd) !important;
+  border: 1px solid #c4eee5 !important;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, .05) !important;
+  text-align: center !important;
+}
+body.reviews-page .review-score .score,
+body.reviews-page .score-box.review-score .score {
+  color: #0f766e !important;
+  font-size: 1.65rem !important;
+  line-height: 1 !important;
+  letter-spacing: -.04em !important;
+  font-weight: 900 !important;
+}
+body.reviews-page .review-score .score-label,
+body.reviews-page .score-box.review-score .score-label {
+  color: #475569 !important;
+  font-size: .58rem !important;
+  line-height: 1.05 !important;
+  letter-spacing: .105em !important;
+  text-transform: uppercase !important;
+  font-weight: 900 !important;
+}
+body.reviews-page .review-card .pros-cons {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  margin: 22px 0 0 !important;
+}
+body.reviews-page .review-card .pros-cons > div {
+  background: linear-gradient(180deg, #f8fffd, #ffffff) !important;
+  border: 1px solid #ccefe8 !important;
+  border-radius: 20px !important;
+  padding: 20px 22px !important;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .035) !important;
+}
+body.reviews-page .review-card .pros-cons > div:nth-child(2) {
+  background: linear-gradient(180deg, #fffbf4, #ffffff) !important;
+  border-color: #fed7aa !important;
+}
+body.reviews-page .review-card .pros-cons h3 {
+  color: #07142f !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 0 0 12px !important;
+  font-size: 1.08rem !important;
+  letter-spacing: -.02em !important;
+}
+body.reviews-page .review-card .pros-cons h3::before {
+  content: "✓" !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 999px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  color: #fff !important;
+  background: #0f9f8a !important;
+  font-size: .82rem !important;
+  font-weight: 900 !important;
+}
+body.reviews-page .review-card .pros-cons > div:nth-child(2) h3::before {
+  content: "!" !important;
+  background: #f97316 !important;
+}
+body.reviews-page .review-card .pros-cons ul {
+  margin: 0 !important;
+  padding-left: 20px !important;
+  color: #334155 !important;
+}
+body.reviews-page .review-card .pros-cons li {
+  color: #334155 !important;
+  line-height: 1.55 !important;
+  margin: 7px 0 !important;
+}
+body.reviews-page .review-actions {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 26px !important;
+}
+body.reviews-page .review-actions .btn,
+body.reviews-page .review-actions .details-link {
+  min-height: 50px !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 900 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+body.reviews-page .review-actions .btn.primary {
+  background: linear-gradient(135deg, #0f8b7c, #2563eb) !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  box-shadow: 0 16px 36px rgba(37, 99, 235, .18) !important;
+}
+body.reviews-page .review-actions .details-link {
+  color: #075e54 !important;
+  background: #ffffff !important;
+  border: 1.5px solid #bfe4dc !important;
+}
+body.reviews-page .review-actions .details-link:hover {
+  color: #1d4ed8 !important;
+  border-color: #93c5fd !important;
+  background: #f8fbff !important;
+}
+@media (max-width: 860px) {
+  body.reviews-page .reviews-stack > .review-card {
+    padding: 22px !important;
+    border-radius: 24px !important;
+  }
+  body.reviews-page .review-topline {
+    grid-template-columns: 1fr 108px !important;
+    gap: 16px !important;
+  }
+  body.reviews-page .review-topline > div:not(.provider-logo):not(.score-box) {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+  }
+  body.reviews-page .review-topline > .provider-logo,
+  body.reviews-page .review-topline > .provider-logo.large,
+  body.reviews-page .review-topline > .provider-logo-wide {
+    grid-column: 1 / 2 !important;
+    grid-row: 2 !important;
+    justify-self: start !important;
+    width: 142px !important;
+    min-width: 142px !important;
+    height: 74px !important;
+  }
+  body.reviews-page .review-score,
+  body.reviews-page .score-box.review-score {
+    grid-column: 2 / 3 !important;
+    grid-row: 2 !important;
+    justify-self: end !important;
+    width: 88px !important;
+    min-width: 88px !important;
+    max-width: 88px !important;
+    min-height: 68px !important;
+  }
+  body.reviews-page .review-card .pros-cons,
+  body.reviews-page .review-actions {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 520px) {
+  body.reviews-page .page-hero { padding: 44px 0 30px !important; }
+  body.reviews-page .reviews-stack { gap: 18px !important; }
+  body.reviews-page .review-topline h2 { font-size: 1.45rem !important; }
+  body.reviews-page .review-topline p { font-size: .96rem !important; }
+  body.reviews-page .review-card .pros-cons > div { padding: 17px !important; }
+}
