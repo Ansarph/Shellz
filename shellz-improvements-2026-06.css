@@ -774,3 +774,304 @@ body.shellz-home-modern .home-proof-tools .section-heading *::-moz-selection {
   -webkit-text-fill-color: #ffffff !important;
   text-shadow: none !important;
 }
+
+
+/* ===================================================================
+   Shellz Homepage Professional UI Consistency Update — 2026-06-27 v4
+   Goal: one stable homepage design system.
+   Dark background = white heading + soft paragraph.
+   White card = dark heading + readable gray paragraph.
+   Uses Inter for professional consistency with inner pages.
+   =================================================================== */
+
+/* One professional heading font for homepage */
+body.shellz-home-modern,
+body.shellz-home-modern h1,
+body.shellz-home-modern h2,
+body.shellz-home-modern h3,
+body.shellz-home-modern h4,
+body.shellz-home-modern h5,
+body.shellz-home-modern h6,
+body.shellz-home-modern p,
+body.shellz-home-modern a,
+body.shellz-home-modern span,
+body.shellz-home-modern strong,
+body.shellz-home-modern em,
+body.shellz-home-modern li,
+body.shellz-home-modern dt,
+body.shellz-home-modern dd,
+body.shellz-home-modern td,
+body.shellz-home-modern th,
+body.shellz-home-modern button {
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  text-shadow: none !important;
+}
+
+/* Core dark homepage sections */
+body.shellz-home-modern .home-cro-top5,
+body.shellz-home-modern .home-cro-needs,
+body.shellz-home-modern .home-cro-coupons,
+body.shellz-home-modern .home-cro-testing,
+body.shellz-home-modern .home-cro-guides,
+body.shellz-home-modern .comparison-pages-upgrade,
+body.shellz-home-modern .home-proof-tools,
+body.shellz-home-modern .latest-shellz-updates {
+  color: #ffffff !important;
+}
+
+/* Headings on dark sections */
+body.shellz-home-modern .top5-premium-heading h1,
+body.shellz-home-modern .top5-premium-heading h2,
+body.shellz-home-modern .home-cro-needs .section-heading h1,
+body.shellz-home-modern .home-cro-needs .section-heading h2,
+body.shellz-home-modern .home-cro-coupons .section-heading h1,
+body.shellz-home-modern .home-cro-coupons .section-heading h2,
+body.shellz-home-modern .home-cro-testing .section-heading h1,
+body.shellz-home-modern .home-cro-testing .section-heading h2,
+body.shellz-home-modern .home-cro-guides .section-heading h1,
+body.shellz-home-modern .home-cro-guides .section-heading h2,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading h1,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading h2,
+body.shellz-home-modern .home-proof-tools .section-heading h1,
+body.shellz-home-modern .home-proof-tools .section-heading h2,
+body.shellz-home-modern .latest-shellz-updates .section-heading h1,
+body.shellz-home-modern .latest-shellz-updates .section-heading h2 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1.05 !important;
+  max-width: 980px !important;
+}
+
+/* Paragraphs on dark sections */
+body.shellz-home-modern .top5-premium-heading p,
+body.shellz-home-modern .home-cro-needs .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-cro-needs .section-heading .muted,
+body.shellz-home-modern .home-cro-coupons .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-cro-coupons .section-heading .muted,
+body.shellz-home-modern .home-cro-testing .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-cro-testing .section-heading .muted,
+body.shellz-home-modern .home-cro-guides .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-cro-guides .section-heading .muted,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading p:not(.eyebrow),
+body.shellz-home-modern .home-proof-tools .section-heading p:not(.eyebrow),
+body.shellz-home-modern .latest-shellz-updates .section-heading p:not(.eyebrow),
+body.shellz-home-modern .latest-shellz-updates .section-heading .muted {
+  color: #dbeafe !important;
+  -webkit-text-fill-color: #dbeafe !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+  line-height: 1.65 !important;
+}
+
+/* Eyebrows / labels on dark sections */
+body.shellz-home-modern .top5-premium-heading .eyebrow,
+body.shellz-home-modern .home-cro-needs .section-heading .eyebrow,
+body.shellz-home-modern .home-cro-coupons .section-heading .eyebrow,
+body.shellz-home-modern .home-cro-testing .section-heading .eyebrow,
+body.shellz-home-modern .home-cro-guides .section-heading .eyebrow,
+body.shellz-home-modern .comparison-pages-upgrade .section-heading .eyebrow,
+body.shellz-home-modern .home-proof-tools .section-heading .eyebrow,
+body.shellz-home-modern .latest-shellz-updates .section-heading .eyebrow {
+  color: #67e8f9 !important;
+  -webkit-text-fill-color: #67e8f9 !important;
+  opacity: 1 !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+}
+
+/* White cards: stable readable contrast */
+body.shellz-home-modern .top5-provider-card,
+body.shellz-home-modern .need-card-premium,
+body.shellz-home-modern .need-card,
+body.shellz-home-modern .home-coupon-card,
+body.shellz-home-modern .home-coupon-card-premium,
+body.shellz-home-modern .testing-status-grid article,
+body.shellz-home-modern .buyer-guide-grid a,
+body.shellz-home-modern .human-card,
+body.shellz-home-modern .compact-update-card,
+body.shellz-home-modern .cluster-link-card,
+body.shellz-home-modern .topic-cluster-panel,
+body.shellz-home-modern .home-methodology-cta,
+body.shellz-home-modern .home-proof-tools .human-card,
+body.shellz-home-modern .comparison-pages-upgrade .human-card {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  -webkit-text-fill-color: initial !important;
+  border-color: #dbe5f0 !important;
+  opacity: 1 !important;
+}
+
+/* White card headings */
+body.shellz-home-modern .top5-provider-card h3,
+body.shellz-home-modern .top5-provider-card strong,
+body.shellz-home-modern .need-card-premium strong,
+body.shellz-home-modern .need-card strong,
+body.shellz-home-modern .home-coupon-card strong,
+body.shellz-home-modern .testing-status-grid article strong,
+body.shellz-home-modern .buyer-guide-grid a strong,
+body.shellz-home-modern .human-card h3,
+body.shellz-home-modern .human-card strong,
+body.shellz-home-modern .compact-update-card strong,
+body.shellz-home-modern .cluster-link-card strong,
+body.shellz-home-modern .topic-cluster-panel h1,
+body.shellz-home-modern .topic-cluster-panel h2,
+body.shellz-home-modern .topic-cluster-panel h3,
+body.shellz-home-modern .home-methodology-cta h1,
+body.shellz-home-modern .home-methodology-cta h2,
+body.shellz-home-modern .home-methodology-cta h3 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  opacity: 1 !important;
+  font-family: Inter, "Segoe UI", Arial, sans-serif !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* White card body text */
+body.shellz-home-modern .top5-provider-card p,
+body.shellz-home-modern .top5-provider-card li,
+body.shellz-home-modern .top5-provider-card span,
+body.shellz-home-modern .top5-provider-card dd,
+body.shellz-home-modern .top5-provider-card dt,
+body.shellz-home-modern .need-card-premium em,
+body.shellz-home-modern .need-card em,
+body.shellz-home-modern .home-coupon-card small,
+body.shellz-home-modern .home-coupon-card span:not(.coupon-verified-icon),
+body.shellz-home-modern .testing-status-grid article span,
+body.shellz-home-modern .buyer-guide-grid a span,
+body.shellz-home-modern .human-card p,
+body.shellz-home-modern .human-card li,
+body.shellz-home-modern .human-card span,
+body.shellz-home-modern .compact-update-card span,
+body.shellz-home-modern .cluster-link-card span,
+body.shellz-home-modern .topic-cluster-panel p,
+body.shellz-home-modern .topic-cluster-panel li,
+body.shellz-home-modern .topic-cluster-panel span,
+body.shellz-home-modern .home-methodology-cta p,
+body.shellz-home-modern .home-methodology-cta li,
+body.shellz-home-modern .home-methodology-cta span {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+  opacity: 1 !important;
+  line-height: 1.6 !important;
+}
+
+/* Links inside white cards */
+body.shellz-home-modern .top5-provider-card a:not(.btn),
+body.shellz-home-modern .home-coupon-card a:not(.btn),
+body.shellz-home-modern .buyer-guide-grid a,
+body.shellz-home-modern .human-card a:not(.btn),
+body.shellz-home-modern .compact-update-card,
+body.shellz-home-modern .cluster-link-card,
+body.shellz-home-modern .topic-cluster-panel a:not(.btn),
+body.shellz-home-modern .home-methodology-cta a:not(.btn) {
+  color: #1d4ed8 !important;
+  opacity: 1 !important;
+}
+
+/* Primary buttons */
+body.shellz-home-modern .btn.primary,
+body.shellz-home-modern .top5-guide-button,
+body.shellz-home-modern .top5-view-deal,
+body.shellz-home-modern .coupon-view-deal {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  border-color: rgba(37, 99, 235, 0.35) !important;
+  font-weight: 850 !important;
+}
+
+/* Keep coupon/deal orange CTA intentionally readable */
+body.shellz-home-modern .home-coupon-card .coupon-view-deal,
+body.shellz-home-modern .home-coupon-card-premium .coupon-view-deal {
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%) !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  font-weight: 900 !important;
+}
+
+/* Secondary buttons */
+body.shellz-home-modern .btn.secondary {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+  background: #ffffff !important;
+  border-color: #bfdbfe !important;
+  font-weight: 850 !important;
+}
+
+/* Tables / proof panels remain readable */
+body.shellz-home-modern .proof-provider-table,
+body.shellz-home-modern .proof-provider-table table,
+body.shellz-home-modern .table-wrap {
+  background: #ffffff !important;
+  color: #0f172a !important;
+}
+
+body.shellz-home-modern .proof-provider-table th,
+body.shellz-home-modern .proof-provider-table td {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+/* Universal selected text: white text on blue highlight */
+body.shellz-home-modern ::selection,
+body.shellz-home-modern h1::selection,
+body.shellz-home-modern h2::selection,
+body.shellz-home-modern h3::selection,
+body.shellz-home-modern h4::selection,
+body.shellz-home-modern p::selection,
+body.shellz-home-modern span::selection,
+body.shellz-home-modern strong::selection,
+body.shellz-home-modern em::selection,
+body.shellz-home-modern a::selection,
+body.shellz-home-modern li::selection,
+body.shellz-home-modern dt::selection,
+body.shellz-home-modern dd::selection,
+body.shellz-home-modern th::selection,
+body.shellz-home-modern td::selection {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+body.shellz-home-modern ::-moz-selection {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Mobile: reduce oversized homepage headings and prevent overlap */
+@media (max-width: 760px) {
+  body.shellz-home-modern .top5-premium-heading h2,
+  body.shellz-home-modern .home-cro-needs .section-heading h2,
+  body.shellz-home-modern .home-cro-coupons .section-heading h2,
+  body.shellz-home-modern .home-cro-testing .section-heading h2,
+  body.shellz-home-modern .home-cro-guides .section-heading h2,
+  body.shellz-home-modern .comparison-pages-upgrade .section-heading h2,
+  body.shellz-home-modern .home-proof-tools .section-heading h2,
+  body.shellz-home-modern .latest-shellz-updates .section-heading h2,
+  body.shellz-home-modern .topic-cluster-panel h2,
+  body.shellz-home-modern .home-methodology-cta h2 {
+    font-size: clamp(1.85rem, 8vw, 2.75rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.035em !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  body.shellz-home-modern .top5-premium-heading p,
+  body.shellz-home-modern .home-cro-needs .section-heading p,
+  body.shellz-home-modern .home-cro-coupons .section-heading p,
+  body.shellz-home-modern .home-cro-testing .section-heading p,
+  body.shellz-home-modern .home-cro-guides .section-heading p,
+  body.shellz-home-modern .comparison-pages-upgrade .section-heading p,
+  body.shellz-home-modern .home-proof-tools .section-heading p {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+  }
+}
