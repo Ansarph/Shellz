@@ -11788,3 +11788,174 @@ html { scroll-padding-top: 68px !important; }
 .site-header .main-nav a { overflow: visible !important; white-space: nowrap !important; }
 .site-header .main-nav a[data-nav="compare"],
 .site-header .main-nav a[data-nav="checklist"] { padding-inline: 11px !important; }
+
+
+/* =====================================================================
+   Web Hosting Finder SEO + UX expansion — 2026-06-28 v8
+   ===================================================================== */
+.shellz-hosting-finder-page .finder-hero-note {
+  margin-top: 16px;
+  color: #bfdbfe !important;
+  -webkit-text-fill-color: #bfdbfe !important;
+  font-size: .98rem;
+  max-width: 68ch;
+}
+.shellz-hosting-finder-page .finder-seo-intro,
+.shellz-hosting-finder-page .finder-website-type,
+.shellz-hosting-finder-page .finder-mistakes,
+.shellz-hosting-finder-page .finder-final-cta {
+  background: #ffffff;
+  border: 1px solid #dbe7f6;
+  border-radius: 28px;
+  padding: 28px;
+  margin-top: 34px;
+  margin-bottom: 34px;
+  box-shadow: 0 16px 38px rgba(15,23,42,.07);
+}
+.shellz-hosting-finder-page .finder-seo-intro h2,
+.shellz-hosting-finder-page .finder-website-type h2,
+.shellz-hosting-finder-page .finder-mistakes h2,
+.shellz-hosting-finder-page .finder-final-cta h2 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+.shellz-hosting-finder-page .finder-seo-intro p,
+.shellz-hosting-finder-page .finder-website-type p,
+.shellz-hosting-finder-page .finder-mistakes span,
+.shellz-hosting-finder-page .finder-final-cta p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+  line-height: 1.65;
+}
+.finder-website-type-grid,
+.finder-mistake-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.finder-website-type-grid article,
+.finder-mistake-grid article {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border: 1px solid #dbe7f6;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(15,23,42,.055);
+}
+.finder-website-type-grid h3,
+.finder-mistake-grid strong {
+  display: block;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-size: 1.08rem;
+  margin: 0 0 8px;
+}
+.finder-website-type-grid a,
+.finder-mistake-grid a,
+.finder-comparison-table a {
+  display: inline-flex;
+  margin-top: 8px;
+  color: #0f766e !important;
+  -webkit-text-fill-color: #0f766e !important;
+  font-weight: 900;
+  text-decoration: none;
+}
+.finder-reason-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.finder-reason-grid div {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 18px;
+  padding: 16px;
+}
+.finder-reason-grid strong,
+.finder-reason-grid span {
+  display: block;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+.finder-reason-grid strong {
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #99f6e4 !important;
+  -webkit-text-fill-color: #99f6e4 !important;
+  margin-bottom: 6px;
+}
+.finder-reason-grid span {
+  color: #dbeafe !important;
+  -webkit-text-fill-color: #dbeafe !important;
+  line-height: 1.55;
+}
+.finder-comparison-table-wrap {
+  margin-top: 18px;
+}
+.finder-comparison-table th,
+.finder-comparison-table td {
+  vertical-align: top;
+}
+.finder-noscript {
+  margin-top: 22px;
+  padding: 20px;
+  border: 1px solid #fed7aa;
+  background: #fff7ed;
+  border-radius: 20px;
+}
+.finder-noscript h2 {
+  color: #9a3412 !important;
+  -webkit-text-fill-color: #9a3412 !important;
+  margin-top: 0;
+}
+.finder-noscript li {
+  margin: 8px 0;
+  color: #334155 !important;
+  -webkit-text-fill-color: #334155 !important;
+}
+.finder-noscript a {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+  font-weight: 900;
+}
+.finder-faq-expanded details {
+  border: 1px solid #dbe7f6;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin: 12px 0;
+  background: #ffffff;
+}
+.finder-faq-expanded summary {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-weight: 900;
+}
+.finder-faq-expanded p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+.finder-final-cta {
+  background: linear-gradient(135deg, #ecfeff, #ffffff 55%, #eff6ff) !important;
+}
+@media (max-width: 980px) {
+  .finder-website-type-grid,
+  .finder-mistake-grid,
+  .finder-reason-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .shellz-hosting-finder-page .finder-seo-intro,
+  .shellz-hosting-finder-page .finder-website-type,
+  .shellz-hosting-finder-page .finder-mistakes,
+  .shellz-hosting-finder-page .finder-final-cta {
+    padding: 20px;
+    border-radius: 22px;
+  }
+  .finder-website-type-grid article,
+  .finder-mistake-grid article {
+    padding: 18px;
+  }
+}
