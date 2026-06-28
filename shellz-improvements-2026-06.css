@@ -1147,3 +1147,86 @@ body.shellz-home-modern .latest-shellz-updates.compact-latest-updates .compact-u
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* =====================================================================
+   Homepage comparison anchor + header fit fix — 2026-06-28 v7
+   Fixes #comparison landing position and prevents the Compare nav item from clipping.
+   ===================================================================== */
+html {
+  scroll-padding-top: 68px !important;
+}
+
+body.shellz-home-modern #comparison,
+body.homepage-category-first #comparison {
+  scroll-margin-top: 68px !important;
+  padding-top: clamp(28px, 3.8vw, 48px) !important;
+}
+
+body.shellz-home-modern .site-header,
+body.homepage-category-first .site-header {
+  background: #020817 !important;
+  background-color: #020817 !important;
+  border-bottom: 1px solid rgba(148,163,184,.24) !important;
+  box-shadow: 0 10px 28px rgba(2,6,23,.16) !important;
+}
+
+body.shellz-home-modern .site-header .nav-wrap,
+body.homepage-category-first .site-header .nav-wrap {
+  width: min(100% - 28px, 1280px) !important;
+  min-height: 66px !important;
+  gap: 12px !important;
+  flex-wrap: nowrap !important;
+}
+
+body.shellz-home-modern .site-header .brand,
+body.homepage-category-first .site-header .brand {
+  flex: 0 0 auto !important;
+  margin-right: 10px !important;
+}
+
+body.shellz-home-modern .site-header .brand-logo,
+body.homepage-category-first .site-header .brand-logo {
+  max-width: 176px !important;
+  max-height: 54px !important;
+}
+
+body.shellz-home-modern .site-header .main-nav,
+body.homepage-category-first .site-header .main-nav {
+  flex: 1 1 auto !important;
+  justify-content: flex-end !important;
+  flex-wrap: nowrap !important;
+  gap: 5px !important;
+  overflow: visible !important;
+  margin-left: auto !important;
+}
+
+body.shellz-home-modern .site-header .main-nav a,
+body.homepage-category-first .site-header .main-nav a {
+  flex: 0 0 auto !important;
+  min-height: 38px !important;
+  padding: 7px 9px !important;
+  font-size: .86rem !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+body.shellz-home-modern .site-header .main-nav a[data-nav="compare"],
+body.homepage-category-first .site-header .main-nav a[data-nav="compare"],
+body.shellz-home-modern .site-header .main-nav a[data-nav="checklist"],
+body.homepage-category-first .site-header .main-nav a[data-nav="checklist"] {
+  padding-inline: 11px !important;
+}
+
+@media (max-width: 1120px) and (min-width: 761px) {
+  body.shellz-home-modern .site-header .brand-logo,
+  body.homepage-category-first .site-header .brand-logo {
+    max-width: 158px !important;
+  }
+  body.shellz-home-modern .site-header .main-nav a,
+  body.homepage-category-first .site-header .main-nav a {
+    padding: 7px 7px !important;
+    font-size: .80rem !important;
+  }
+}
