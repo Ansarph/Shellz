@@ -10621,3 +10621,492 @@ body.reviews-page .review-actions .details-link:hover {
   body.reviews-page .review-topline p { font-size: .96rem !important; }
   body.reviews-page .review-card .pros-cons > div { padding: 17px !important; }
 }
+
+
+/* ===================================================================
+   Shellz review money-page template update — 2026-06-28
+   Standardizes main review pages with a cleaner buying summary, trust
+   checks, and high-conversion CTA layout.
+   =================================================================== */
+.shellz-review-money-template {
+  margin: 28px auto 34px !important;
+}
+.review-money-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, .85fr) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+}
+.review-money-verdict,
+.review-money-checks,
+.review-money-facts > div {
+  background: #ffffff !important;
+  border: 1px solid #dbe7f3 !important;
+  border-radius: 24px !important;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, .08) !important;
+  color: #0f172a !important;
+}
+.review-money-verdict {
+  padding: 28px !important;
+  border-left: 6px solid #2563eb !important;
+}
+.review-money-checks {
+  padding: 24px !important;
+  border-left: 6px solid #10b981 !important;
+}
+.review-money-verdict .eyebrow {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+  font-weight: 900 !important;
+  letter-spacing: .08em !important;
+}
+.review-money-verdict h2,
+.review-money-checks h3,
+.review-money-facts strong {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  text-shadow: none !important;
+}
+.review-money-verdict h2 {
+  margin: 6px 0 12px !important;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
+  font-size: clamp(1.55rem, 2.6vw, 2.15rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.035em !important;
+}
+.review-money-verdict p,
+.review-money-checks li,
+.review-money-facts span {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+  opacity: 1 !important;
+}
+.review-money-verdict p {
+  margin: 0 0 18px !important;
+  font-size: 1.03rem !important;
+  line-height: 1.72 !important;
+}
+.review-money-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+.review-money-actions .btn,
+.review-money-actions .details-link {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 14px !important;
+  font-weight: 900 !important;
+}
+.review-money-actions .details-link {
+  padding: 11px 14px !important;
+  background: #f8fafc !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+  text-decoration: none !important;
+}
+.review-money-checks h3 {
+  margin: 0 0 12px !important;
+  font-size: 1.12rem !important;
+  letter-spacing: -.02em !important;
+}
+.review-money-checks ul {
+  margin: 0 !important;
+  padding-left: 20px !important;
+}
+.review-money-checks li {
+  margin: 8px 0 !important;
+  line-height: 1.45 !important;
+}
+.review-money-facts {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  margin-top: 16px !important;
+}
+.review-money-facts > div {
+  padding: 18px !important;
+}
+.review-money-facts span {
+  display: block !important;
+  margin-bottom: 7px !important;
+  font-size: .76rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: .08em !important;
+  font-weight: 900 !important;
+}
+.review-money-facts strong {
+  display: block !important;
+  font-size: .96rem !important;
+  line-height: 1.52 !important;
+}
+@media (max-width: 860px) {
+  .review-money-grid,
+  .review-money-facts {
+    grid-template-columns: 1fr !important;
+  }
+  .review-money-verdict,
+  .review-money-checks,
+  .review-money-facts > div {
+    border-radius: 20px !important;
+  }
+  .review-money-verdict,
+  .review-money-checks {
+    padding: 20px !important;
+  }
+  .review-money-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+  .review-money-actions .btn,
+  .review-money-actions .details-link {
+    width: 100% !important;
+  }
+}
+
+
+/* ===================================================================
+   Hosting Buyer's Checklist hub + crosslink cards — 2026-06-28
+   =================================================================== */
+.hosting-buyers-checklist-page .checklist-hero {
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, .18), transparent 32%), linear-gradient(135deg, #071326 0%, #0f1f3d 58%, #111827 100%);
+  color: #fff;
+}
+.checklist-hero-grid,
+.checklist-intro-grid,
+.checklist-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, .85fr);
+  gap: 24px;
+  align-items: stretch;
+}
+.checklist-hero h1,
+.checklist-hero .hero-text,
+.checklist-hero .eyebrow { color: #fff !important; -webkit-text-fill-color: currentColor !important; }
+.checklist-hero .hero-text { color: #dbeafe !important; }
+.checklist-hero-card,
+.checklist-summary-card,
+.checklist-toc-card,
+.buyer-checklist-panel,
+.checklist-section,
+.checklist-faq,
+.check-card,
+.checklist-callout,
+.home-buyers-checklist-inner,
+.prebuy-checklist-inner {
+  background: #fff;
+  border: 1px solid #dbe4f0;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, .08);
+}
+.checklist-hero-card {
+  border-radius: 28px;
+  padding: 26px;
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.22);
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+.checklist-hero-card strong { display: block; font-size: 1.15rem; margin-bottom: 12px; }
+.checklist-hero-card li { margin: 10px 0; color: #e0f2fe; }
+.checklist-intro-grid { margin-top: 28px; }
+.checklist-summary-card,
+.checklist-toc-card,
+.buyer-checklist-panel,
+.checklist-section,
+.checklist-faq {
+  border-radius: 28px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.checklist-summary-card h2,
+.checklist-toc-card h2,
+.buyer-checklist-panel h2,
+.checklist-section h2,
+.checklist-faq h2,
+.prebuy-checklist-inner h2,
+.home-buyers-checklist-inner h2 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+.checklist-summary-card p,
+.checklist-toc-card li,
+.checklist-section p,
+.checklist-section li,
+.check-card p,
+.check-card li,
+.prebuy-checklist-inner p,
+.home-buyers-checklist-inner p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+.checklist-toc-card ol { margin: 0; padding-left: 21px; }
+.checklist-toc-card a { color: #1d4ed8; font-weight: 800; text-decoration: none; }
+.buyer-checklist-grid,
+.buyer-path-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.buyer-checklist-grid label,
+.buyer-path-grid a {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-weight: 750;
+  line-height: 1.45;
+}
+.buyer-checklist-grid input { margin-top: 4px; accent-color: #2563eb; }
+.buyer-checklist-grid.compact label { font-weight: 650; }
+.checklist-table th { color: #0f172a; }
+.checklist-tip,
+.checklist-callout {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 20px;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1e3a8a;
+}
+.checklist-two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.check-card { border-radius: 22px; padding: 22px; box-shadow: none; }
+.check-card h3 { margin-top: 0; color: #0f172a; }
+.check-card.warning { background: #fff7ed; border-color: #fed7aa; }
+.check-card.action-card { background: #eef2ff; border-color: #c7d2fe; }
+.checklist-list { padding-left: 22px; }
+.buyer-path-grid a {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+}
+.buyer-path-grid a strong { display: block; color: #0f172a; margin-bottom: 7px; }
+.buyer-path-grid a span { display: block; color: #475569; line-height: 1.5; }
+.faq-list details {
+  border: 1px solid #dbe4f0;
+  border-radius: 18px;
+  padding: 16px 18px;
+  background: #f8fafc;
+  margin-bottom: 12px;
+}
+.faq-list summary { cursor: pointer; font-weight: 850; color: #0f172a; }
+.faq-list p { color: #475569; }
+.home-buyers-checklist-feature,
+.prebuy-checklist-banner { margin-top: 26px; margin-bottom: 26px; }
+.home-buyers-checklist-inner,
+.prebuy-checklist-inner {
+  border-radius: 26px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-buyers-checklist-inner { background: linear-gradient(135deg, #ffffff, #eff6ff); border-color: #bfdbfe; }
+.prebuy-checklist-inner { background: linear-gradient(135deg, #f8fafc, #ffffff); }
+.prebuy-checklist-inner .btn,
+.home-buyers-checklist-inner .btn { white-space: nowrap; }
+@media (max-width: 860px) {
+  .checklist-hero-grid,
+  .checklist-intro-grid,
+  .checklist-two-col,
+  .buyer-checklist-grid,
+  .buyer-path-grid { grid-template-columns: 1fr; }
+  .checklist-summary-card,
+  .checklist-toc-card,
+  .buyer-checklist-panel,
+  .checklist-section,
+  .checklist-faq { border-radius: 22px; padding: 20px; }
+  .home-buyers-checklist-inner,
+  .prebuy-checklist-inner { display: grid; grid-template-columns: 1fr; }
+  .prebuy-checklist-inner .btn,
+  .home-buyers-checklist-inner .btn { width: 100%; }
+}
+
+
+/* =====================================================================
+   Shellz Web Hosting Finder 2026 — interactive buyer tool
+   ===================================================================== */
+.main-nav a[data-nav="finder"] {
+  color: #dbeafe;
+}
+.finder-hero {
+  background: radial-gradient(circle at top left, rgba(20, 184, 166, .18), transparent 34%), linear-gradient(135deg, #071327 0%, #0f2746 55%, #0b4f4a 100%);
+  color: #ffffff;
+  padding: 72px 0 54px;
+}
+.finder-hero h1,
+.finder-hero h2,
+.finder-hero .eyebrow {
+  color: #ffffff;
+}
+.finder-hero .hero-text {
+  color: #dbeafe;
+  max-width: 68ch;
+}
+.finder-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+  gap: 32px;
+  align-items: center;
+}
+.finder-summary-card {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 26px;
+  padding: 24px;
+  box-shadow: 0 22px 50px rgba(0,0,0,.22);
+}
+.finder-summary-card h2 { margin-top: 0; font-size: 22px; }
+.finder-summary-card ul { margin: 0; padding-left: 20px; color: #e5f2ff; }
+.finder-tool-panel,
+.finder-decision-map,
+.finder-buying-steps,
+.checklist-to-finder-panel {
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+.finder-tool-panel {
+  background: #ffffff;
+  border: 1px solid #dbe7f6;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 0 18px 42px rgba(15,23,42,.08);
+}
+.hosting-finder-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.finder-question {
+  border: 1px solid #dbe7f6;
+  border-radius: 22px;
+  padding: 18px;
+  background: #f8fafc;
+  margin: 0;
+}
+.finder-question legend {
+  font-weight: 900;
+  color: #0f172a;
+  padding: 0 8px;
+}
+.finder-question label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #e5edf7;
+  cursor: pointer;
+  color: #24324a;
+  font-weight: 700;
+}
+.finder-question label:has(input:checked) {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15,118,110,.12);
+  background: #ecfeff;
+}
+.finder-question input { accent-color: #0f766e; }
+.finder-run-button { grid-column: 1 / -1; justify-self: start; }
+.finder-result {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0f172a, #0f766e);
+  color: #ffffff;
+}
+.finder-result h2,
+.finder-result .eyebrow { color: #ffffff; }
+.finder-result p { color: #dbeafe; }
+.finder-result-grid,
+.finder-map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.finder-result-card,
+.finder-map-grid article {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #dbe7f6;
+  border-radius: 20px;
+  padding: 18px;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(15,23,42,.06);
+}
+.finder-result-card strong,
+.finder-result-card span { display: block; }
+.finder-result-card strong { color: #0f766e; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
+.finder-result-card span { margin-top: 4px; font-weight: 900; }
+.finder-map-grid article h3 { margin-top: 0; color: #0f172a; }
+.finder-map-grid article p { color: #475569; }
+.finder-map-grid article a { color: #0f766e; font-weight: 900; }
+.finder-buying-steps {
+  background: #ffffff;
+  border: 1px solid #dbe7f6;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 12px 30px rgba(15,23,42,.06);
+}
+.finder-buying-steps li { margin: 12px 0; color: #334155; }
+.finder-cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.home-hosting-finder-feature,
+.checklist-to-finder-panel {
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ecfeff, #ffffff 58%, #fff7ed);
+  border: 1px solid #bae6fd;
+  box-shadow: 0 14px 34px rgba(15,23,42,.08);
+  padding: 24px;
+}
+.home-hosting-finder-inner,
+.checklist-to-finder-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+.home-hosting-finder-inner h2,
+.checklist-to-finder-inner h2 { margin: 4px 0 8px; color: #0f172a; }
+.home-hosting-finder-inner p,
+.checklist-to-finder-inner p { color: #475569; margin-bottom: 0; }
+.prebuy-checklist-inner {
+  gap: 14px;
+}
+.prebuy-checklist-inner > a {
+  flex: 0 0 auto;
+}
+.faq-section details {
+  background: #ffffff;
+  border: 1px solid #dbe7f6;
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin: 12px 0;
+}
+.faq-section summary { cursor: pointer; font-weight: 900; color: #0f172a; }
+.faq-section p { color: #475569; }
+@media (max-width: 860px) {
+  .finder-hero-grid,
+  .hosting-finder-form,
+  .finder-result-grid,
+  .finder-map-grid {
+    grid-template-columns: 1fr;
+  }
+  .home-hosting-finder-inner,
+  .checklist-to-finder-inner,
+  .prebuy-checklist-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .finder-tool-panel,
+  .finder-buying-steps { padding: 20px; }
+  .finder-hero { padding: 54px 0 40px; }
+}
