@@ -1,4 +1,4 @@
-// Shellz enhanced Website Cost Calculator - 2026-06-26
+// Shellz enhanced Website Cost Calculator - 2026 renewal data update
 (function () {
   function ready(fn) {
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
@@ -10,10 +10,10 @@
     if (!form) return;
 
     var presets = {
-      under25: { websiteType: 'learning', hostingType: 'shared', budgetLimit: '25', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '0.99', renewalPrice: '7.99', domainCost: '12.00', emailCost: '0.00', addonCost: '0.00' },
-      blog: { websiteType: 'blog', hostingType: 'wordpress', budgetLimit: '50', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '2.99', renewalPrice: '8.99', domainCost: '0.00', emailCost: '0.00', addonCost: '0.00' },
-      business: { websiteType: 'business', hostingType: 'wordpress', budgetLimit: '100', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'basic', introPrice: '3.99', renewalPrice: '11.99', domainCost: '0.00', emailCost: '12.00', addonCost: '12.00' },
-      affiliate: { websiteType: 'affiliate', hostingType: 'wordpress', budgetLimit: '100', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '2.99', renewalPrice: '9.99', domainCost: '12.00', emailCost: '0.00', addonCost: '24.00' }
+      under25: { websiteType: 'learning', hostingType: 'shared', budgetLimit: '25', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '1.98', renewalPrice: '4.66', domainCost: '12.99', emailCost: '0.00', addonCost: '0.00' },
+      blog: { websiteType: 'blog', hostingType: 'wordpress', budgetLimit: '50', billingMonths: '48', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '2.99', renewalPrice: '10.99', domainCost: '0.00', emailCost: '0.00', addonCost: '0.00' },
+      business: { websiteType: 'business', hostingType: 'wordpress', budgetLimit: '100', billingMonths: '36', domainNeeded: 'yes', emailNeeded: 'basic', introPrice: '3.99', renewalPrice: '9.99', domainCost: '0.00', emailCost: '35.88', addonCost: '0.00' },
+      affiliate: { websiteType: 'affiliate', hostingType: 'wordpress', budgetLimit: '250', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '2.99', renewalPrice: '17.99', domainCost: '17.99', emailCost: '0.00', addonCost: '24.00' }
     };
 
     function el(id) { return document.getElementById(id); }
@@ -67,7 +67,7 @@
 
       if (warning) {
         if (increase >= 150) {
-          warning.textContent = 'High renewal warning: your next billing term may be much higher than the first bill. Compare renewal before choosing this deal.';
+          warning.textContent = 'High renewal warning: your next billing term may be much higher than the first bill. Use the hosting renewal price comparison table before choosing this deal.';
           setClass(warning, 'danger');
         } else if (renewalTerm > firstTerm) {
           warning.textContent = 'Renewal warning: this setup may become more expensive after the first term. Save the renewal price before paying.';
