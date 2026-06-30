@@ -1,0 +1,60 @@
+Shellz Day 2 SEO Cleanup Report
+================================
+Updated files: 38
+HTML pages checked: 98
+robots.txt added: True
+Missing titles: 0
+Missing meta descriptions: 0
+Titles over 65 chars: 0
+Meta descriptions over 160 chars: 0
+H1 issues: 0
+Missing local links/assets: 0
+Risky phrase hits checked: 0
+
+Remaining long titles:
+
+Remaining long descriptions:
+
+Missing local links/assets:
+
+Risky phrase hits:
+
+Updated file list:
+about.html
+ai-website-builders.html
+ansar-ph.html
+best-hosting-for-beginners.html
+best-hosting-under-25.html
+best-web-hosting.html
+best-website-setup-under-25.html
+bluehost-vs-hostgator.html
+bluehost-vs-siteground.html
+cheap-hosting-mistakes-before-checkout.html
+cheap-hosting-with-low-renewal-price.html
+cloud-hosting.html
+cloudways-vs-scalahosting.html
+colocation-web-hosting.html
+contabo-deals.html
+contabo-dedicated-servers-review.html
+contabo-vs-hostinger-vps.html
+coupons.html
+domain.html
+first-24-hours-after-buying-hosting.html
+hosting-buyers-checklist.html
+hosting-cost-calculator.html
+hosting-testing-status.html
+hostinger-vs-namecheap.html
+hostinger-vs-siteground.html
+hostinger-website-builder-review.html
+hostinger-website-builder-vs-wordpress.html
+namesilo-coupon.html
+namesilo-vs-namecheap.html
+promo-codes.html
+reseller-hosting.html
+robots.txt
+shared-web-hosting.html
+start-a-website-under-25.html
+trending-hosting-june-2026.html
+vps-hosting.html
+web-hosting-finder.html
+wpx-hosting-review.html
