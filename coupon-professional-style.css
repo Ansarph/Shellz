@@ -69,3 +69,20 @@ body.coupon-pro-style-page .page-hero.official-coupon-page>.container{padding:34
 body.coupon-pro-style-page .page-hero.official-coupon-page>.container:after{width:96px;height:96px;right:22px;top:28px;font-size:42px;border-radius:26px;opacity:.35;}body.coupon-pro-style-page .page-hero h1{padding-right:70px;}body.coupon-pro-style-page .page-hero .coupon-page-cta .show-code-btn{grid-template-columns:1fr;gap:8px;text-align:left;padding:15px;}body.coupon-pro-style-page .page-hero .coupon-page-cta .show-code-btn:after{position:absolute;right:14px;top:14px;width:28px;height:28px;}body.coupon-pro-style-page .page-hero .coupon-page-cta .show-code-btn .show-code-label{justify-self:stretch;min-width:0;width:100%;}.official-mini-grid,.official-pick-grid,.source-list{grid-template-columns:1fr!important;}}
 @media(max-width:620px){body.coupon-pro-style-page .page-hero h1{font-size:2rem;padding-right:0;}body.coupon-pro-style-page .page-hero.official-coupon-clean>.container:after,
 body.coupon-pro-style-page .page-hero.official-coupon-page>.container:after{display:none;}body.coupon-pro-style-page .page-hero .hero-text{font-size:.98rem;}body.coupon-pro-style-page .shellz-breadcrumbs{margin-inline:12px;}body.coupon-pro-style-page .official-updated{font-size:.8rem;}}
+
+
+/* Promo-code trust cleanup patch - July 2026 */
+body.coupon-pro-style-page .offer-type-legend-card{margin:18px 0 24px;padding:22px;border-radius:20px;background:#fff;border:1px solid #dbeafe;box-shadow:0 16px 38px rgba(15,23,42,.07);}
+body.coupon-pro-style-page .offer-type-legend-card h3{margin:0 0 12px;color:#061527;font-size:1.18rem;letter-spacing:-.02em;}
+body.coupon-pro-style-page .offer-type-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none;}
+body.coupon-pro-style-page .offer-type-legend li{padding:12px 14px;border-radius:14px;background:#f8fbff;border:1px solid #e2e8f0;color:#334155;line-height:1.45;}
+body.coupon-pro-style-page .offer-type-legend strong{color:#075985;}
+body.coupon-pro-style-page .promo-code-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0 16px;padding:0;list-style:none;}
+body.coupon-pro-style-page .promo-code-list li{display:grid;gap:4px;padding:12px 14px;border-radius:14px;background:#f8fbff;border:1px solid #dbeafe;}
+body.coupon-pro-style-page .promo-code-list code{display:inline-flex;width:max-content;padding:5px 9px;border-radius:999px;background:#e0f2fe;color:#075985;font-weight:1000;letter-spacing:.02em;}
+body.coupon-pro-style-page .promo-code-list span{font-size:.9rem;color:#475569;line-height:1.45;}
+body.coupon-pro-style-page .coupon-code-actions{align-items:stretch;gap:9px;flex-wrap:wrap;}
+body.coupon-pro-style-page .coupon-code-actions .show-code-btn{min-height:42px;border:0;border-radius:12px;background:linear-gradient(135deg,#028f9b,#2563eb);color:#fff;font-weight:1000;cursor:pointer;box-shadow:0 10px 22px rgba(37,99,235,.22);padding:0 12px;}
+body.coupon-pro-style-page .coupon-code-actions .show-code-btn .show-code-label{display:inline-flex;align-items:center;justify-content:center;min-height:42px;color:#fff;white-space:nowrap;}
+body.coupon-pro-style-page .coupon-code-actions .show-code-btn .show-code-label:before{content:"🎟";font-size:.78rem;margin-right:7px;}
+@media(max-width:760px){body.coupon-pro-style-page .offer-type-legend,body.coupon-pro-style-page .promo-code-list{grid-template-columns:1fr;}body.coupon-pro-style-page .coupon-code-actions .show-code-btn,body.coupon-pro-style-page .coupon-code-actions .btn{width:100%;justify-content:center;}}
