@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -7,12 +6,12 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<title>Hosting Renewal Price Comparison Calculator | Shellz</title>
-<meta content="Estimate first-year vs renewal hosting costs in 2026, including domain, email, backups, add-ons, and renewal-price comparison warnings." name="description"/>
+<title>Hosting Cost Calculator: Exact Plan &amp; Renewal Term | Shellz</title>
+<meta content="Calculate first-term and renewal costs for one exact hosting plan and billing term, then add domain, email, backups, and other extras before checkout." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://shellz.com/hosting-cost-calculator.html" rel="canonical"/>
-<meta content="Hosting Renewal Price Comparison Calculator | Shellz" property="og:title"/>
-<meta content="Estimate first-year vs renewal hosting costs in 2026, including domain, email, backups, add-ons, and renewal-price comparison warnings." property="og:description"/>
+<meta content="Hosting Cost Calculator: Exact Plan &amp; Renewal Term | Shellz" property="og:title"/>
+<meta content="Calculate first-term and renewal costs for one exact hosting plan and billing term, then add domain, email, backups, and other extras before checkout." property="og:description"/>
 <meta content="article" property="og:type"/>
 <meta content="https://shellz.com/hosting-cost-calculator.html" property="og:url"/>
 <meta content="https://shellz.com/assets/shellz-logo.png" property="og:image"/>
@@ -52,8 +51,8 @@
 <div class="container cost-tool-hero-grid">
 <div>
 <p class="eyebrow">2026 cost tool</p>
-<h1>Hosting Renewal Price Comparison Calculator</h1>
-<p class="hero-text">Estimate the real cost of hosting by comparing the first bill with the renewal bill, then add domain, email, backups, and checkout extras.</p>
+<h1>Hosting Cost Calculator: Compare Exact Plan and Renewal Term</h1>
+<p class="hero-text">Enter one exact hosting plan, its billing term, intro monthly equivalent, and renewal monthly equivalent. Then add domain, email, backups, and extras. The calculator does not use one provider-wide renewal price.</p>
 <div class="hero-cta-row">
 <a class="btn primary shellz-track-cta" data-cta="cost-tool-start" data-offer-type="tool" data-page-type="calculator" data-provider="shellz" href="#calculator">Use the calculator</a>
 <a class="btn secondary shellz-track-cta" data-cta="renewal-warning-click" data-offer-type="internal-guide" data-page-type="calculator" data-provider="shellz" href="hosting-renewal-price-database.html">Check renewal warnings</a>
@@ -82,21 +81,13 @@
 <div class="section-heading split">
 <div>
 <p class="eyebrow">2026 benchmark data</p>
-<h2>Use these hosting renewal price comparison examples</h2>
-<p>These examples help you fill the calculator with realistic 2026 planning numbers. Provider pricing changes often, so always replace these with the live checkout price you see.</p>
+<h2>Use these exact-plan renewal examples</h2>
+<p>These June 2026 planning examples come from the same exact-plan data used by the renewal tracker. Replace them with the live values from your own cart before making a buying decision.</p>
 </div>
 <a class="btn secondary shellz-track-cta" data-cta="renewal-database-click" data-page-type="calculator" data-provider="shellz" href="hosting-renewal-price-database.html">Open renewal database</a>
 </div>
 <div class="table-wrap article-table">
-<table>
-<thead><tr><th>Preset idea</th><th>Intro monthly price</th><th>Renewal monthly price to test</th><th>Use this when</th></tr></thead>
-<tbody>
-<tr><td>Low-cost cPanel route</td><td>$1.98</td><td>$4.66</td><td>You want the cheapest beginner hosting estimate using a Namecheap-style annual renewal.</td></tr>
-<tr><td>Beginner WordPress route</td><td>$2.99</td><td>$10.99</td><td>You want a Hostinger-style promo vs renewal comparison.</td></tr>
-<tr><td>Bluehost Starter route</td><td>$3.99</td><td>$9.99</td><td>You want a beginner WordPress setup with a mainstream host.</td></tr>
-<tr><td>SiteGround performance route</td><td>$2.99</td><td>$17.99</td><td>You want to test a higher-renewal performance-focused shared hosting path.</td></tr>
-</tbody>
-</table>
+<table><thead><tr><th>Exact plan example</th><th>Intro monthly equivalent</th><th>Renewal monthly equivalent</th><th>Term context</th></tr></thead><tbody><tr><td>Hostinger Premium</td><td>$2.99</td><td>$10.99</td><td>Long-term promo example; exact term must be matched in cart.</td></tr><tr><td>Bluehost Starter</td><td>$3.99</td><td>$9.99</td><td>36-month intro and 36-month renewal example.</td></tr><tr><td>Manual exact plan</td><td>Enter live value</td><td>Enter live value</td><td>Use the same product and clearly label both billing terms.</td></tr></tbody></table>
 </div>
 <p class="small-note">Tip: if a provider bills 36 or 48 months upfront, change the billing months field before calculating. The first bill may be much larger than the advertised monthly price suggests.</p>
 </div>
@@ -160,9 +151,9 @@
 <option value="paid">Paid professional email</option>
 </select>
 </label>
-<label>Intro monthly hosting price<input id="introPrice" min="0" step="0.01" type="number" value="2.99"/>
+<label>Provider and exact plan<input id="planLabel" type="text" value="Hostinger Premium example"/></label><label>Intro monthly equivalent for this exact plan<input id="introPrice" min="0" step="0.01" type="number" value="2.99"/>
 </label>
-<label>Renewal monthly hosting price<input id="renewalPrice" min="0" step="0.01" type="number" value="10.99"/>
+<label>Renewal monthly equivalent for the same plan<input id="renewalPrice" min="0" step="0.01" type="number" value="10.99"/>
 </label>
 <label>Domain first-year cost
             <input id="domainCost" min="0" step="0.01" type="number" value="12.99"/>
@@ -204,12 +195,12 @@
 <div class="container">
 <div class="section-heading">
 <p class="eyebrow">Beginner explanation</p>
-<h2>How to use this hosting renewal price comparison calculator</h2>
-<p>Most hosting pages advertise a low monthly price, but the real decision is the hosting renewal price comparison: first bill vs renewal bill, plus domain, email, backups, security, and add-ons.</p>
+<h2>How to use the exact-plan hosting cost calculator</h2>
+<p>Most hosting pages advertise a monthly equivalent, but the real comparison is plan-specific: exact product, billing term, first-term total, renewal term, domain, email, backups, security, and add-ons.</p>
 </div>
 <div class="human-grid cost-explain-grid">
-<article class="human-card"><h3>1. Enter the intro price</h3><p>This is the discounted price you see before checkout. Multiply it by the billing term to estimate the first hosting bill.</p></article>
-<article class="human-card"><h3>2. Enter the renewal price</h3><p>This is the price after the first term ends. It is the number beginners often miss, and it can change the real value of a deal.</p></article>
+<article class="human-card"><h3>1. Enter the intro price</h3><p>Enter the monthly equivalent for the exact plan and promotion you are considering, then use the billing-month field to model the prepaid term.</p></article>
+<article class="human-card"><h3>2. Enter the renewal price</h3><p>Enter the renewal monthly equivalent for the same plan. Match the renewal billing cycle before comparing totals.</p></article>
 <article class="human-card"><h3>3. Add domain, email, and extras</h3><p>If the plan does not include them, add domain registration, business email, backups, privacy, or security tools to see the real total.</p></article>
 </div>
 </div>
@@ -292,74 +283,15 @@
 <p>Before you buy a domain or hosting plan, read the <a href="start-a-website-under-25.html">start a website under $25</a> guide to see what to buy first, what to skip, and where renewal costs appear.</p>
 </section><section class="container scala-funnel-crosslink" data-shellz-generated="scala-funnel-20260708"><div class="scala-funnel-crosslink-inner"><p class="eyebrow">ScalaHosting buyer path</p><h2>Calculating a ScalaHosting plan?</h2><p>Do not mix a managed cloud plan and a self-managed VPS in the same price comparison without accounting for management responsibility.</p><div class="scala-funnel-link-grid"><a href="scalahosting-deals.html">ScalaHosting deal checks<span>Record plan type, term, and renewal before calculating.</span></a><a href="scalahosting-review.html">ScalaHosting review<span>Understand what the managed route is designed for.</span></a><a href="scalahosting-vs-hostinger-vps.html">ScalaHosting vs Hostinger VPS<span>Compare management responsibility before price.</span></a></div></div></section></main>
 <footer class="site-footer">
-<div class="container footer-grid enhanced-footer">
-<div>
-<a aria-label="Shellz home" class="brand footer-brand" href="index.html"><img alt="Shellz.com logo" class="brand-logo" height="233" src="assets/shellz-logo.png" width="900"/></a>
-<p>Shellz compares web hosting plans, coupons, domain deals, and beginner website-building steps using clear review notes, coupon checks, renewal warnings, and buyer-focused guidance.</p>
-</div>
-<div>
-<h2>Hosting Guides</h2>
-<a href="why-hosting-renewal-price-is-higher.html">Hosting Renewal Prices</a>
-<a href="best-web-hosting.html">Best Web Hosting</a>
-<a href="web-hosting-finder.html">Hosting Finder</a>
-<a href="best-cheap-web-hosting.html">Cheap Hosting</a>
-<a href="best-free-web-hosting.html">Free Web Hosting</a>
-<a href="best-wordpress-hosting.html">WordPress Hosting</a>
-<a href="best-vps-hosting.html">VPS Hosting</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="internal-guide" data-page-type="home" data-provider="shellz" href="start-a-website.html">Start a Website</a>
-<a href="start-a-website-under-25.html">Under $25 Website Setup</a>
-<a href="first-24-hours-after-buying-hosting.html">After Buying Hosting Checklist</a>
-</div>
-<div>
-<h2>Coupons</h2>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="shellz" href="promo-codes.html">All Hosting Coupons</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="contabo" href="contabo-deals.html">Contabo Deals</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="wpx" href="wpx-coupon.html">WPX Coupon</a>
-<a href="cloudways-coupon.html">Cloudways Promo</a>
-<a href="zalvis-coupon.html">Zalvis Promotions</a>
-<a href="coin-host-voucher.html">COIN.HOST 5% Voucher</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="webhostingpad" href="webhostingpad-coupon.html">WebHostingPad Coupon</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="hostinger" href="hostinger-coupon.html">Hostinger Coupon</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="bluehost" href="bluehost-coupon.html">Bluehost Coupon</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="hostgator" href="hostgator-coupon.html">HostGator Coupon</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="namesilo" href="namesilo-coupon.html">NameSilo Coupon</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="namecheap" href="namecheap-coupon.html">Namecheap Coupon</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="home" data-provider="ionos" href="ionos-coupon.html">IONOS Coupon</a>
-</div>
-<div>
-<h2>Comparisons</h2>
-<a href="kinsta-vs-rocket-net-vs-cloudways.html">Kinsta vs Rocket.net vs Cloudways</a>
-<a href="hostinger-vs-hostgator.html">Hostinger vs HostGator</a>
-<a href="hostinger-vs-bluehost.html">Hostinger vs Bluehost</a>
-<a href="hostinger-vs-namecheap.html">Namecheap Hosting vs Hostinger</a>
-<a href="bluehost-vs-siteground.html">Bluehost vs SiteGround</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="coin-host" href="coin-host-review.html">COIN.HOST Review</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="zalvis" href="zalvis-review.html">Zalvis Review</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="kinsta" href="kinsta-review.html">Kinsta Review</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="cloudways" href="cloudways-review.html">Cloudways Review</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="contabo" href="contabo-dedicated-servers-review.html">Contabo Dedicated Servers Review</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="scalahosting" href="scalahosting-review.html">ScalaHosting Review</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="wpx" href="wpx-hosting-review.html">WPX Hosting Review</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="site-footer" data-provider="hostinger" href="hostinger-website-builder-review.html">Hostinger Website Builder Review</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="comparison" data-page-type="site-footer" data-provider="hostinger" href="hostinger-website-builder-vs-wordpress.html">Hostinger Builder vs WordPress</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="shellz" href="reviews.html">All Reviews</a>
-</div>
-<div data-shellz-generated="ads-landing-footer"><h2>Start Here</h2><a href="start-a-website-under-25.html">Start a Website Under $25</a><a href="cheap-hosting-mistakes-before-checkout.html">Cheap Hosting Mistakes Before Checkout</a><a href="first-24-hours-after-buying-hosting.html">After Buying Hosting Checklist</a><a href="best-hosting-for-beginners.html">Best Hosting for Beginners</a><a href="cheap-hosting-with-low-renewal-price.html">Cheap Hosting With Low Renewal</a><a href="best-domain-registrar-for-new-website.html">Best Domain Registrar</a><a class="shellz-track-cta" data-cta="cta-click" data-offer-type="coupon-or-deal" data-page-type="guide" data-provider="shellz" href="hosting-coupons-that-work.html">Hosting Coupons That Work</a></div><div>
-<h2>Trust</h2>
-<a href="about.html">About Shellz</a>
-<a class="shellz-track-cta" data-cta="cta-click" data-offer-type="review" data-page-type="home" data-provider="shellz" href="methodology.html">Review Methodology</a>
-<a href="hosting-speed-uptime-test.html">Hosting Speed &amp; Uptime Tests</a>
-<a href="editorial-policy.html">Editorial Policy</a>
-<a href="corrections-policy.html">Corrections Policy</a>
-<a href="disclosure.html">Affiliate Disclosure</a>
-<a href="privacy.html">Privacy Policy</a>
-<a href="terms.html">Terms</a>
-<a href="contact.html">Contact</a>
-</div>
+<div class="container footer-grid enhanced-footer compact-shellz-footer">
+<div><a aria-label="Shellz home" class="brand footer-brand" href="index.html"><img alt="Shellz.com logo" class="brand-logo" height="233" src="assets/shellz-logo.png" width="900"/></a><p>Shellz helps hosting buyers compare exact plan examples, renewal risk, coupon status, and published proof before paying.</p></div>
+<div><h2>Buyer guides</h2><a href="best-web-hosting.html">Best Web Hosting</a><a href="hosting-renewal-price-database.html">Renewal Price Tracker</a><a href="hosting-cost-calculator.html">Hosting Cost Calculator</a><a href="start-a-website-under-25.html">Start Under $25</a></div>
+<div><h2>Check before buying</h2><a href="promo-codes.html">Hosting Coupons</a><a href="hosting-testing-status.html">Testing & Proof Status</a><a href="hosting-buyers-checklist.html">Buyer's Checklist</a><a href="web-hosting-finder.html">Hosting Finder</a></div>
+<div><h2>Compare & trust</h2><a href="reviews.html">All Reviews</a><a href="hostinger-vs-bluehost.html">Hostinger vs Bluehost</a><a href="bluehost-vs-hostgator.html">Bluehost vs HostGator</a><a href="cloudways-vs-scalahosting.html">Cloudways vs ScalaHosting</a><a href="about.html">About Shellz</a><a href="methodology.html">Methodology</a><a href="editorial-policy.html">Editorial Policy</a><a href="corrections-policy.html">Corrections</a><a href="disclosure.html">Affiliate Disclosure</a><a href="contact.html">Contact</a></div>
 </div>
 <div class="container copyright">© <span id="year">2026</span> Shellz. All rights reserved.</div>
 </footer>
 <script src="script.js?v=20260621-footer-gap-fix"></script>
-<script src="cost-calculator-enhanced.js?v=20260630-renewal-data"></script>
+<script src="hosting-prices.js?v=20260709"></script><script src="cost-calculator-enhanced.js?v=20260630-renewal-data"></script>
 </body>
 </html>
