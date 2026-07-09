@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-07-09",
+  "evidence_rule": "Published means the supporting result is available on Shellz. Public provider research is labelled separately from Shellz checkout, speed, uptime or support testing.",
+  "providers": {
+    "hostinger": {
+      "public_status": true,
+      "public_order": 1,
+      "publicSummary": "Public plan and renewal research reviewed; dedicated deal page published.",
+      "checkoutLabel": "Checkout screenshot: not published.",
+      "checkout": {
+        "published": false,
+        "date": null,
+        "url": null
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false
+      },
+      "renewal": {
+        "status": "public-pricing-example",
+        "plan_keys": [
+          "hostinger-premium"
+        ]
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Match exact plan, capture promo term and final cart total"
+    },
+    "bluehost": {
+      "public_status": true,
+      "public_order": 2,
+      "publicSummary": "Starter plan renewal example is documented in the Shellz tracker.",
+      "checkoutLabel": "Checkout screenshot: not published.",
+      "checkout": {
+        "published": false,
+        "date": null,
+        "url": null
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false
+      },
+      "renewal": {
+        "status": "public-pricing-example",
+        "plan_keys": [
+          "bluehost-starter"
+        ]
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Verify Starter plan, currency and 36-month cart total"
+    },
+    "hostgator": {
+      "public_status": true,
+      "public_order": 3,
+      "publicSummary": "SNAPPY is covered on a dedicated coupon-status page with eligibility warnings.",
+      "checkoutLabel": "Final checkout capture: not published.",
+      "checkout": {
+        "published": false,
+        "date": null,
+        "url": null
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false,
+        "check_keys": [
+          "hostgator-snappy"
+        ]
+      },
+      "renewal": {
+        "status": "live-confirmation-required",
+        "plan_keys": [
+          "hostgator-hatchling"
+        ]
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Test SNAPPY, save exact plan, term, final total and renewal line"
+    },
+    "wpx": {
+      "public_status": true,
+      "public_order": 4,
+      "publicSummary": "SAVE79 is covered as a first-month eligibility check for monthly WordPress hosting.",
+      "checkoutLabel": "Final checkout capture: not published.",
+      "checkout": {
+        "published": false,
+        "date": null,
+        "url": null
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false,
+        "check_keys": [
+          "wpx-save79"
+        ]
+      },
+      "renewal": {
+        "status": "live-term-check-required",
+        "plan_keys": [
+          "wpx-managed-wordpress"
+        ]
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Verify eligible monthly plan, first-month result and normal next charge"
+    },
+    "siteground": {
+      "public_status": false,
+      "checkout": {
+        "published": false
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false
+      },
+      "renewal": {
+        "status": "public-pricing-example",
+        "plan_keys": [
+          "siteground-startup"
+        ]
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Capture exact StartUp promo term and checkout"
+    },
+    "namecheap": {
+      "public_status": false,
+      "checkout": {
+        "published": false
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false
+      },
+      "renewal": {
+        "status": "public-pricing-example",
+        "plan_keys": [
+          "namecheap-stellar"
+        ]
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Capture exact Stellar promo term and checkout"
+    },
+    "namesilo": {
+      "public_status": false,
+      "checkout": {
+        "published": false
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false,
+        "check_keys": [
+          "namesilo-discount10",
+          "namesilo-namesilo10",
+          "namesilo-a10"
+        ]
+      },
+      "renewal": {
+        "status": "not-structured",
+        "plan_keys": []
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Test one code at a time and record before/after total"
+    },
+    "dreamhost": {
+      "public_status": false,
+      "checkout": {
+        "published": false
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false
+      },
+      "renewal": {
+        "status": "public-pricing-example",
+        "plan_keys": [
+          "dreamhost-launch"
+        ]
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Capture region/currency and exact renewal billing cycle"
+    },
+    "cloudways": {
+      "public_status": false,
+      "checkout": {
+        "published": false
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false
+      },
+      "renewal": {
+        "status": "usage-model",
+        "plan_keys": [
+          "cloudways-managed-cloud"
+        ]
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Structure server size, provider, add-ons and monthly usage model"
+    },
+    "scalahosting": {
+      "public_status": false,
+      "checkout": {
+        "published": false
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false
+      },
+      "renewal": {
+        "status": "not-structured",
+        "plan_keys": []
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Capture exact managed cloud/VPS plan and term separately"
+    },
+    "ionos": {
+      "public_status": false,
+      "checkout": {
+        "published": false
+      },
+      "coupon": {
+        "page_published": true,
+        "tested": false
+      },
+      "renewal": {
+        "status": "not-structured",
+        "plan_keys": []
+      },
+      "speed": {
+        "published": false
+      },
+      "uptime": {
+        "published": false
+      },
+      "support": {
+        "published": false
+      },
+      "next_action": "Add an exact plan pricing row before renewal comparisons"
+    }
+  }
+}

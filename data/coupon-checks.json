@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-07-09",
+  "status_note": "A published coupon page is not a captured checkout test. code_applied, checkout_capture and renewal_visible remain null/false until direct evidence exists.",
+  "checks": {
+    "hostinger-general-deal": {
+      "provider_key": "hostinger",
+      "code": null,
+      "label": "Hostinger deal/coupon status page",
+      "date_checked": null,
+      "page_url": "hostinger-coupon.html",
+      "page_published": true,
+      "checkout_capture": false,
+      "code_applied": null,
+      "renewal_visible": null,
+      "status": "Research page published; final cart evidence not published"
+    },
+    "bluehost-general-deal": {
+      "provider_key": "bluehost",
+      "code": null,
+      "label": "Bluehost deal/coupon status page",
+      "date_checked": null,
+      "page_url": "bluehost-coupon.html",
+      "page_published": true,
+      "checkout_capture": false,
+      "code_applied": null,
+      "renewal_visible": null,
+      "status": "Research page published; final cart evidence not published"
+    },
+    "hostgator-snappy": {
+      "provider_key": "hostgator",
+      "code": "SNAPPY",
+      "label": "HostGator SNAPPY eligibility check",
+      "date_checked": null,
+      "page_url": "hostgator-coupon.html",
+      "page_published": true,
+      "checkout_capture": false,
+      "code_applied": null,
+      "renewal_visible": null,
+      "status": "Coupon-status page published; live code result and final cart capture still required"
+    },
+    "wpx-save79": {
+      "provider_key": "wpx",
+      "code": "SAVE79",
+      "label": "WPX SAVE79 eligibility check",
+      "date_checked": null,
+      "page_url": "wpx-coupon.html",
+      "page_published": true,
+      "checkout_capture": false,
+      "code_applied": null,
+      "renewal_visible": null,
+      "status": "Eligibility page published; final checkout capture not published"
+    },
+    "namesilo-discount10": {
+      "provider_key": "namesilo",
+      "code": "DISCOUNT10",
+      "label": "NameSilo DISCOUNT10 checkout note",
+      "date_checked": null,
+      "page_url": "namesilo-coupon.html",
+      "page_published": true,
+      "checkout_capture": false,
+      "code_applied": null,
+      "renewal_visible": null,
+      "status": "Code note published; checkout outcome not captured in this ZIP"
+    },
+    "namesilo-namesilo10": {
+      "provider_key": "namesilo",
+      "code": "NAMESILO10",
+      "label": "NameSilo NAMESILO10 checkout note",
+      "date_checked": null,
+      "page_url": "namesilo-coupon.html",
+      "page_published": true,
+      "checkout_capture": false,
+      "code_applied": null,
+      "renewal_visible": null,
+      "status": "Code note published; checkout outcome not captured in this ZIP"
+    },
+    "namesilo-a10": {
+      "provider_key": "namesilo",
+      "code": "A10",
+      "label": "NameSilo A10 checkout note",
+      "date_checked": null,
+      "page_url": "namesilo-coupon.html",
+      "page_published": true,
+      "checkout_capture": false,
+      "code_applied": null,
+      "renewal_visible": null,
+      "status": "Code note published; checkout outcome not captured in this ZIP"
+    }
+  }
+}
