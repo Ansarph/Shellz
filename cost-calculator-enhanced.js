@@ -9,11 +9,15 @@
     var form = document.getElementById('hosting-cost-calculator');
     if (!form) return;
 
+    var priceData = window.SHELLZ_HOSTING_PRICE_SNAPSHOTS || {};
+    function price(key, field, fallback) {
+      return priceData[key] && priceData[key][field] !== undefined ? String(priceData[key][field]) : fallback;
+    }
     var presets = {
-      under25: { websiteType: 'learning', hostingType: 'shared', budgetLimit: '25', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '1.98', renewalPrice: '4.66', domainCost: '12.99', emailCost: '0.00', addonCost: '0.00' },
-      blog: { websiteType: 'blog', hostingType: 'wordpress', budgetLimit: '50', billingMonths: '48', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '2.99', renewalPrice: '10.99', domainCost: '0.00', emailCost: '0.00', addonCost: '0.00' },
-      business: { websiteType: 'business', hostingType: 'wordpress', budgetLimit: '100', billingMonths: '36', domainNeeded: 'yes', emailNeeded: 'basic', introPrice: '3.99', renewalPrice: '9.99', domainCost: '0.00', emailCost: '35.88', addonCost: '0.00' },
-      affiliate: { websiteType: 'affiliate', hostingType: 'wordpress', budgetLimit: '250', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '2.99', renewalPrice: '17.99', domainCost: '17.99', emailCost: '0.00', addonCost: '24.00' }
+      under25: { planLabel: 'Manual under-$25 plan', websiteType: 'learning', hostingType: 'shared', budgetLimit: '25', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '1.98', renewalPrice: '4.66', domainCost: '12.99', emailCost: '0.00', addonCost: '0.00' },
+      blog: { planLabel: 'Hostinger Premium example', websiteType: 'blog', hostingType: 'wordpress', budgetLimit: '50', billingMonths: '48', domainNeeded: 'yes', emailNeeded: 'no', introPrice: price('hostinger-premium','introMonthly','2.99'), renewalPrice: price('hostinger-premium','renewalMonthly','10.99'), domainCost: '0.00', emailCost: '0.00', addonCost: '0.00' },
+      business: { planLabel: 'Bluehost Starter example', websiteType: 'business', hostingType: 'wordpress', budgetLimit: '100', billingMonths: '36', domainNeeded: 'yes', emailNeeded: 'basic', introPrice: price('bluehost-starter','introMonthly','3.99'), renewalPrice: price('bluehost-starter','renewalMonthly','9.99'), domainCost: '0.00', emailCost: '35.88', addonCost: '0.00' },
+      affiliate: { planLabel: 'SiteGround StartUp example', websiteType: 'affiliate', hostingType: 'wordpress', budgetLimit: '250', billingMonths: '12', domainNeeded: 'yes', emailNeeded: 'no', introPrice: '2.99', renewalPrice: price('siteground-startup','renewalMonthly','17.99'), domainCost: '17.99', emailCost: '0.00', addonCost: '24.00' }
     };
 
     function el(id) { return document.getElementById(id); }
@@ -140,7 +144,7 @@
       calculate();
     });
 
-    ['websiteType','hostingType','budgetLimit','domainNeeded','emailNeeded','introPrice','renewalPrice','billingMonths','domainCost','emailCost','addonCost'].forEach(function (id) {
+    ['planLabel','websiteType','hostingType','budgetLimit','domainNeeded','emailNeeded','introPrice','renewalPrice','billingMonths','domainCost','emailCost','addonCost'].forEach(function (id) {
       var field = el(id);
       if (field) {
         field.addEventListener('input', calculate);
