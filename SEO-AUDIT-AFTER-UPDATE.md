@@ -64,3 +64,18 @@ This is a 100-point SEO-readiness audit of the updated static package. It is **n
 2. Run a controlled four-host WordPress speed/TTFB test with the same site, test locations, cache rules, and documented methodology.
 3. Start 30- to 90-day uptime monitoring and publish the raw monitoring period and incident notes.
 4. Use Google Search Console to identify the five pages with impressions but low CTR, then rewrite only their title and description based on the actual query mix.
+
+## Post-audit maintenance — Hosting Finder, July 9, 2026
+
+The Web Hosting Finder was upgraded after the 88/100 site audit. The previous finder used a priority-order rule where a single answer could override the other three and several different answer combinations could collapse into the same generic path. The result card also had a dark-theme contrast conflict on the live layout.
+
+The updated finder now:
+
+- weighs all four answers instead of using a single first-match rule;
+- offers eight reachable decision profiles: budget shared, beginner shared/WordPress, WordPress-focused, ecommerce-ready, managed WordPress, managed cloud, VPS, and domain-first/static-site;
+- shows a best match, match-strength label, the four selected answers, a close alternative, and three practical next steps;
+- persists selections in the URL so the result can be revisited or shared;
+- includes a clear reset action and a visible limitation that the finder is not a speed, uptime, or support benchmark;
+- uses a high-contrast light result panel to avoid the previous dark-text-on-dark-background conflict.
+
+This maintenance improves buyer-journey usefulness, but the overall package audit remains **88/100** until the first-hand checkout/performance evidence gaps listed above are closed.

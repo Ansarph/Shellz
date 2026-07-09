@@ -108,3 +108,9 @@ Files changed or added:
 - best-vps-hosting.html: applied the same buyer-fit markup fix.
 - best-wordpress-hosting.html: applied the same buyer-fit markup fix.
 - desktop-review-coupon-fixes.css: added dedicated buyer-fit typography so text no longer inherits oversized numeric-score styling.
+
+2026-07-09 — Hosting Finder usefulness update
+- web-hosting-finder.html — replaced single-rule path selection with weighted 4-answer recommendation UI; added best match, match strength, answer summary, close alternative, shareable URL state, reset action, and clearer evidence limitations.
+- hosting-finder.js — new weighted recommendation engine using all four answers; result URLs persist selections.
+- hosting-finder-v2.css — new high-contrast result styling and responsive finder UX.
+- sitemap.xml — refreshed web-hosting-finder.html lastmod where present.
