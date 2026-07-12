@@ -1,26 +1,38 @@
 {
   "schema_version": "1.0",
-  "updated": "2026-07-09",
+  "updated": "2026-07-12",
   "evidence_rule": "Published means the supporting result is available on Shellz. Public provider research is labelled separately from Shellz checkout, speed, uptime or support testing.",
   "providers": {
     "hostinger": {
       "public_status": true,
       "public_order": 1,
-      "publicSummary": "Public plan and renewal research reviewed; dedicated deal page published.",
-      "checkoutLabel": "Checkout screenshot: not published.",
+      "publicSummary": "Hostinger Premium cart evidence published for 12, 24 and 48-month terms with renewal note visible.",
+      "checkoutLabel": "Checkout screenshots published: 12, 24 and 48-month Premium carts.",
       "checkout": {
-        "published": false,
-        "date": null,
-        "url": null
+        "published": true,
+        "date": "2026-07-12",
+        "url": "hostinger-renewal-price.html",
+        "screenshots": [
+          "hostinger-premium-12m-uroff10-20260712.png",
+          "hostinger-premium-12m-blogwithbp-20260712.png",
+          "hostinger-premium-24m-blogwithbp-20260712.png",
+          "hostinger-premium-48m-blogwithbp-20260712.png"
+        ]
       },
       "coupon": {
         "page_published": true,
-        "tested": false
+        "tested": true,
+        "tested_codes": [
+          "UROFF10",
+          "BLOGWITHBP"
+        ]
       },
       "renewal": {
-        "status": "public-pricing-example",
+        "status": "shellz-cart-evidence",
         "plan_keys": [
-          "hostinger-premium"
+          "hostinger-premium",
+          "hostinger-premium-24m",
+          "hostinger-premium-48m"
         ]
       },
       "speed": {
@@ -32,26 +44,34 @@
       "support": {
         "published": false
       },
-      "next_action": "Match exact plan, capture promo term and final cart total"
+      "next_action": "Add an independent speed, uptime, and support test; re-check cart before major price updates."
     },
     "bluehost": {
       "public_status": true,
       "public_order": 2,
-      "publicSummary": "Starter plan renewal example is documented in the Shellz tracker.",
-      "checkoutLabel": "Checkout screenshot: not published.",
+      "publicSummary": "Bluehost Starter 36-month checkout evidence is now published with renewal at $359.64.",
+      "checkoutLabel": "Checkout screenshots published: two 36-month Starter cart captures.",
       "checkout": {
-        "published": false,
-        "date": null,
-        "url": null
+        "published": true,
+        "date": "2026-07-12",
+        "url": "bluehost-renewal-price.html",
+        "screenshots": [
+          "bluehost-starter-36m-12928-20260712.png",
+          "bluehost-starter-36m-12209-20260712.png"
+        ]
       },
       "coupon": {
         "page_published": true,
-        "tested": false
+        "tested": true,
+        "tested_codes": [],
+        "note": "Hosting promo applied automatically in the captured checkout; no typed public code was visible."
       },
       "renewal": {
-        "status": "public-pricing-example",
+        "status": "shellz-cart-evidence",
         "plan_keys": [
-          "bluehost-starter"
+          "bluehost-starter",
+          "bluehost-starter-36m-129",
+          "bluehost-starter-36m-122"
         ]
       },
       "speed": {
@@ -63,28 +83,34 @@
       "support": {
         "published": false
       },
-      "next_action": "Verify Starter plan, currency and 36-month cart total"
+      "next_action": "Re-check the 12-month and 48-month Starter carts, then add independent speed, uptime and support testing."
     },
     "hostgator": {
       "public_status": true,
       "public_order": 3,
-      "publicSummary": "SNAPPY is covered on a dedicated coupon-status page with eligibility warnings.",
-      "checkoutLabel": "Final checkout capture: not published.",
+      "publicSummary": "HostGator Hatchling SNAPPY cart evidence is published for 1-year and 3-year terms.",
+      "checkoutLabel": "Checkout screenshots published: Hatchling 1-year and 3-year SNAPPY carts.",
       "checkout": {
-        "published": false,
-        "date": null,
-        "url": null
+        "published": true,
+        "date": "2026-07-12",
+        "url": "hostgator-snappy-coupon-test.html",
+        "screenshots": [
+          "hostgator-hatchling-1y-snappy-20260712.png",
+          "hostgator-hatchling-3y-snappy-20260712.png"
+        ]
       },
       "coupon": {
         "page_published": true,
-        "tested": false,
-        "check_keys": [
-          "hostgator-snappy"
-        ]
+        "tested": true,
+        "tested_codes": [
+          "SNAPPY"
+        ],
+        "note": "SNAPPY appeared as applied in the captured 1-year and 3-year Hatchling cart examples."
       },
       "renewal": {
-        "status": "live-confirmation-required",
+        "status": "shellz-cart-evidence",
         "plan_keys": [
+          "hostgator-hatchling-1y",
           "hostgator-hatchling"
         ]
       },
@@ -97,29 +123,37 @@
       "support": {
         "published": false
       },
-      "next_action": "Test SNAPPY, save exact plan, term, final total and renewal line"
+      "next_action": "Capture the final payment step if possible and add independent speed, uptime and support tests before assigning performance claims."
     },
     "wpx": {
       "public_status": true,
-      "public_order": 4,
-      "publicSummary": "SAVE79 is covered as a first-month eligibility check for monthly WordPress hosting.",
-      "checkoutLabel": "Final checkout capture: not published.",
+      "public_order": 5,
+      "publicSummary": "WPX SAVE79 evidence is published: monthly Starter cart accepted the code, while the 1-year Starter cart rejected it.",
+      "checkoutLabel": "Checkout screenshots published: monthly SAVE79 applied and 1-year SAVE79 rejected.",
       "checkout": {
-        "published": false,
-        "date": null,
-        "url": null
+        "published": true,
+        "date": "2026-07-12",
+        "url": "wpx-save79-coupon-test.html",
+        "screenshots": [
+          "wpx-starter-monthly-save79-applied-20260712.png",
+          "wpx-starter-monthly-before-save79-20260712.png",
+          "wpx-starter-annual-save79-rejected-20260712.png",
+          "wpx-starter-annual-no-discount-20260712.png"
+        ]
       },
       "coupon": {
         "page_published": true,
-        "tested": false,
-        "check_keys": [
-          "wpx-save79"
-        ]
+        "tested": true,
+        "tested_codes": [
+          "SAVE79"
+        ],
+        "note": "SAVE79 applied to the captured monthly Starter cart and was rejected on the captured 1-year Starter cart."
       },
       "renewal": {
-        "status": "live-term-check-required",
+        "status": "shellz-cart-evidence",
         "plan_keys": [
-          "wpx-managed-wordpress"
+          "wpx-managed-wordpress",
+          "wpx-starter-annual-save79-rejected"
         ]
       },
       "speed": {
@@ -131,7 +165,7 @@
       "support": {
         "published": false
       },
-      "next_action": "Verify eligible monthly plan, first-month result and normal next charge"
+      "next_action": "Re-check SAVE79 periodically and add independent speed, uptime and support tests before claiming performance quality."
     },
     "siteground": {
       "public_status": false,
@@ -267,17 +301,33 @@
       "next_action": "Structure server size, provider, add-ons and monthly usage model"
     },
     "scalahosting": {
-      "public_status": false,
+      "public_status": true,
+      "public_order": 4,
+      "publicSummary": "ScalaHosting SPanel checkout evidence is published for Mini, Start and Advanced 12-month cart examples.",
+      "checkoutLabel": "Checkout screenshots published: Mini, Start and Advanced SPanel 12-month carts.",
       "checkout": {
-        "published": false
+        "published": true,
+        "date": "2026-07-12",
+        "url": "scalahosting-checkout-evidence.html",
+        "screenshots": [
+          "scalahosting-mini-12m-spanel-20260712.png",
+          "scalahosting-start-12m-spanel-20260712.png",
+          "scalahosting-advanced-12m-spanel-20260712.png"
+        ]
       },
       "coupon": {
         "page_published": true,
-        "tested": false
+        "tested": false,
+        "tested_codes": [],
+        "note": "No reusable public coupon code was shown in the captured cart. The evidence is a special initial-price checkout capture."
       },
       "renewal": {
-        "status": "not-structured",
-        "plan_keys": []
+        "status": "shellz-cart-evidence-estimated-from-regular-price",
+        "plan_keys": [
+          "scalahosting-mini-12m",
+          "scalahosting-start-12m",
+          "scalahosting-advanced-12m"
+        ]
       },
       "speed": {
         "published": false
@@ -288,7 +338,7 @@
       "support": {
         "published": false
       },
-      "next_action": "Capture exact managed cloud/VPS plan and term separately"
+      "next_action": "Capture a separate post-promo renewal invoice if available, then add independent speed, uptime and support testing."
     },
     "ionos": {
       "public_status": false,

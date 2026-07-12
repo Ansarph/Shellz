@@ -39,12 +39,15 @@ function comparisonEligibility(aKey, bKey) {
   const b = pageEligibility(bKey);
   const aPlan = pricing[aKey];
   const bPlan = pricing[bKey];
+  if (aPlan && bPlan && aPlan.provider_key === bPlan.provider_key) {
+    return { pair: [aKey, bKey], score: -99, eligible: false, reasons: ['Same-provider term comparison; use the provider renewal page instead of a vs page'] };
+  }
   let score = Math.min(a.score, b.score);
   const reasons = [`Base score uses weaker data side: ${score}`];
   const comparable = aPlan && bPlan && Number.isFinite(aPlan.renewalTermMonths) && aPlan.renewalTermMonths === bPlan.renewalTermMonths && Number.isFinite(aPlan.renewalMonthly) && Number.isFinite(bPlan.renewalMonthly);
   if (comparable) { score += 2; reasons.push('+2 Comparable renewal terms and monthly equivalents'); }
-  else { score -= 3; reasons.push('-3 Billing terms/renewal units are not safely comparable'); }
-  return { pair: [aKey, bKey], score, eligible: score >= 7, reasons };
+  else { score -= 3; reasons.push('-3 Billing terms/renewal units are not safely comparable'); reasons.push('BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model'); }
+  return { pair: [aKey, bKey], score, eligible: comparable && score >= 7, reasons };
 }
 
 if (require.main === module) {
