@@ -150,3 +150,124 @@ Rules introduced:
 - Score 7+ means manual-review candidate, never automatic publication.
 - Public provider research is separated from Shellz checkout/performance evidence.
 
+2026-07-09 — Homepage visual polish and brand-logo resilience
+- shellz-logo.png — added a root-level copy of the existing Shellz logo for root HTML pages.
+- 96 root HTML pages — header/footer brand logo references now use the root logo path.
+- Public Open Graph and JSON-LD Shellz logo URLs now point to https://shellz.com/shellz-logo.png so brand metadata uses the same resilient root asset.
+- index.html — removed artifact wording, corrected the coupon CTA label, and loaded the homepage polish stylesheet.
+- home-data-engine-polish.css — added homepage-only card/grid/readability styling for evidence cards, four buyer paths, guide cards, latest checks, exact-plan table CTAs, trust panel, and compact footer.
+- bluehost-review.html, hostgator-review.html, hostinger-review.html — replaced public “this ZIP” wording with visitor-facing Shellz publication language.
+
+2026-07-12 Hostinger Renewal Evidence Update
+- data/pricing.json: replaced Hostinger generic row with 12-month cart evidence and added 24/48-month Premium rows.
+- data/coupon-checks.json: added UROFF10 and BLOGWITHBP Hostinger Premium cart checks.
+- data/evidence.json: marked Hostinger checkout/coupon/renewal evidence as published.
+- shellz-data.js: rebuilt from JSON sources.
+- hostinger-renewal-price.html: new evidence-backed Hostinger Premium first bill vs second bill page.
+- hostinger-review.html: updated hero, proof status and added cart evidence summary.
+- hostinger-coupon.html: added coupon result table for UROFF10 and BLOGWITHBP.
+- index.html: updated homepage Hostinger evidence status and latest check.
+- hosting-renewal-price-database.html / hosting-cost-calculator.html / hosting-testing-status.html: use rebuilt data layer.
+- assets/evidence/: added four Hostinger cart screenshots.
+- hostinger-evidence.css: added evidence page/card styling.
+- sitemap.xml: added hostinger-renewal-price.html and updated lastmod dates.
+- scripts/page-eligibility.js: blocks same-provider term comparisons from becoming vs pages.
+- scripts/generate-renewal-pages.js: updated preview report date and skips same-provider term comparisons.
+
+
+2026-07-12 Bluehost Starter renewal evidence update
+- bluehost-renewal-price.html
+- bluehost-review.html
+- bluehost-coupon.html
+- index.html
+- hosting-renewal-price-database.html
+- hosting-cost-calculator.html
+- hosting-testing-status.html
+- data-status.html
+- data/pricing.json
+- data/evidence.json
+- data/coupon-checks.json
+- shellz-data.js
+- robots.txt
+- sitemap.xml
+- assets/evidence/bluehost-starter-36m-12928-20260712.png
+- assets/evidence/bluehost-starter-36m-12209-20260712.png
+- pseo-opportunities.json
+
+
+2026-07-12 HostGator SNAPPY Evidence Update
+- Added hostgator-snappy-coupon-test.html.
+- Added HostGator Hatchling 1-year and 3-year SNAPPY cart screenshots to assets/evidence/.
+- Updated data/pricing.json with HostGator Hatchling 1-year and 3-year cart rows.
+- Updated data/evidence.json and data/coupon-checks.json to mark HostGator checkout/coupon/renewal evidence as published for captured terms.
+- Updated shellz-data.js and pseo-opportunities.json.
+- Updated index.html, hostgator-review.html, hostgator-coupon.html, hosting-renewal-price-database.html, hosting-cost-calculator.html, hosting-testing-status.html, data-status.html, web-hosting-finder.html and sitemap.xml.
+
+
+Shellz Evidence Hub v1 — 2026-07-12
+- hosting-checkout-evidence.html
+- hostinger-vs-bluehost-vs-hostgator-renewal-cost.html
+- evidence-hub.css
+- index.html
+- best-web-hosting.html
+- best-cheap-web-hosting.html
+- hostinger-review.html
+- bluehost-review.html
+- hostgator-review.html
+- hosting-renewal-price-database.html
+- hosting-testing-status.html
+- data-status.html
+- web-hosting-finder.html
+- sitemap.xml
+- pseo-opportunities.json
+- scripts/generate-renewal-pages.js
+
+
+Shellz ScalaHosting SPanel Evidence Update — 2026-07-12
+Added:
+- scalahosting-checkout-evidence.html
+- assets/evidence/scalahosting-mini-12m-spanel-20260712.png
+- assets/evidence/scalahosting-start-12m-spanel-20260712.png
+- assets/evidence/scalahosting-advanced-12m-spanel-20260712.png
+Updated:
+- data/pricing.json
+- data/evidence.json
+- data/coupon-checks.json
+- shellz-data.js
+- hosting-checkout-evidence.html
+- index.html
+- scalahosting-review.html
+- scalahosting-deals.html
+- hosting-renewal-price-database.html
+- hosting-testing-status.html
+- home-data-engine-polish.css
+- evidence-hub.css
+- sitemap.xml
+- pseo-opportunities.json
+
+2026-07-12 — WPX SAVE79 Evidence Update
+Added:
+- wpx-save79-coupon-test.html
+- assets/evidence/wpx-starter-monthly-save79-applied-20260712.png
+- assets/evidence/wpx-starter-monthly-before-save79-20260712.png
+- assets/evidence/wpx-starter-annual-save79-rejected-20260712.png
+- assets/evidence/wpx-starter-annual-no-discount-20260712.png
+Updated:
+- index.html
+- hosting-checkout-evidence.html
+- hosting-renewal-price-database.html
+- hosting-testing-status.html
+- hosting-cost-calculator.html
+- web-hosting-finder.html
+- data-status.html
+- wpx-coupon.html
+- wpx-hosting-review.html
+- data/pricing.json
+- data/evidence.json
+- data/coupon-checks.json
+- shellz-data.js
+- sitemap.xml
+- pseo-opportunities.json
+- scripts/generate-renewal-pages.js
+- UPDATE-MANIFEST.txt
+- SEO-AUDIT-AFTER-UPDATE.md
