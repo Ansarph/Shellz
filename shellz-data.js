@@ -2,7 +2,7 @@
 window.SHELLZ_DATA = {
   "providers": {
     "schema_version": "1.0",
-    "updated": "2026-07-09",
+    "updated": "2026-07-12",
     "providers": {
       "hostinger": {
         "name": "Hostinger",
@@ -191,50 +191,76 @@ window.SHELLZ_DATA = {
   },
   "pricing": {
     "schema_version": "1.0",
-    "updated": "2026-07-09",
-    "source_note": "Dated Shellz public-pricing research snapshots. These are not a live price feed. Missing values remain null and must not be guessed.",
+    "updated": "2026-07-12",
+    "source_note": "Dated Shellz plan/cart screenshots and public-pricing research snapshots. These are not a live price feed. Missing values remain null and must not be guessed.",
     "plans": {
       "hostinger-premium": {
         "provider_key": "hostinger",
         "provider": "Hostinger",
         "plan": "Premium",
-        "regionCurrency": "Provider currency; region not captured in source row",
-        "introLabel": "$2.99/mo on long-term promo",
-        "introMonthly": 2.99,
-        "introTerm": "Long-term promo; exact term not captured in source row",
-        "introTermMonths": null,
-        "renewalLabel": "$10.99/mo renewal shown on provider pricing page",
+        "regionCurrency": "USD cart screenshot; checkout region not displayed",
+        "introLabel": "$3.59/mo for 12 months after 10% coupon; $43.09 total today",
+        "introMonthly": 3.59,
+        "introTerm": "12 months; Hostinger Premium cart captured 2026-07-12",
+        "introTermMonths": 12,
+        "firstTermTotal": 43.09,
+        "firstTermCouponCodes": [
+          "UROFF10",
+          "BLOGWITHBP"
+        ],
+        "couponDiscountPercent": 10,
+        "renewalLabel": "$10.99/mo for 12 months after the 12-month term",
         "renewalMonthly": 10.99,
         "renewalAnnual": null,
-        "renewalTerm": "Provider pricing page; exact renewal cycle should be rechecked",
-        "renewalTermMonths": null,
-        "lastChecked": "June 2026",
-        "status": "Public pricing research; verify checkout",
-        "evidenceStatus": "public-pricing-research",
-        "threeYearCost": null,
-        "providerSource": "https://www.hostinger.com/pricing",
-        "reviewUrl": "hostinger-review.html"
+        "renewalTerm": "Renews after 12 months at $10.99/mo for 12 months",
+        "renewalTermMonths": 12,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz cart screenshots published: 12-month UROFF10 and BLOGWITHBP checks",
+        "evidenceStatus": "shellz-checkout-capture",
+        "threeYearCost": 306.85,
+        "providerSource": "https://www.hostinger.com/",
+        "reviewUrl": "hostinger-review.html",
+        "evidencePage": "hostinger-renewal-price.html",
+        "screenshotUrls": [
+          "assets/evidence/hostinger-premium-12m-uroff10-20260712.png",
+          "assets/evidence/hostinger-premium-12m-blogwithbp-20260712.png"
+        ],
+        "notes": "Domain name, domain privacy and taxes showed $0 in the captured 12-month cart. Screenshot does not verify speed, uptime or support."
       },
       "bluehost-starter": {
         "provider_key": "bluehost",
         "provider": "Bluehost",
-        "plan": "Starter",
-        "regionCurrency": "Provider currency; region not captured in source row",
-        "introLabel": "$3.99/mo commonly shown for 36-month term",
-        "introMonthly": 3.99,
-        "introTerm": "36 months",
+        "plan": "Starter Hosting 36-month cart",
+        "regionCurrency": "USD checkout with Qatar billing form; data center India, Mumbai",
+        "introLabel": "36-month Starter checkout captures showed $122.09 and $129.28 totals after hosting promo",
+        "introMonthly": 3.39,
+        "displayedMonthly": 3.99,
+        "introTerm": "36 months; Bluehost Starter cart captured 2026-07-12",
         "introTermMonths": 36,
-        "renewalLabel": "$9.99/mo 36-month renewal listed for Starter",
+        "firstTermTotal": 122.09,
+        "alternateFirstTermTotal": 129.28,
+        "firstTermTotalRange": "$122.09–$129.28 in two captures",
+        "couponDiscountPercent": null,
+        "couponLabel": "Hosting promo applied automatically; no typed code visible in capture",
+        "renewalLabel": "Renews at $359.64 for the next 36-month term ($9.99/mo)",
         "renewalMonthly": 9.99,
         "renewalAnnual": null,
-        "renewalTerm": "36 months",
+        "renewalTerm": "Renews at $359.64 for 36 months",
         "renewalTermMonths": 36,
-        "lastChecked": "June 2026",
-        "status": "Public pricing research; verify checkout",
-        "evidenceStatus": "public-pricing-research",
-        "threeYearCost": null,
-        "providerSource": "https://www.bluehost.com/help/article/shared-hosting-prices",
-        "reviewUrl": "bluehost-review.html"
+        "renewalTotal": 359.64,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz Bluehost Starter checkout screenshots published: two 36-month cart captures with renewal note visible",
+        "evidenceStatus": "shellz-checkout-capture",
+        "threeYearCost": 122.09,
+        "threeYearCostNote": "Uses the lower captured cart total; another captured promo state showed $129.28 for the same 36-month term.",
+        "providerSource": "https://www.bluehost.com/",
+        "reviewUrl": "bluehost-review.html",
+        "evidencePage": "bluehost-renewal-price.html",
+        "screenshotUrls": [
+          "assets/evidence/bluehost-starter-36m-12928-20260712.png",
+          "assets/evidence/bluehost-starter-36m-12209-20260712.png"
+        ],
+        "notes": "Domain name, Professional Email Trial and tax showed $0. Optional add-ons were visible and unchecked in the captured checkout. Screenshot does not verify speed, uptime or support."
       },
       "namecheap-stellar": {
         "provider_key": "namecheap",
@@ -302,44 +328,75 @@ window.SHELLZ_DATA = {
       "hostgator-hatchling": {
         "provider_key": "hostgator",
         "provider": "HostGator",
-        "plan": "Hatchling / shared",
-        "regionCurrency": "Provider currency; region not captured in source row",
-        "introLabel": "Intro price changes by coupon and term",
-        "introMonthly": null,
-        "introTerm": "Varies",
-        "introTermMonths": null,
-        "renewalLabel": "Public renewal details may require account/checkout confirmation",
-        "renewalMonthly": null,
+        "plan": "Hatchling Plan 3-year cart",
+        "regionCurrency": "USD checkout screenshot; data center India, Mumbai",
+        "introLabel": "3-year Hatchling cart showed $2.75/mo and $99.00 total today after SNAPPY",
+        "introMonthly": 2.75,
+        "displayedMonthly": 2.75,
+        "introTerm": "3 years; HostGator Hatchling cart captured 2026-07-12",
+        "introTermMonths": 36,
+        "firstTermTotal": 99,
+        "firstTermCouponCodes": [
+          "SNAPPY"
+        ],
+        "couponLabel": "SNAPPY applied in captured cart",
+        "couponDiscountPercent": null,
+        "couponStatus": "applied",
+        "renewalLabel": "Renews at $10.99/mo after the 3-year term",
+        "renewalMonthly": 10.99,
         "renewalAnnual": null,
-        "renewalTerm": "Not captured",
+        "renewalTerm": "Renews at $10.99/mo; renewal billing period not specified in the visible cart line",
         "renewalTermMonths": null,
-        "lastChecked": "June 2026",
-        "status": "Coupon page published; renewal needs live confirmation",
-        "evidenceStatus": "coupon-page-published",
-        "threeYearCost": null,
-        "providerSource": "https://www.hostgator.com/help/article/addon-price-chart",
-        "reviewUrl": "hostgator-review.html"
+        "renewalTotal": null,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz HostGator Hatchling 3-year SNAPPY checkout screenshot published with renewal note visible",
+        "evidenceStatus": "shellz-checkout-capture",
+        "threeYearCost": 99,
+        "threeYearCostNote": "Uses captured 3-year first-term total only; next renewal term length was not visible in the screenshot.",
+        "providerSource": "https://www.hostgator.com/",
+        "reviewUrl": "hostgator-review.html",
+        "couponUrl": "hostgator-coupon.html",
+        "evidencePage": "hostgator-snappy-coupon-test.html",
+        "screenshotUrls": [
+          "assets/evidence/hostgator-hatchling-3y-snappy-20260712.png"
+        ],
+        "notes": "Professional Email Trial showed $0.00 and add-on cards were visible but not added to the captured order summary. Screenshot does not verify speed, uptime or support."
       },
       "wpx-managed-wordpress": {
         "provider_key": "wpx",
         "provider": "WPX Hosting",
-        "plan": "Managed WordPress hosting",
-        "regionCurrency": "Provider currency; region not captured in source row",
-        "introLabel": "Higher starting price than shared hosting",
-        "introMonthly": null,
-        "introTerm": "Monthly or annual; verify live plan",
-        "introTermMonths": null,
-        "renewalLabel": "Not a typical cheap shared-host renewal model",
-        "renewalMonthly": null,
+        "plan": "WordPress Hosting Starter monthly cart",
+        "regionCurrency": "USD checkout; account country field showed United States in captured cart",
+        "introLabel": "SAVE79 reduced first monthly payment to $3.78 on the captured monthly Starter cart",
+        "introMonthly": 3.78,
+        "displayedMonthly": 17.99,
+        "introTerm": "1 month; WPX Starter monthly cart captured 2026-07-12",
+        "introTermMonths": 1,
+        "firstTermTotal": 3.78,
+        "firstTermCouponCodes": [
+          "SAVE79"
+        ],
+        "couponDiscountAmount": 14.21,
+        "couponDiscountLabel": "$14.21 off first monthly payment",
+        "renewalLabel": "Next monthly charge shown as $17.99 USD",
+        "renewalMonthly": 17.99,
         "renewalAnnual": null,
-        "renewalTerm": "Verify monthly vs annual pricing",
-        "renewalTermMonths": null,
-        "lastChecked": "June 2026",
-        "status": "SAVE79 page published; verify checkout and eligibility",
-        "evidenceStatus": "coupon-page-published",
+        "renewalTerm": "Next monthly charge: $17.99 USD on Aug 12, 2026",
+        "renewalTermMonths": 1,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz WPX Starter monthly checkout screenshot published with SAVE79 applied and next monthly charge visible",
+        "evidenceStatus": "shellz-checkout-capture",
         "threeYearCost": null,
+        "threeYearCostNote": "WPX monthly evidence is not a 3-year prepaid shared-hosting comparison; use exact monthly charges instead.",
         "providerSource": "https://wpx.net/",
-        "reviewUrl": "wpx-hosting-review.html"
+        "reviewUrl": "wpx-hosting-review.html",
+        "couponUrl": "wpx-coupon.html",
+        "evidencePage": "wpx-save79-coupon-test.html",
+        "screenshotUrls": [
+          "assets/evidence/wpx-starter-monthly-save79-applied-20260712.png",
+          "assets/evidence/wpx-starter-monthly-before-save79-20260712.png"
+        ],
+        "notes": "SAVE79 applied to the monthly Starter cart in the Shellz test. It did not apply to the captured 1-year Starter cart. Screenshot does not verify speed, uptime or support."
       },
       "cloudways-managed-cloud": {
         "provider_key": "cloudways",
@@ -361,61 +418,378 @@ window.SHELLZ_DATA = {
         "threeYearCost": null,
         "providerSource": "https://www.cloudways.com/en/pricing.php",
         "reviewUrl": "cloudways-review.html"
+      },
+      "hostinger-premium-24m": {
+        "provider_key": "hostinger",
+        "provider": "Hostinger",
+        "plan": "Premium 24-month cart",
+        "regionCurrency": "USD cart screenshot; checkout region not displayed",
+        "introLabel": "$3.14/mo for 24 months after BLOGWITHBP 10% coupon; $75.38 total today",
+        "introMonthly": 3.14,
+        "introTerm": "24 months; Hostinger Premium cart captured 2026-07-12",
+        "introTermMonths": 24,
+        "firstTermTotal": 75.38,
+        "firstTermCouponCodes": [
+          "BLOGWITHBP"
+        ],
+        "couponDiscountPercent": 10,
+        "renewalLabel": "$10.99/mo for 12 months after the 24-month term",
+        "renewalMonthly": 10.99,
+        "renewalAnnual": null,
+        "renewalTerm": "Renews after 24 months at $10.99/mo for 12 months",
+        "renewalTermMonths": 12,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz cart screenshot published: 24-month BLOGWITHBP check",
+        "evidenceStatus": "shellz-checkout-capture",
+        "threeYearCost": 207.26,
+        "providerSource": "https://www.hostinger.com/",
+        "reviewUrl": "hostinger-review.html",
+        "evidencePage": "hostinger-renewal-price.html",
+        "screenshotUrls": [
+          "assets/evidence/hostinger-premium-24m-blogwithbp-20260712.png"
+        ],
+        "notes": "Domain name, domain privacy and taxes showed $0. Hostinger Reach was shown as an optional add-on and was not included in the order summary."
+      },
+      "hostinger-premium-48m": {
+        "provider_key": "hostinger",
+        "provider": "Hostinger",
+        "plan": "Premium 48-month cart",
+        "regionCurrency": "USD cart screenshot; checkout region not displayed",
+        "introLabel": "$2.69/mo for 48 months after BLOGWITHBP 10% coupon; $129.17 total today",
+        "introMonthly": 2.69,
+        "introTerm": "48 months; Hostinger Premium cart captured 2026-07-12",
+        "introTermMonths": 48,
+        "firstTermTotal": 129.17,
+        "firstTermCouponCodes": [
+          "BLOGWITHBP"
+        ],
+        "couponDiscountPercent": 10,
+        "renewalLabel": "$10.99/mo for 12 months after the 48-month term",
+        "renewalMonthly": 10.99,
+        "renewalAnnual": null,
+        "renewalTerm": "Renews after 48 months at $10.99/mo for 12 months",
+        "renewalTermMonths": 12,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz cart screenshot published: 48-month BLOGWITHBP check",
+        "evidenceStatus": "shellz-checkout-capture",
+        "threeYearCost": null,
+        "providerSource": "https://www.hostinger.com/",
+        "reviewUrl": "hostinger-review.html",
+        "evidencePage": "hostinger-renewal-price.html",
+        "screenshotUrls": [
+          "assets/evidence/hostinger-premium-48m-blogwithbp-20260712.png"
+        ],
+        "notes": "This is a 48-month first term, so it is not a 3-year cost example. The screenshot shows a renewal note of $10.99/mo for 12 months."
+      },
+      "bluehost-starter-36m-129": {
+        "provider_key": "bluehost",
+        "provider": "Bluehost",
+        "plan": "Starter Hosting 36-month cart capture: $129.28",
+        "regionCurrency": "USD checkout with Qatar billing form; data center India, Mumbai",
+        "introLabel": "36-month Starter cart capture showed $129.28 today after a hosting promo discount",
+        "introMonthly": 3.59,
+        "displayedMonthly": 3.99,
+        "introTerm": "36 months; Bluehost Starter cart captured 2026-07-12",
+        "introTermMonths": 36,
+        "firstTermTotal": 129.28,
+        "couponLabel": "Hosting promo code applied automatically",
+        "discountValue": 14.36,
+        "renewalLabel": "Renews at $359.64 for the next 36-month term ($9.99/mo)",
+        "renewalMonthly": 9.99,
+        "renewalTerm": "Renews at $359.64 for 36 months",
+        "renewalTermMonths": 36,
+        "renewalTotal": 359.64,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz checkout screenshot published",
+        "evidenceStatus": "shellz-checkout-capture",
+        "threeYearCost": 129.28,
+        "providerSource": "https://www.bluehost.com/",
+        "reviewUrl": "bluehost-review.html",
+        "evidencePage": "bluehost-renewal-price.html",
+        "screenshotUrls": [
+          "assets/evidence/bluehost-starter-36m-12928-20260712.png"
+        ],
+        "notes": "The cart showed optional add-ons unchecked. Use as one dated promo state, not a permanent price."
+      },
+      "bluehost-starter-36m-122": {
+        "provider_key": "bluehost",
+        "provider": "Bluehost",
+        "plan": "Starter Hosting 36-month cart capture: $122.09",
+        "regionCurrency": "USD checkout with Qatar billing form; data center India, Mumbai",
+        "introLabel": "36-month Starter cart capture showed $122.09 today after a hosting promo discount",
+        "introMonthly": 3.39,
+        "displayedMonthly": 3.99,
+        "introTerm": "36 months; Bluehost Starter cart captured 2026-07-12",
+        "introTermMonths": 36,
+        "firstTermTotal": 122.09,
+        "couponLabel": "Hosting promo code applied automatically",
+        "discountValue": 21.55,
+        "renewalLabel": "Renews at $359.64 for the next 36-month term ($9.99/mo)",
+        "renewalMonthly": 9.99,
+        "renewalTerm": "Renews at $359.64 for 36 months",
+        "renewalTermMonths": 36,
+        "renewalTotal": 359.64,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz checkout screenshot published",
+        "evidenceStatus": "shellz-checkout-capture",
+        "threeYearCost": 122.09,
+        "providerSource": "https://www.bluehost.com/",
+        "reviewUrl": "bluehost-review.html",
+        "evidencePage": "bluehost-renewal-price.html",
+        "screenshotUrls": [
+          "assets/evidence/bluehost-starter-36m-12209-20260712.png"
+        ],
+        "notes": "The cart showed a green discount-applied banner and optional add-ons unchecked. Use as one dated promo state, not a permanent price."
+      },
+      "hostgator-hatchling-1y": {
+        "provider_key": "hostgator",
+        "provider": "HostGator",
+        "plan": "Hatchling Plan 1-year cart",
+        "regionCurrency": "USD checkout screenshot; data center India, Mumbai",
+        "introLabel": "1-year Hatchling cart showed $3.95/mo and $47.40 total today after SNAPPY",
+        "introMonthly": 3.95,
+        "displayedMonthly": 3.95,
+        "introTerm": "1 year; HostGator Hatchling cart captured 2026-07-12",
+        "introTermMonths": 12,
+        "firstTermTotal": 47.4,
+        "firstTermCouponCodes": [
+          "SNAPPY"
+        ],
+        "couponLabel": "SNAPPY applied in captured cart",
+        "couponDiscountPercent": null,
+        "couponStatus": "applied",
+        "renewalLabel": "Renews at $13.19/mo after the 1-year term",
+        "renewalMonthly": 13.19,
+        "renewalAnnual": null,
+        "renewalTerm": "Renews at $13.19/mo; renewal billing period not specified in the visible cart line",
+        "renewalTermMonths": null,
+        "renewalTotal": null,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz HostGator Hatchling 1-year SNAPPY checkout screenshot published with renewal note visible",
+        "evidenceStatus": "shellz-checkout-capture",
+        "threeYearCost": null,
+        "threeYearCostNote": "Not calculated because the visible renewal line shows monthly renewal price but not the next renewal term length.",
+        "providerSource": "https://www.hostgator.com/",
+        "reviewUrl": "hostgator-review.html",
+        "couponUrl": "hostgator-coupon.html",
+        "evidencePage": "hostgator-snappy-coupon-test.html",
+        "screenshotUrls": [
+          "assets/evidence/hostgator-hatchling-1y-snappy-20260712.png"
+        ],
+        "notes": "Professional Email Trial showed $0.00 and add-on cards were visible but not added to the captured order summary. Screenshot does not verify speed, uptime or support."
+      },
+      "scalahosting-mini-12m": {
+        "provider_key": "scalahosting",
+        "provider": "ScalaHosting",
+        "plan": "Mini SPanel",
+        "regionCurrency": "USD checkout screenshot; data center shown as First available",
+        "introLabel": "$2.95/mo for 12 months; $35.40 first invoice",
+        "introMonthly": 2.95,
+        "displayedMonthly": 2.95,
+        "introTerm": "12 months; SPanel selected; domain shellz.com shown in cart",
+        "introTermMonths": 12,
+        "firstTermTotal": 35.4,
+        "couponDiscountPercent": null,
+        "couponLabel": "Special initial price; no reusable coupon code shown",
+        "renewalLabel": "Regular price shown as $11.95/mo; estimated next 12-month renewal $143.40",
+        "renewalMonthly": 11.95,
+        "renewalAnnual": 143.39999999999998,
+        "renewalTerm": "Estimated from displayed regular monthly price; checkout notice says the special initial price applies to the first invoice only and the product renews at the regular price.",
+        "renewalTermMonths": 12,
+        "renewalTotal": 143.4,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz ScalaHosting checkout screenshot published; renewal is estimated from the displayed regular monthly price, not a separate final renewal invoice line.",
+        "evidenceStatus": "shellz-checkout-capture-estimated-renewal",
+        "threeYearCost": null,
+        "threeYearCostNote": "Not calculated because only a 12-month cart and displayed regular monthly price are captured.",
+        "providerSource": "https://www.scalahosting.com/#shellz",
+        "reviewUrl": "scalahosting-review.html",
+        "evidencePage": "scalahosting-checkout-evidence.html",
+        "screenshotUrls": [
+          "assets/evidence/scalahosting-mini-12m-spanel-20260712.png"
+        ],
+        "notes": "Screenshot shows the plan, shellz.com domain, 12-month period, SPanel control panel, product price and first invoice total. It does not verify speed, uptime, support, or a separate renewal invoice."
+      },
+      "scalahosting-start-12m": {
+        "provider_key": "scalahosting",
+        "provider": "ScalaHosting",
+        "plan": "Start SPanel",
+        "regionCurrency": "USD checkout screenshot; data center shown as First available",
+        "introLabel": "$5.95/mo for 12 months; $71.40 first invoice",
+        "introMonthly": 5.95,
+        "displayedMonthly": 5.95,
+        "introTerm": "12 months; SPanel selected; domain shellz.com shown in cart",
+        "introTermMonths": 12,
+        "firstTermTotal": 71.4,
+        "couponDiscountPercent": null,
+        "couponLabel": "Special initial price; no reusable coupon code shown",
+        "renewalLabel": "Regular price shown as $14.95/mo; estimated next 12-month renewal $179.40",
+        "renewalMonthly": 14.95,
+        "renewalAnnual": 179.39999999999998,
+        "renewalTerm": "Estimated from displayed regular monthly price; checkout notice says the special initial price applies to the first invoice only and the product renews at the regular price.",
+        "renewalTermMonths": 12,
+        "renewalTotal": 179.4,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz ScalaHosting checkout screenshot published; renewal is estimated from the displayed regular monthly price, not a separate final renewal invoice line.",
+        "evidenceStatus": "shellz-checkout-capture-estimated-renewal",
+        "threeYearCost": null,
+        "threeYearCostNote": "Not calculated because only a 12-month cart and displayed regular monthly price are captured.",
+        "providerSource": "https://www.scalahosting.com/#shellz",
+        "reviewUrl": "scalahosting-review.html",
+        "evidencePage": "scalahosting-checkout-evidence.html",
+        "screenshotUrls": [
+          "assets/evidence/scalahosting-start-12m-spanel-20260712.png"
+        ],
+        "notes": "Screenshot shows the plan, shellz.com domain, 12-month period, SPanel control panel, product price and first invoice total. It does not verify speed, uptime, support, or a separate renewal invoice."
+      },
+      "scalahosting-advanced-12m": {
+        "provider_key": "scalahosting",
+        "provider": "ScalaHosting",
+        "plan": "Advanced SPanel",
+        "regionCurrency": "USD checkout screenshot; data center shown as First available",
+        "introLabel": "$9.95/mo for 12 months; $119.40 first invoice",
+        "introMonthly": 9.95,
+        "displayedMonthly": 9.95,
+        "introTerm": "12 months; SPanel selected; domain shellz.com shown in cart",
+        "introTermMonths": 12,
+        "firstTermTotal": 119.4,
+        "couponDiscountPercent": null,
+        "couponLabel": "Special initial price; no reusable coupon code shown",
+        "renewalLabel": "Regular price shown as $19.95/mo; estimated next 12-month renewal $239.40",
+        "renewalMonthly": 19.95,
+        "renewalAnnual": 239.39999999999998,
+        "renewalTerm": "Estimated from displayed regular monthly price; checkout notice says the special initial price applies to the first invoice only and the product renews at the regular price.",
+        "renewalTermMonths": 12,
+        "renewalTotal": 239.4,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz ScalaHosting checkout screenshot published; renewal is estimated from the displayed regular monthly price, not a separate final renewal invoice line.",
+        "evidenceStatus": "shellz-checkout-capture-estimated-renewal",
+        "threeYearCost": null,
+        "threeYearCostNote": "Not calculated because only a 12-month cart and displayed regular monthly price are captured.",
+        "providerSource": "https://www.scalahosting.com/#shellz",
+        "reviewUrl": "scalahosting-review.html",
+        "evidencePage": "scalahosting-checkout-evidence.html",
+        "screenshotUrls": [
+          "assets/evidence/scalahosting-advanced-12m-spanel-20260712.png"
+        ],
+        "notes": "Screenshot shows the plan, shellz.com domain, 12-month period, SPanel control panel, product price and first invoice total. It does not verify speed, uptime, support, or a separate renewal invoice."
+      },
+      "wpx-starter-annual-save79-rejected": {
+        "provider_key": "wpx",
+        "provider": "WPX Hosting",
+        "plan": "WordPress Hosting Starter 1-year cart",
+        "regionCurrency": "USD checkout; account country field showed United States in captured cart",
+        "introLabel": "1-year Starter cart showed $179.90; SAVE79 was rejected in the captured test",
+        "introMonthly": 14.99,
+        "displayedAnnual": 179.9,
+        "introTerm": "1 year; WPX Starter annual cart captured 2026-07-12",
+        "introTermMonths": 12,
+        "firstTermTotal": 179.9,
+        "firstTermCouponCodes": [],
+        "couponAttempted": "SAVE79",
+        "couponApplied": false,
+        "couponRejectionMessage": "This coupon cannot be applied to your order",
+        "renewalLabel": "Next 1 Year Charge shown as $179.90 USD",
+        "renewalMonthly": 14.99,
+        "renewalAnnual": 179.9,
+        "renewalTerm": "Next 1 Year Charge: $179.90 USD on Jul 12, 2027",
+        "renewalTermMonths": 12,
+        "lastChecked": "2026-07-12",
+        "status": "Shellz WPX Starter annual checkout screenshot published with SAVE79 rejection message",
+        "evidenceStatus": "shellz-checkout-capture-coupon-rejected",
+        "threeYearCost": 539.7,
+        "threeYearCostNote": "Uses the captured annual price repeated for three years; future WPX pricing can change.",
+        "providerSource": "https://wpx.net/",
+        "reviewUrl": "wpx-hosting-review.html",
+        "couponUrl": "wpx-coupon.html",
+        "evidencePage": "wpx-save79-coupon-test.html",
+        "screenshotUrls": [
+          "assets/evidence/wpx-starter-annual-save79-rejected-20260712.png",
+          "assets/evidence/wpx-starter-annual-no-discount-20260712.png"
+        ],
+        "notes": "The captured annual cart rejected SAVE79. This supports monthly-only caution for the code in this Shellz test."
       }
     }
   },
   "coupons": {
     "schema_version": "1.0",
-    "updated": "2026-07-09",
-    "status_note": "A published coupon page is not a captured checkout test. code_applied, checkout_capture and renewal_visible remain null/false until direct evidence exists.",
+    "updated": "2026-07-12",
+    "status_note": "A published coupon page is not a captured checkout test. Hostinger, Bluehost, HostGator, ScalaHosting and WPX rows with dated screenshot URLs are Shellz cart captures from 2026-07-12; other codes remain unverified until direct evidence exists.",
     "checks": {
       "hostinger-general-deal": {
         "provider_key": "hostinger",
         "code": null,
         "label": "Hostinger deal/coupon status page",
-        "date_checked": null,
+        "date_checked": "2026-07-12",
         "page_url": "hostinger-coupon.html",
         "page_published": true,
-        "checkout_capture": false,
-        "code_applied": null,
-        "renewal_visible": null,
-        "status": "Research page published; final cart evidence not published"
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "status": "Hostinger Premium cart evidence published for UROFF10 and BLOGWITHBP; exact term still matters",
+        "evidence_page": "hostinger-renewal-price.html"
       },
       "bluehost-general-deal": {
         "provider_key": "bluehost",
         "code": null,
         "label": "Bluehost deal/coupon status page",
-        "date_checked": null,
+        "date_checked": "2026-07-12",
         "page_url": "bluehost-coupon.html",
         "page_published": true,
-        "checkout_capture": false,
-        "code_applied": null,
-        "renewal_visible": null,
-        "status": "Research page published; final cart evidence not published"
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "status": "Bluehost Starter 36-month checkout evidence published; two promo states showed $129.28 and $122.09 totals with the same $359.64 renewal amount.",
+        "evidence_page": "bluehost-renewal-price.html"
       },
       "hostgator-snappy": {
         "provider_key": "hostgator",
         "code": "SNAPPY",
-        "label": "HostGator SNAPPY eligibility check",
-        "date_checked": null,
+        "label": "HostGator SNAPPY coupon checkout test",
+        "date_checked": "2026-07-12",
         "page_url": "hostgator-coupon.html",
         "page_published": true,
-        "checkout_capture": false,
-        "code_applied": null,
-        "renewal_visible": null,
-        "status": "Coupon-status page published; live code result and final cart capture still required"
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "status": "SNAPPY applied in Shellz HostGator Hatchling 1-year and 3-year cart screenshots; term-specific totals and renewal notes published.",
+        "evidence_page": "hostgator-snappy-coupon-test.html",
+        "screenshots": [
+          "assets/evidence/hostgator-hatchling-1y-snappy-20260712.png",
+          "assets/evidence/hostgator-hatchling-3y-snappy-20260712.png"
+        ]
       },
       "wpx-save79": {
         "provider_key": "wpx",
         "code": "SAVE79",
-        "label": "WPX SAVE79 eligibility check",
-        "date_checked": null,
+        "label": "WPX SAVE79 monthly WordPress hosting coupon test",
+        "date_checked": "2026-07-12",
         "page_url": "wpx-coupon.html",
         "page_published": true,
-        "checkout_capture": false,
-        "code_applied": null,
-        "renewal_visible": null,
-        "status": "Eligibility page published; final checkout capture not published"
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "status": "SAVE79 applied to the captured monthly WPX Starter WordPress Hosting cart, reducing the first monthly payment to $3.78. The same code was rejected on the captured 1-year WPX Starter cart.",
+        "evidence_page": "wpx-save79-coupon-test.html",
+        "screenshots": [
+          "assets/evidence/wpx-starter-monthly-save79-applied-20260712.png",
+          "assets/evidence/wpx-starter-monthly-before-save79-20260712.png",
+          "assets/evidence/wpx-starter-annual-save79-rejected-20260712.png",
+          "assets/evidence/wpx-starter-annual-no-discount-20260712.png"
+        ],
+        "monthly_result": {
+          "term": "Monthly",
+          "first_payment": 3.78,
+          "regular_monthly": 17.99,
+          "discount_amount": 14.21,
+          "next_charge": 17.99
+        },
+        "annual_result": {
+          "term": "1 Year",
+          "coupon_applied": false,
+          "cart_total": 179.9,
+          "next_charge": 179.9
+        }
       },
       "namesilo-discount10": {
         "provider_key": "namesilo",
@@ -452,32 +826,178 @@ window.SHELLZ_DATA = {
         "code_applied": null,
         "renewal_visible": null,
         "status": "Code note published; checkout outcome not captured in this ZIP"
+      },
+      "hostinger-uroff10-12m": {
+        "provider_key": "hostinger",
+        "code": "UROFF10",
+        "label": "Hostinger Premium 12-month UROFF10 cart check",
+        "date_checked": "2026-07-12",
+        "page_url": "hostinger-coupon.html",
+        "page_published": true,
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "billing_term_months": 12,
+        "cart_total": 43.09,
+        "currency": "USD",
+        "discount_value": 4.79,
+        "discount_percent": 10,
+        "renewal_note": "Renews after 12 months at $10.99/mo for 12 months",
+        "screenshot_url": "assets/evidence/hostinger-premium-12m-uroff10-20260712.png",
+        "status": "Captured Hostinger cart showed UROFF10 -10%, $43.09 total, $0 domain, $0 privacy, $0 taxes, and renewal note visible."
+      },
+      "hostinger-blogwithbp-12m": {
+        "provider_key": "hostinger",
+        "code": "BLOGWITHBP",
+        "label": "Hostinger Premium 12-month BLOGWITHBP cart check",
+        "date_checked": "2026-07-12",
+        "page_url": "hostinger-coupon.html",
+        "page_published": true,
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "billing_term_months": 12,
+        "cart_total": 43.09,
+        "currency": "USD",
+        "discount_value": 4.79,
+        "discount_percent": 10,
+        "renewal_note": "Renews after 12 months at $10.99/mo for 12 months",
+        "screenshot_url": "assets/evidence/hostinger-premium-12m-blogwithbp-20260712.png",
+        "status": "Captured Hostinger cart showed BLOGWITHBP -10%, $43.09 total, $0 domain, $0 privacy, $0 taxes, and renewal note visible."
+      },
+      "hostinger-blogwithbp-24m": {
+        "provider_key": "hostinger",
+        "code": "BLOGWITHBP",
+        "label": "Hostinger Premium 24-month BLOGWITHBP cart check",
+        "date_checked": "2026-07-12",
+        "page_url": "hostinger-coupon.html",
+        "page_published": true,
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "billing_term_months": 24,
+        "cart_total": 75.38,
+        "currency": "USD",
+        "discount_value": 8.38,
+        "discount_percent": 10,
+        "renewal_note": "Renews after 24 months at $10.99/mo for 12 months",
+        "screenshot_url": "assets/evidence/hostinger-premium-24m-blogwithbp-20260712.png",
+        "status": "Captured Hostinger cart showed BLOGWITHBP -10%, $75.38 total, $0 domain, $0 privacy, $0 taxes, and renewal note visible. Hostinger Reach was not included in the order summary."
+      },
+      "hostinger-blogwithbp-48m": {
+        "provider_key": "hostinger",
+        "code": "BLOGWITHBP",
+        "label": "Hostinger Premium 48-month BLOGWITHBP cart check",
+        "date_checked": "2026-07-12",
+        "page_url": "hostinger-coupon.html",
+        "page_published": true,
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "billing_term_months": 48,
+        "cart_total": 129.17,
+        "currency": "USD",
+        "discount_value": 14.35,
+        "discount_percent": 10,
+        "renewal_note": "Renews after 48 months at $10.99/mo for 12 months",
+        "screenshot_url": "assets/evidence/hostinger-premium-48m-blogwithbp-20260712.png",
+        "status": "Captured Hostinger cart showed BLOGWITHBP -10%, $129.17 total, $0 domain, $0 privacy, $0 taxes, and renewal note visible."
+      },
+      "bluehost-starter-36m-129": {
+        "provider_key": "bluehost",
+        "code": null,
+        "label": "Bluehost Starter 36-month cart check: $129.28 total",
+        "date_checked": "2026-07-12",
+        "page_url": "bluehost-coupon.html",
+        "page_published": true,
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "billing_term_months": 36,
+        "cart_total": 129.28,
+        "currency": "USD",
+        "discount_value": 14.36,
+        "discount_label": "Hosting promo code applied",
+        "renewal_note": "Renews at $359.64",
+        "screenshot_url": "assets/evidence/bluehost-starter-36m-12928-20260712.png",
+        "status": "Captured Bluehost Starter checkout state with $129.28 total and $359.64 renewal note.",
+        "evidence_page": "bluehost-renewal-price.html"
+      },
+      "bluehost-starter-36m-122": {
+        "provider_key": "bluehost",
+        "code": null,
+        "label": "Bluehost Starter 36-month cart check: $122.09 total",
+        "date_checked": "2026-07-12",
+        "page_url": "bluehost-coupon.html",
+        "page_published": true,
+        "checkout_capture": true,
+        "code_applied": true,
+        "renewal_visible": true,
+        "billing_term_months": 36,
+        "cart_total": 122.09,
+        "currency": "USD",
+        "discount_value": 21.55,
+        "discount_label": "Hosting promo code applied",
+        "renewal_note": "Renews at $359.64",
+        "screenshot_url": "assets/evidence/bluehost-starter-36m-12209-20260712.png",
+        "status": "Captured Bluehost Starter checkout state with $122.09 total and $359.64 renewal note.",
+        "evidence_page": "bluehost-renewal-price.html"
+      },
+      "scalahosting-initial-offer-12m": {
+        "provider_key": "scalahosting",
+        "code": null,
+        "label": "ScalaHosting SPanel 12-month initial-price checkout capture",
+        "date_checked": "2026-07-12",
+        "page_url": "scalahosting-deals.html",
+        "page_published": true,
+        "checkout_capture": true,
+        "code_applied": null,
+        "renewal_visible": true,
+        "status": "Mini, Start and Advanced 12-month SPanel cart screenshots published; regular monthly prices are visible and renewal estimate is calculated from those displayed regular prices.",
+        "evidence_page": "scalahosting-checkout-evidence.html",
+        "screenshots": [
+          "assets/evidence/scalahosting-mini-12m-spanel-20260712.png",
+          "assets/evidence/scalahosting-start-12m-spanel-20260712.png",
+          "assets/evidence/scalahosting-advanced-12m-spanel-20260712.png"
+        ]
       }
     }
   },
   "evidence": {
     "schema_version": "1.0",
-    "updated": "2026-07-09",
+    "updated": "2026-07-12",
     "evidence_rule": "Published means the supporting result is available on Shellz. Public provider research is labelled separately from Shellz checkout, speed, uptime or support testing.",
     "providers": {
       "hostinger": {
         "public_status": true,
         "public_order": 1,
-        "publicSummary": "Public plan and renewal research reviewed; dedicated deal page published.",
-        "checkoutLabel": "Checkout screenshot: not published.",
+        "publicSummary": "Hostinger Premium cart evidence published for 12, 24 and 48-month terms with renewal note visible.",
+        "checkoutLabel": "Checkout screenshots published: 12, 24 and 48-month Premium carts.",
         "checkout": {
-          "published": false,
-          "date": null,
-          "url": null
+          "published": true,
+          "date": "2026-07-12",
+          "url": "hostinger-renewal-price.html",
+          "screenshots": [
+            "hostinger-premium-12m-uroff10-20260712.png",
+            "hostinger-premium-12m-blogwithbp-20260712.png",
+            "hostinger-premium-24m-blogwithbp-20260712.png",
+            "hostinger-premium-48m-blogwithbp-20260712.png"
+          ]
         },
         "coupon": {
           "page_published": true,
-          "tested": false
+          "tested": true,
+          "tested_codes": [
+            "UROFF10",
+            "BLOGWITHBP"
+          ]
         },
         "renewal": {
-          "status": "public-pricing-example",
+          "status": "shellz-cart-evidence",
           "plan_keys": [
-            "hostinger-premium"
+            "hostinger-premium",
+            "hostinger-premium-24m",
+            "hostinger-premium-48m"
           ]
         },
         "speed": {
@@ -489,26 +1009,34 @@ window.SHELLZ_DATA = {
         "support": {
           "published": false
         },
-        "next_action": "Match exact plan, capture promo term and final cart total"
+        "next_action": "Add an independent speed, uptime, and support test; re-check cart before major price updates."
       },
       "bluehost": {
         "public_status": true,
         "public_order": 2,
-        "publicSummary": "Starter plan renewal example is documented in the Shellz tracker.",
-        "checkoutLabel": "Checkout screenshot: not published.",
+        "publicSummary": "Bluehost Starter 36-month checkout evidence is now published with renewal at $359.64.",
+        "checkoutLabel": "Checkout screenshots published: two 36-month Starter cart captures.",
         "checkout": {
-          "published": false,
-          "date": null,
-          "url": null
+          "published": true,
+          "date": "2026-07-12",
+          "url": "bluehost-renewal-price.html",
+          "screenshots": [
+            "bluehost-starter-36m-12928-20260712.png",
+            "bluehost-starter-36m-12209-20260712.png"
+          ]
         },
         "coupon": {
           "page_published": true,
-          "tested": false
+          "tested": true,
+          "tested_codes": [],
+          "note": "Hosting promo applied automatically in the captured checkout; no typed public code was visible."
         },
         "renewal": {
-          "status": "public-pricing-example",
+          "status": "shellz-cart-evidence",
           "plan_keys": [
-            "bluehost-starter"
+            "bluehost-starter",
+            "bluehost-starter-36m-129",
+            "bluehost-starter-36m-122"
           ]
         },
         "speed": {
@@ -520,28 +1048,34 @@ window.SHELLZ_DATA = {
         "support": {
           "published": false
         },
-        "next_action": "Verify Starter plan, currency and 36-month cart total"
+        "next_action": "Re-check the 12-month and 48-month Starter carts, then add independent speed, uptime and support testing."
       },
       "hostgator": {
         "public_status": true,
         "public_order": 3,
-        "publicSummary": "SNAPPY is covered on a dedicated coupon-status page with eligibility warnings.",
-        "checkoutLabel": "Final checkout capture: not published.",
+        "publicSummary": "HostGator Hatchling SNAPPY cart evidence is published for 1-year and 3-year terms.",
+        "checkoutLabel": "Checkout screenshots published: Hatchling 1-year and 3-year SNAPPY carts.",
         "checkout": {
-          "published": false,
-          "date": null,
-          "url": null
+          "published": true,
+          "date": "2026-07-12",
+          "url": "hostgator-snappy-coupon-test.html",
+          "screenshots": [
+            "hostgator-hatchling-1y-snappy-20260712.png",
+            "hostgator-hatchling-3y-snappy-20260712.png"
+          ]
         },
         "coupon": {
           "page_published": true,
-          "tested": false,
-          "check_keys": [
-            "hostgator-snappy"
-          ]
+          "tested": true,
+          "tested_codes": [
+            "SNAPPY"
+          ],
+          "note": "SNAPPY appeared as applied in the captured 1-year and 3-year Hatchling cart examples."
         },
         "renewal": {
-          "status": "live-confirmation-required",
+          "status": "shellz-cart-evidence",
           "plan_keys": [
+            "hostgator-hatchling-1y",
             "hostgator-hatchling"
           ]
         },
@@ -554,29 +1088,37 @@ window.SHELLZ_DATA = {
         "support": {
           "published": false
         },
-        "next_action": "Test SNAPPY, save exact plan, term, final total and renewal line"
+        "next_action": "Capture the final payment step if possible and add independent speed, uptime and support tests before assigning performance claims."
       },
       "wpx": {
         "public_status": true,
-        "public_order": 4,
-        "publicSummary": "SAVE79 is covered as a first-month eligibility check for monthly WordPress hosting.",
-        "checkoutLabel": "Final checkout capture: not published.",
+        "public_order": 5,
+        "publicSummary": "WPX SAVE79 evidence is published: monthly Starter cart accepted the code, while the 1-year Starter cart rejected it.",
+        "checkoutLabel": "Checkout screenshots published: monthly SAVE79 applied and 1-year SAVE79 rejected.",
         "checkout": {
-          "published": false,
-          "date": null,
-          "url": null
+          "published": true,
+          "date": "2026-07-12",
+          "url": "wpx-save79-coupon-test.html",
+          "screenshots": [
+            "wpx-starter-monthly-save79-applied-20260712.png",
+            "wpx-starter-monthly-before-save79-20260712.png",
+            "wpx-starter-annual-save79-rejected-20260712.png",
+            "wpx-starter-annual-no-discount-20260712.png"
+          ]
         },
         "coupon": {
           "page_published": true,
-          "tested": false,
-          "check_keys": [
-            "wpx-save79"
-          ]
+          "tested": true,
+          "tested_codes": [
+            "SAVE79"
+          ],
+          "note": "SAVE79 applied to the captured monthly Starter cart and was rejected on the captured 1-year Starter cart."
         },
         "renewal": {
-          "status": "live-term-check-required",
+          "status": "shellz-cart-evidence",
           "plan_keys": [
-            "wpx-managed-wordpress"
+            "wpx-managed-wordpress",
+            "wpx-starter-annual-save79-rejected"
           ]
         },
         "speed": {
@@ -588,7 +1130,7 @@ window.SHELLZ_DATA = {
         "support": {
           "published": false
         },
-        "next_action": "Verify eligible monthly plan, first-month result and normal next charge"
+        "next_action": "Re-check SAVE79 periodically and add independent speed, uptime and support tests before claiming performance quality."
       },
       "siteground": {
         "public_status": false,
@@ -724,17 +1266,33 @@ window.SHELLZ_DATA = {
         "next_action": "Structure server size, provider, add-ons and monthly usage model"
       },
       "scalahosting": {
-        "public_status": false,
+        "public_status": true,
+        "public_order": 4,
+        "publicSummary": "ScalaHosting SPanel checkout evidence is published for Mini, Start and Advanced 12-month cart examples.",
+        "checkoutLabel": "Checkout screenshots published: Mini, Start and Advanced SPanel 12-month carts.",
         "checkout": {
-          "published": false
+          "published": true,
+          "date": "2026-07-12",
+          "url": "scalahosting-checkout-evidence.html",
+          "screenshots": [
+            "scalahosting-mini-12m-spanel-20260712.png",
+            "scalahosting-start-12m-spanel-20260712.png",
+            "scalahosting-advanced-12m-spanel-20260712.png"
+          ]
         },
         "coupon": {
           "page_published": true,
-          "tested": false
+          "tested": false,
+          "tested_codes": [],
+          "note": "No reusable public coupon code was shown in the captured cart. The evidence is a special initial-price checkout capture."
         },
         "renewal": {
-          "status": "not-structured",
-          "plan_keys": []
+          "status": "shellz-cart-evidence-estimated-from-regular-price",
+          "plan_keys": [
+            "scalahosting-mini-12m",
+            "scalahosting-start-12m",
+            "scalahosting-advanced-12m"
+          ]
         },
         "speed": {
           "published": false
@@ -745,7 +1303,7 @@ window.SHELLZ_DATA = {
         "support": {
           "published": false
         },
-        "next_action": "Capture exact managed cloud/VPS plan and term separately"
+        "next_action": "Capture a separate post-promo renewal invoice if available, then add independent speed, uptime and support testing."
       },
       "ionos": {
         "public_status": false,

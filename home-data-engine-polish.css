@@ -51,7 +51,7 @@ body.shellz-home-modern .section-heading > p:not(.eyebrow) {
 /* Evidence cards: the base .proof-grid styles only targeted div children. */
 body.shellz-home-modern .home-cro-proof .proof-grid {
   display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
   gap: 16px !important;
   margin-top: 0 !important;
 }
@@ -443,3 +443,5 @@ body.shellz-home-modern .site-footer a {
     max-width: none !important;
   }
 }
+
+.hero-mockup-row .ok{color:#047857;font-weight:800;}

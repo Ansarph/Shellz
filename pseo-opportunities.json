@@ -1,35 +1,186 @@
 {
   "mode": "PREVIEW_ONLY",
-  "generated_at": "2026-07-09",
+  "generated_at": "2026-07-12",
   "rule": "No page is published automatically. Score 7+ means candidate for manual review, not auto-indexing.",
   "renewal_candidates": [
-    {
-      "planKey": "bluehost-starter",
-      "provider": "Bluehost",
-      "plan": "Starter",
-      "score": 3,
-      "eligible": false,
-      "reasons": [
-        "+2 Distinct provider + exact-plan renewal intent",
-        "+2 Exact plan name is structured",
-        "+2 Structured renewal amount exists",
-        "-2 No published Shellz checkout evidence",
-        "+2 Inputs support a unique term-aware calculation",
-        "-3 Region/currency context is incomplete"
-      ]
-    },
     {
       "planKey": "hostinger-premium",
       "provider": "Hostinger",
       "plan": "Premium",
-      "score": 1,
-      "eligible": false,
+      "score": 11,
+      "eligible": true,
       "reasons": [
         "+2 Distinct provider + exact-plan renewal intent",
         "+2 Exact plan name is structured",
         "+2 Structured renewal amount exists",
-        "-2 No published Shellz checkout evidence",
-        "-3 Region/currency context is incomplete"
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "bluehost-starter",
+      "provider": "Bluehost",
+      "plan": "Starter Hosting 36-month cart",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "wpx-managed-wordpress",
+      "provider": "WPX Hosting",
+      "plan": "WordPress Hosting Starter monthly cart",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "hostinger-premium-24m",
+      "provider": "Hostinger",
+      "plan": "Premium 24-month cart",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "hostinger-premium-48m",
+      "provider": "Hostinger",
+      "plan": "Premium 48-month cart",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "bluehost-starter-36m-129",
+      "provider": "Bluehost",
+      "plan": "Starter Hosting 36-month cart capture: $129.28",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "bluehost-starter-36m-122",
+      "provider": "Bluehost",
+      "plan": "Starter Hosting 36-month cart capture: $122.09",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "scalahosting-mini-12m",
+      "provider": "ScalaHosting",
+      "plan": "Mini SPanel",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "scalahosting-start-12m",
+      "provider": "ScalaHosting",
+      "plan": "Start SPanel",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "scalahosting-advanced-12m",
+      "provider": "ScalaHosting",
+      "plan": "Advanced SPanel",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "wpx-starter-annual-save79-rejected",
+      "provider": "WPX Hosting",
+      "plan": "WordPress Hosting Starter 1-year cart",
+      "score": 11,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published",
+        "+2 Inputs support a unique term-aware calculation"
+      ]
+    },
+    {
+      "planKey": "hostgator-hatchling",
+      "provider": "HostGator",
+      "plan": "Hatchling Plan 3-year cart",
+      "score": 9,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published"
+      ]
+    },
+    {
+      "planKey": "hostgator-hatchling-1y",
+      "provider": "HostGator",
+      "plan": "Hatchling Plan 1-year cart",
+      "score": 9,
+      "eligible": true,
+      "reasons": [
+        "+2 Distinct provider + exact-plan renewal intent",
+        "+2 Exact plan name is structured",
+        "+2 Structured renewal amount exists",
+        "+3 Shellz checkout evidence is published"
       ]
     },
     {
@@ -75,34 +226,6 @@
       ]
     },
     {
-      "planKey": "hostgator-hatchling",
-      "provider": "HostGator",
-      "plan": "Hatchling / shared",
-      "score": -4,
-      "eligible": false,
-      "reasons": [
-        "+2 Distinct provider + exact-plan renewal intent",
-        "+2 Exact plan name is structured",
-        "-3 Structured renewal amount is missing",
-        "-2 No published Shellz checkout evidence",
-        "-3 Region/currency context is incomplete"
-      ]
-    },
-    {
-      "planKey": "wpx-managed-wordpress",
-      "provider": "WPX Hosting",
-      "plan": "Managed WordPress hosting",
-      "score": -4,
-      "eligible": false,
-      "reasons": [
-        "+2 Distinct provider + exact-plan renewal intent",
-        "+2 Exact plan name is structured",
-        "-3 Structured renewal amount is missing",
-        "-2 No published Shellz checkout evidence",
-        "-3 Region/currency context is incomplete"
-      ]
-    },
-    {
       "planKey": "cloudways-managed-cloud",
       "provider": "Cloudways",
       "plan": "Managed cloud hosting",
@@ -121,133 +244,194 @@
     {
       "pair": [
         "hostinger-premium",
+        "scalahosting-mini-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium",
+        "scalahosting-start-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium",
+        "scalahosting-advanced-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium",
+        "wpx-starter-annual-save79-rejected"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium-24m",
+        "scalahosting-mini-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium-24m",
+        "scalahosting-start-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium-24m",
+        "scalahosting-advanced-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium-24m",
+        "wpx-starter-annual-save79-rejected"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium-48m",
+        "scalahosting-mini-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium-48m",
+        "scalahosting-start-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium-48m",
+        "scalahosting-advanced-12m"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium-48m",
+        "wpx-starter-annual-save79-rejected"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "scalahosting-mini-12m",
+        "wpx-starter-annual-save79-rejected"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "scalahosting-start-12m",
+        "wpx-starter-annual-save79-rejected"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "scalahosting-advanced-12m",
+        "wpx-starter-annual-save79-rejected"
+      ],
+      "score": 13,
+      "eligible": true,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "+2 Comparable renewal terms and monthly equivalents"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium",
         "bluehost-starter"
       ],
-      "score": -2,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "hostinger-premium",
-        "namecheap-stellar"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "hostinger-premium",
-        "siteground-startup"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "hostinger-premium",
-        "dreamhost-launch"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "bluehost-starter",
-        "namecheap-stellar"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "bluehost-starter",
-        "siteground-startup"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "bluehost-starter",
-        "dreamhost-launch"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "namecheap-stellar",
-        "siteground-startup"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "namecheap-stellar",
-        "dreamhost-launch"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "siteground-startup",
-        "dreamhost-launch"
-      ],
-      "score": -2,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: 1",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "hostinger-premium",
-        "hostgator-hatchling"
-      ],
-      "score": -7,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
     },
     {
@@ -255,168 +439,142 @@
         "hostinger-premium",
         "wpx-managed-wordpress"
       ],
-      "score": -7,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
     },
     {
       "pair": [
         "hostinger-premium",
-        "cloudways-managed-cloud"
+        "bluehost-starter-36m-129"
       ],
-      "score": -7,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
+      ]
+    },
+    {
+      "pair": [
+        "hostinger-premium",
+        "bluehost-starter-36m-122"
+      ],
+      "score": 8,
+      "eligible": false,
+      "reasons": [
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
     },
     {
       "pair": [
         "bluehost-starter",
-        "hostgator-hatchling"
+        "wpx-managed-wordpress"
       ],
-      "score": -7,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
     },
     {
       "pair": [
         "bluehost-starter",
-        "wpx-managed-wordpress"
+        "hostinger-premium-24m"
       ],
-      "score": -7,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
     },
     {
       "pair": [
         "bluehost-starter",
-        "cloudways-managed-cloud"
+        "hostinger-premium-48m"
       ],
-      "score": -7,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
     },
     {
       "pair": [
-        "namecheap-stellar",
-        "hostgator-hatchling"
+        "bluehost-starter",
+        "scalahosting-mini-12m"
       ],
-      "score": -7,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
     },
     {
       "pair": [
-        "namecheap-stellar",
-        "wpx-managed-wordpress"
+        "bluehost-starter",
+        "scalahosting-start-12m"
       ],
-      "score": -7,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
     },
     {
       "pair": [
-        "namecheap-stellar",
-        "cloudways-managed-cloud"
+        "bluehost-starter",
+        "scalahosting-advanced-12m"
       ],
-      "score": -7,
+      "score": 8,
       "eligible": false,
       "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
+        "Base score uses weaker data side: 11",
+        "-3 Billing terms/renewal units are not safely comparable",
+        "BLOCK: comparison pages require comparable renewal terms or a separate manually reviewed normalization model"
       ]
+    }
+  ],
+  "manual_comparison_candidates": [
+    {
+      "slug": "hostinger-vs-bluehost-vs-hostgator-renewal-cost.html",
+      "title": "Hostinger vs Bluehost vs HostGator Renewal Cost: Real Cart Evidence Compared",
+      "status": "published_after_manual_review",
+      "reason": "Uses captured cart examples with clear non-equal-term limitation instead of automatic pair generation.",
+      "evidence_pages": [
+        "hostinger-renewal-price.html",
+        "bluehost-renewal-price.html",
+        "hostgator-snappy-coupon-test.html"
+      ]
+    }
+  ],
+  "core_evidence_hubs": [
+    {
+      "slug": "hosting-checkout-evidence.html",
+      "status": "published",
+      "purpose": "Central hub for dated Shellz checkout screenshots and renewal notes."
     },
     {
-      "pair": [
-        "siteground-startup",
-        "hostgator-hatchling"
-      ],
-      "score": -7,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "siteground-startup",
-        "wpx-managed-wordpress"
-      ],
-      "score": -7,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "siteground-startup",
-        "cloudways-managed-cloud"
-      ],
-      "score": -7,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "dreamhost-launch",
-        "hostgator-hatchling"
-      ],
-      "score": -7,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "dreamhost-launch",
-        "wpx-managed-wordpress"
-      ],
-      "score": -7,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
-    },
-    {
-      "pair": [
-        "dreamhost-launch",
-        "cloudways-managed-cloud"
-      ],
-      "score": -7,
-      "eligible": false,
-      "reasons": [
-        "Base score uses weaker data side: -4",
-        "-3 Billing terms/renewal units are not safely comparable"
-      ]
+      "slug": "wpx-save79-coupon-test.html",
+      "status": "published_after_manual_review",
+      "purpose": "WPX SAVE79 monthly accepted / annual rejected coupon evidence page."
     }
   ]
 }
