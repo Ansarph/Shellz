@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-07-14",
+  "providers": {
+    "hostinger": {
+      "name": "Hostinger",
+      "slug": "hostinger",
+      "review_url": "hostinger-review.html",
+      "coupon_url": "hostinger-coupon.html",
+      "affiliate_url": "https://www.hostinger.com/?tracking_id=shellz&ref=top5-2026-06",
+      "tags": [
+        "budget",
+        "shared",
+        "wordpress",
+        "beginner"
+      ],
+      "categories": [
+        "shared",
+        "wordpress"
+      ]
+    },
+    "bluehost": {
+      "name": "Bluehost",
+      "slug": "bluehost",
+      "review_url": "bluehost-review.html",
+      "coupon_url": "bluehost-coupon.html",
+      "affiliate_url": "https://www.bluehost.com/track/shellz?cmp=hp-top5&utm_source=shellz&utm_medium=affiliate&utm_campaign=top5-2026-06",
+      "tags": [
+        "shared",
+        "wordpress",
+        "beginner",
+        "business"
+      ],
+      "categories": [
+        "shared",
+        "wordpress"
+      ]
+    },
+    "hostgator": {
+      "name": "HostGator",
+      "slug": "hostgator",
+      "review_url": "hostgator-review.html",
+      "coupon_url": "hostgator-coupon.html",
+      "affiliate_url": "https://partners.hostgator.com/OR6JeP",
+      "tags": [
+        "budget",
+        "shared",
+        "beginner",
+        "coupon"
+      ],
+      "categories": [
+        "shared",
+        "wordpress"
+      ]
+    },
+    "siteground": {
+      "name": "SiteGround",
+      "slug": "siteground",
+      "review_url": "siteground-review.html",
+      "coupon_url": "siteground-coupon.html",
+      "affiliate_url": "https://www.siteground.com/index.htm?afcode=shellz&campaign=top5-2026-06",
+      "tags": [
+        "wordpress",
+        "managed-wordpress",
+        "business",
+        "performance"
+      ],
+      "categories": [
+        "shared",
+        "wordpress",
+        "managed-wordpress"
+      ]
+    },
+    "namecheap": {
+      "name": "Namecheap",
+      "slug": "namecheap",
+      "review_url": "namecheap-review.html",
+      "coupon_url": "namecheap-coupon.html",
+      "affiliate_url": "https://www.namecheap.com/hosting/shared/?affId=shellz&campaign=top5-2026-06",
+      "tags": [
+        "budget",
+        "shared",
+        "domain"
+      ],
+      "categories": [
+        "shared",
+        "domain"
+      ]
+    },
+    "namesilo": {
+      "name": "NameSilo",
+      "slug": "namesilo",
+      "review_url": "namesilo-review.html",
+      "coupon_url": "namesilo-coupon.html",
+      "affiliate_url": null,
+      "tags": [
+        "domain",
+        "budget",
+        "coupon"
+      ],
+      "categories": [
+        "domain"
+      ]
+    },
+    "dreamhost": {
+      "name": "DreamHost",
+      "slug": "dreamhost",
+      "review_url": "dreamhost-review.html",
+      "coupon_url": "dreamhost-coupon.html",
+      "affiliate_url": "https://www.dreamhost.com/track/shellz?campaign=top5-2026-06",
+      "tags": [
+        "shared",
+        "wordpress",
+        "beginner"
+      ],
+      "categories": [
+        "shared",
+        "wordpress"
+      ]
+    },
+    "wpx": {
+      "name": "WPX Hosting",
+      "slug": "wpx",
+      "review_url": "wpx-hosting-review.html",
+      "coupon_url": "wpx-coupon.html",
+      "affiliate_url": "https://wpx.net/?affid=12483",
+      "tags": [
+        "managed-wordpress",
+        "wordpress",
+        "business",
+        "performance",
+        "coupon"
+      ],
+      "categories": [
+        "managed-wordpress",
+        "wordpress"
+      ]
+    },
+    "cloudways": {
+      "name": "Cloudways",
+      "slug": "cloudways",
+      "review_url": "cloudways-review.html",
+      "coupon_url": "cloudways-coupon.html",
+      "affiliate_url": null,
+      "tags": [
+        "managed-cloud",
+        "cloud",
+        "performance",
+        "technical"
+      ],
+      "categories": [
+        "cloud",
+        "managed-cloud"
+      ]
+    },
+    "scalahosting": {
+      "name": "ScalaHosting",
+      "slug": "scalahosting",
+      "review_url": "scalahosting-review.html",
+      "coupon_url": "scalahosting-deals.html",
+      "affiliate_url": "https://www.scalahosting.com/#shellz",
+      "tags": [
+        "vps",
+        "managed-cloud",
+        "cloud",
+        "business"
+      ],
+      "categories": [
+        "vps",
+        "managed-cloud"
+      ]
+    },
+    "ionos": {
+      "name": "IONOS",
+      "slug": "ionos",
+      "review_url": "ionos-review.html",
+      "coupon_url": "ionos-coupon.html",
+      "affiliate_url": null,
+      "tags": [
+        "shared",
+        "business",
+        "budget"
+      ],
+      "categories": [
+        "shared"
+      ]
+    },
+    "greengeeks": {
+      "name": "GreenGeeks",
+      "slug": "greengeeks",
+      "review_url": "greengeeks-review.html",
+      "coupon_url": "promo-codes.html#greengeeks",
+      "affiliate_url": "https://www.greengeeks.com/track/ansarph",
+      "tags": [
+        "shared",
+        "wordpress",
+        "eco-friendly",
+        "sustainable",
+        "green-hosting"
+      ],
+      "categories": [
+        "shared",
+        "wordpress"
+      ]
+    }
+  }
+}
