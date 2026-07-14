@@ -1,0 +1,108 @@
+
+/* Shellz Hosting Finder v2 — weighted recommendation UX, 2026-07-09 */
+.shellz-hosting-finder-page .finder-updated-note{
+  margin:0;align-self:flex-start;padding:8px 12px;border-radius:999px;
+  background:#ecfeff;border:1px solid #99f6e4;color:#0f766e!important;
+  -webkit-text-fill-color:#0f766e!important;font-size:.82rem;font-weight:850;white-space:nowrap
+}
+.shellz-hosting-finder-page .finder-form-actions{
+  grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:2px
+}
+.shellz-hosting-finder-page .finder-reset-button{
+  background:#fff;color:#334155!important;-webkit-text-fill-color:#334155!important;
+  border:1px solid #cbd5e1;box-shadow:none
+}
+.shellz-hosting-finder-page .finder-reset-button:hover{background:#f8fafc;border-color:#94a3b8}
+.shellz-hosting-finder-page .finder-result-v2{
+  margin-top:24px;padding:26px;border-radius:26px;background:#ffffff!important;
+  color:#0f172a!important;-webkit-text-fill-color:currentColor!important;
+  border:1px solid #b7d8d5;border-top:5px solid #0f766e;
+  box-shadow:0 20px 46px rgba(15,23,42,.10);scroll-margin-top:92px
+}
+.shellz-hosting-finder-page .finder-result-v2 .eyebrow{
+  color:#0f766e!important;-webkit-text-fill-color:#0f766e!important;margin-bottom:8px
+}
+.shellz-hosting-finder-page .finder-result-v2 h2,
+.shellz-hosting-finder-page .finder-result-v2 h3{
+  color:#0f172a!important;-webkit-text-fill-color:#0f172a!important
+}
+.shellz-hosting-finder-page .finder-result-v2 p,
+.shellz-hosting-finder-page .finder-result-v2 span{
+  color:#475569!important;-webkit-text-fill-color:#475569!important
+}
+.shellz-hosting-finder-page .finder-result-head{
+  display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:20px;align-items:start
+}
+.shellz-hosting-finder-page .finder-result-summary{font-size:1.04rem;line-height:1.65;max-width:72ch;margin:0}
+.shellz-hosting-finder-page .finder-match-badge{
+  min-height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:14px;border-radius:20px;background:linear-gradient(180deg,#ecfeff,#f0fdfa);
+  border:1px solid #99f6e4;text-align:center
+}
+.shellz-hosting-finder-page .finder-match-badge span{
+  font-size:.76rem!important;text-transform:uppercase;letter-spacing:.06em;font-weight:800!important;color:#0f766e!important;-webkit-text-fill-color:#0f766e!important
+}
+.shellz-hosting-finder-page .finder-match-badge strong{
+  display:block;margin-top:3px;font-size:1.25rem;color:#0f172a!important;-webkit-text-fill-color:#0f172a!important
+}
+.shellz-hosting-finder-page .finder-answer-summary{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.shellz-hosting-finder-page .finder-answer-chip{
+  display:inline-flex;align-items:center;min-height:32px;padding:6px 10px;border-radius:999px;
+  background:#f1f5f9;border:1px solid #dbe7f6;color:#334155!important;-webkit-text-fill-color:#334155!important;
+  font-size:.82rem;font-weight:780
+}
+.shellz-hosting-finder-page .finder-reason-grid-v2{margin:18px 0}
+.shellz-hosting-finder-page .finder-reason-grid-v2 div{
+  background:#f8fafc!important;border:1px solid #dbe7f6!important;border-radius:18px;padding:17px
+}
+.shellz-hosting-finder-page .finder-reason-grid-v2 strong{
+  color:#0f766e!important;-webkit-text-fill-color:#0f766e!important
+}
+.shellz-hosting-finder-page .finder-reason-grid-v2 span{
+  color:#334155!important;-webkit-text-fill-color:#334155!important
+}
+.shellz-hosting-finder-page .finder-alternative{
+  display:grid;grid-template-columns:125px minmax(0,1fr);gap:4px 14px;align-items:start;
+  margin:18px 0;padding:16px 18px;border-radius:18px;background:#fff7ed;border:1px solid #fed7aa
+}
+.shellz-hosting-finder-page .finder-alternative>span{
+  grid-row:1/3;color:#9a3412!important;-webkit-text-fill-color:#9a3412!important;
+  text-transform:uppercase;letter-spacing:.06em;font-size:.76rem;font-weight:900
+}
+.shellz-hosting-finder-page .finder-alternative>strong{color:#0f172a!important;-webkit-text-fill-color:#0f172a!important}
+.shellz-hosting-finder-page .finder-alternative>p{margin:0;font-size:.92rem;line-height:1.5}
+.shellz-hosting-finder-page .finder-next-steps{margin-top:20px}
+.shellz-hosting-finder-page .finder-mini-heading{
+  margin:0 0 10px!important;color:#0f172a!important;-webkit-text-fill-color:#0f172a!important;font-weight:900
+}
+.shellz-hosting-finder-page .finder-result-v2 .finder-result-card{
+  display:block;background:#ffffff!important;color:#0f172a!important;-webkit-text-fill-color:#0f172a!important;
+  border:1px solid #dbe7f6;border-radius:18px;padding:17px;text-decoration:none;
+  box-shadow:0 8px 20px rgba(15,23,42,.055);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease
+}
+.shellz-hosting-finder-page .finder-result-v2 .finder-result-card:hover{
+  transform:translateY(-2px);border-color:#5eead4;box-shadow:0 14px 28px rgba(15,23,42,.09)
+}
+.shellz-hosting-finder-page .finder-result-v2 .finder-result-card strong{
+  display:block;color:#0f766e!important;-webkit-text-fill-color:#0f766e!important;font-size:.76rem;text-transform:uppercase;letter-spacing:.06em
+}
+.shellz-hosting-finder-page .finder-result-v2 .finder-result-card span{
+  display:block;margin-top:5px;color:#0f172a!important;-webkit-text-fill-color:#0f172a!important;font-weight:900;line-height:1.35
+}
+.shellz-hosting-finder-page .finder-result-note{
+  margin:18px 0 0!important;padding-top:16px;border-top:1px solid #e2e8f0;
+  color:#64748b!important;-webkit-text-fill-color:#64748b!important;font-size:.84rem;line-height:1.55
+}
+@media(max-width:760px){
+  .shellz-hosting-finder-page .finder-result-head{grid-template-columns:1fr}
+  .shellz-hosting-finder-page .finder-match-badge{min-height:auto;align-items:flex-start;text-align:left}
+  .shellz-hosting-finder-page .finder-alternative{grid-template-columns:1fr;gap:5px}
+  .shellz-hosting-finder-page .finder-alternative>span{grid-row:auto}
+  .shellz-hosting-finder-page .finder-updated-note{white-space:normal}
+}
+@media(max-width:520px){
+  .shellz-hosting-finder-page .finder-result-v2{padding:20px;border-radius:22px}
+  .shellz-hosting-finder-page .finder-form-actions{display:grid;grid-template-columns:1fr}
+  .shellz-hosting-finder-page .finder-form-actions .btn{width:100%}
+  .shellz-hosting-finder-page .finder-answer-chip{width:100%;border-radius:12px}
+}

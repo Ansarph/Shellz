@@ -1,0 +1,26 @@
+/* Shellz Verified Renewal Comparison v1 */
+.verified-renewal-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:24px 0 30px}
+.verified-renewal-summary article{background:linear-gradient(145deg,#fff,#f6f9ff);border:1px solid #dbe5f4;border-radius:18px;padding:20px;box-shadow:0 12px 30px rgba(27,45,82,.07)}
+.verified-renewal-summary span{display:block;font-size:.78rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#52627a;margin-bottom:8px}
+.verified-renewal-summary strong{display:block;font-size:1.65rem;line-height:1.1;color:#10213b;margin-bottom:8px}
+.verified-renewal-summary p{margin:0;color:#56657a;font-size:.92rem;line-height:1.55}
+.verified-comparison-section{margin-top:38px}
+.verified-comparison-section .comparison-note{background:#f7f9fc;border-left:4px solid #5c6bd6;border-radius:12px;padding:14px 16px;color:#42516a;margin:14px 0 20px}
+.verified-renewal-table th{white-space:nowrap;background:#13233d;color:#fff}
+.verified-renewal-table td{vertical-align:top}
+.verified-renewal-table td strong{color:#10213b}
+.verified-renewal-table td small{display:block;color:#69788c;margin-top:4px;line-height:1.4}
+.renewal-proof-badge{display:inline-flex;align-items:center;max-width:220px;padding:6px 9px;border-radius:999px;font-size:.72rem;font-weight:800;line-height:1.25}
+.renewal-proof-confirmed-cart-line,.renewal-proof-confirmed-next-charge{background:#e8f7ef;color:#11613a;border:1px solid #b9e6cd}
+.renewal-proof-confirmed-monthly-line{background:#fff6df;color:#765100;border:1px solid #efd699}
+.renewal-proof-estimated-regular-price{background:#eef1ff;color:#334a9f;border:1px solid #cbd4ff}
+.renewal-proof-coupon-rejected{background:#fff0f0;color:#9a2e2e;border:1px solid #f2c2c2}
+.renewal-legend{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px}
+.renewal-method-box{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0}
+.renewal-method-box article{border:1px solid #dce4ef;border-radius:16px;padding:18px;background:#fff}
+.renewal-method-box h3{margin:0 0 8px;font-size:1rem}.renewal-method-box p{margin:0;color:#5e6b7c}
+.renewal-page-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.verified-comparison-link-box{margin:24px auto;padding:20px;border:1px solid #d9e4f2;border-radius:18px;background:linear-gradient(135deg,#f8fbff,#eef4ff)}
+.verified-comparison-link-box h2,.verified-comparison-link-box h3{margin:0 0 8px}.verified-comparison-link-box p{margin:0 0 14px;color:#53637a}
+@media(max-width:1000px){.verified-renewal-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.renewal-method-box{grid-template-columns:1fr}}
+@media(max-width:640px){.verified-renewal-summary{grid-template-columns:1fr}.verified-renewal-summary strong{font-size:1.4rem}.verified-renewal-table{min-width:980px}.renewal-page-cta .btn{width:100%;justify-content:center}}
