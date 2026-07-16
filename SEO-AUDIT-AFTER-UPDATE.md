@@ -206,3 +206,8 @@ The package now includes the Priority 1–3 audit recommendations that can be im
 ## Post-remediation static score — 14 July 2026
 
 The verified static package score is now **93/100**. See `SHELLZ-SEO-AUDIT-REMEDIATED-2026-07-14.md` for the full results and limitations.
+
+
+## Backup comparison update — July 16, 2026
+
+Added an evidence-bounded web-hosting backup comparison covering 10 providers. The page targets a high-intent reliability topic and links to reviews, coupon/deal pages and checkout proof. Provider documentation is explicitly separated from independent Shellz restore testing to avoid unsupported reliability claims.
