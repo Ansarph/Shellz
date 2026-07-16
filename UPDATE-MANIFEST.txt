@@ -337,3 +337,12 @@ SEO REMEDIATION UPDATE — 2026-07-14
 - Added explicit image dimensions, srcset and sizes to evidence previews.
 - Consolidated each page's local CSS into an ordered, exact-rule-deduplicated bundle.
 - Updated sitemap lastmod dates and synchronized GreenGeeks review data.
+
+
+BACKUP COMPARISON UPDATE — 2026-07-16
+- Added web-hosting-backup-comparison.html.
+- Compared automatic backups, frequency, retention, restore access, extra costs and off-site support across 10 providers.
+- Clearly labelled public provider research as separate from independent Shellz restore testing.
+- Added review, coupon/deal and checkout-evidence links from the comparison table.
+- Added contextual internal links from the homepage, hosting guides, review hub, testing-status page and buyer checklist.
+- Updated sitemap.xml.
