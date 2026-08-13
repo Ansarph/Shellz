@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "published": "2026-08-13",
+  "source": "Shellz checkout evidence captured July 12\u201314, 2026",
+  "methodology": "Monthly-equivalent increase = ((renewal monthly equivalent / captured intro monthly equivalent) - 1) \u00d7 100. The primary index uses five 12-month first-term examples. Confirmed renewal lines and estimates from displayed regular prices are labelled separately.",
+  "primary_12_month_summary": {
+    "provider_count": 5,
+    "average_increase_percent": 293.8,
+    "median_increase_percent": 305.1,
+    "range_percent": [
+      206.1,
+      372.9
+    ],
+    "average_intro_monthly_equivalent_usd": 3.49,
+    "average_renewal_monthly_equivalent_usd": 13.61
+  },
+  "primary_12_month_rows": [
+    {
+      "provider": "Hostinger",
+      "plan": "Premium",
+      "lastChecked": "2026-07-12",
+      "upfront_term_months": 12,
+      "first_invoice_total": 43.09,
+      "effective_intro_monthly": 3.5908,
+      "renewal_monthly_equivalent": 10.99,
+      "renewal_invoice_total": 131.88,
+      "renewal_increase_percent": 206.1,
+      "renewal_evidence_type": "confirmed-cart-line",
+      "renewal_evidence_label": "Confirmed renewal line",
+      "evidencePage": "hostinger-renewal-price.html"
+    },
+    {
+      "provider": "HostGator",
+      "plan": "Hatchling Plan 1-year cart",
+      "lastChecked": "2026-07-12",
+      "upfront_term_months": 12,
+      "first_invoice_total": 47.4,
+      "effective_intro_monthly": 3.95,
+      "renewal_monthly_equivalent": 13.19,
+      "renewal_invoice_total": null,
+      "renewal_increase_percent": 233.9,
+      "renewal_evidence_type": "confirmed-monthly-line",
+      "renewal_evidence_label": "Confirmed monthly renewal line; next billing-cycle length not visible",
+      "evidencePage": "hostgator-snappy-coupon-test.html"
+    },
+    {
+      "provider": "ScalaHosting",
+      "plan": "Mini SPanel",
+      "lastChecked": "2026-07-12",
+      "upfront_term_months": 12,
+      "first_invoice_total": 35.4,
+      "effective_intro_monthly": 2.95,
+      "renewal_monthly_equivalent": 11.95,
+      "renewal_invoice_total": 143.4,
+      "renewal_increase_percent": 305.1,
+      "renewal_evidence_type": "estimated-regular-price",
+      "renewal_evidence_label": "Estimated from displayed regular price",
+      "evidencePage": "scalahosting-checkout-evidence.html"
+    },
+    {
+      "provider": "GreenGeeks",
+      "plan": "Ecosite Lite 25 annual checkout",
+      "lastChecked": "2026-07-12",
+      "upfront_term_months": 12,
+      "first_invoice_total": 35.4,
+      "effective_intro_monthly": 2.95,
+      "renewal_monthly_equivalent": 13.95,
+      "renewal_invoice_total": 167.4,
+      "renewal_increase_percent": 372.9,
+      "renewal_evidence_type": "estimated-regular-price",
+      "renewal_evidence_label": "Estimated from displayed regular annual price",
+      "evidencePage": "greengeeks-checkout-evidence.html"
+    },
+    {
+      "provider": "SiteGround",
+      "plan": "StartUp 12-month cart",
+      "lastChecked": "2026-07-14",
+      "upfront_term_months": 12,
+      "first_invoice_total": 47.88,
+      "effective_intro_monthly": 3.99,
+      "renewal_monthly_equivalent": 17.99,
+      "renewal_invoice_total": 215.88,
+      "renewal_increase_percent": 350.9,
+      "renewal_evidence_type": "estimated-regular-price",
+      "renewal_evidence_label": "Estimated from displayed regular price",
+      "evidencePage": "siteground-checkout-evidence.html"
+    }
+  ],
+  "additional_term_context": [
+    {
+      "provider": "Bluehost",
+      "plan": "Starter Hosting 36-month cart",
+      "lastChecked": "2026-07-12",
+      "upfront_term_months": 36,
+      "first_invoice_total": 122.09,
+      "effective_intro_monthly": 3.3914,
+      "renewal_monthly_equivalent": 9.99,
+      "renewal_invoice_total": 359.64,
+      "renewal_increase_percent": 194.6,
+      "renewal_evidence_type": "confirmed-cart-line",
+      "renewal_evidence_label": "Confirmed 36-month renewal invoice",
+      "evidencePage": "bluehost-renewal-price.html"
+    },
+    {
+      "provider": "WPX Hosting",
+      "plan": "WordPress Hosting Starter monthly cart",
+      "lastChecked": "2026-07-12",
+      "upfront_term_months": 1,
+      "first_invoice_total": 3.78,
+      "effective_intro_monthly": 3.78,
+      "renewal_monthly_equivalent": 17.99,
+      "renewal_invoice_total": 17.99,
+      "renewal_increase_percent": 375.9,
+      "renewal_evidence_type": "confirmed-next-charge",
+      "renewal_evidence_label": "Confirmed next monthly charge",
+      "evidencePage": "wpx-save79-coupon-test.html"
+    }
+  ]
+}
