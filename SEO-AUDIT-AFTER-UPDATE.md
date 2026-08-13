@@ -211,3 +211,10 @@ The verified static package score is now **93/100**. See `SHELLZ-SEO-AUDIT-REMED
 ## Backup comparison update — July 16, 2026
 
 Added an evidence-bounded web-hosting backup comparison covering 10 providers. The page targets a high-intent reliability topic and links to reviews, coupon/deal pages and checkout proof. Provider documentation is explicitly separated from independent Shellz restore testing to avoid unsupported reliability claims.
+
+
+## 2026-08-13 authority update
+- Published the Shellz Hosting Renewal Shock Index 2026.
+- Added a machine-readable CSV/JSON dataset and Dataset structured data.
+- Added evidence-type labelling so confirmed renewal lines are not mixed with estimates from displayed regular prices.
+- Strengthened internal links from priority pages already receiving Google impressions.
