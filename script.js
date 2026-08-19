@@ -1,3 +1,25 @@
+// Shellz GA4 bootstrap
+(function () {
+  var measurementId = 'G-Y8VJ0MDTT3';
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () {
+    window.dataLayer.push(arguments);
+  };
+
+  var selector = 'script[src*="googletagmanager.com/gtag/js?id=' + measurementId + '"]';
+  if (!document.querySelector(selector)) {
+    var googleTag = document.createElement('script');
+    googleTag.async = true;
+    googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+    googleTag.setAttribute('data-shellz-ga4', measurementId);
+    document.head.appendChild(googleTag);
+  }
+
+  window.gtag('js', new Date());
+  window.gtag('config', measurementId);
+})();
+
 // Shellz.com site interactions
 (function () {
   function ready(fn) {
