@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">Hosting renewal price increase for five captured 12-month carts</title>
+<desc id="desc">A horizontal bar chart comparing the monthly-equivalent increase from captured introductory price to confirmed renewal or displayed regular price. Hostinger 206.1 percent, HostGator 233.9 percent, ScalaHosting 305.1 percent, SiteGround 350.9 percent, and GreenGeeks 372.9 percent.</desc>
+<rect width="1200" height="700" fill="#f8fafc"/>
+<rect x="32" y="32" width="1136" height="636" rx="24" fill="#ffffff" stroke="#dbe3ef" stroke-width="2"/>
+<g font-family="Inter, Arial, sans-serif" fill="#0f172a">
+<text x="80" y="95" font-size="34" font-weight="800">Hosting renewal price increase</text>
+<text x="80" y="135" font-size="20" fill="#526077">Five captured 12-month carts · monthly-equivalent uplift</text>
+<text x="80" y="184" font-size="16" fill="#526077">0%</text>
+<text x="540" y="184" font-size="16" fill="#526077">200%</text>
+<text x="1000" y="184" font-size="16" fill="#526077">400%</text>
+<line x1="280" y1="195" x2="280" y2="555" stroke="#cbd5e1"/>
+<line x1="640" y1="195" x2="640" y2="555" stroke="#e2e8f0" stroke-dasharray="7 7"/>
+<line x1="1000" y1="195" x2="1000" y2="555" stroke="#e2e8f0" stroke-dasharray="7 7"/>
+<text x="80" y="245" font-size="20" font-weight="700">Hostinger</text><rect x="280" y="215" width="371" height="42" rx="8" fill="#2563eb"/><text x="665" y="243" font-size="20" font-weight="800">+206.1%</text>
+<text x="80" y="315" font-size="20" font-weight="700">HostGator</text><rect x="280" y="285" width="421" height="42" rx="8" fill="#2563eb"/><text x="715" y="313" font-size="20" font-weight="800">+233.9%</text>
+<text x="80" y="385" font-size="20" font-weight="700">ScalaHosting</text><rect x="280" y="355" width="549" height="42" rx="8" fill="#f59e0b"/><text x="843" y="383" font-size="20" font-weight="800">+305.1%</text>
+<text x="80" y="455" font-size="20" font-weight="700">SiteGround</text><rect x="280" y="425" width="632" height="42" rx="8" fill="#f59e0b"/><text x="926" y="453" font-size="20" font-weight="800">+350.9%</text>
+<text x="80" y="525" font-size="20" font-weight="700">GreenGeeks</text><rect x="280" y="495" width="671" height="42" rx="8" fill="#f59e0b"/><text x="965" y="523" font-size="20" font-weight="800">+372.9%</text>
+<rect x="80" y="585" width="20" height="20" rx="4" fill="#2563eb"/><text x="112" y="601" font-size="16">Confirmed renewal line</text>
+<rect x="365" y="585" width="20" height="20" rx="4" fill="#f59e0b"/><text x="397" y="601" font-size="16">Displayed regular-price estimate</text>
+<text x="80" y="638" font-size="15" fill="#64748b">Source: Shellz Hosting Renewal Price Shock Index 2026 · captures July 12–14, 2026 · shellz.com</text>
+</g></svg>
