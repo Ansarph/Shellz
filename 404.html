@@ -99,4 +99,18 @@
 </div>
 <div class="container copyright">© <span id="year">2026</span> Shellz. All rights reserved.</div>
 </footer>
-<script src="script.js?v=20260621-footer-gap-fix"></script></body></html>
+<script src="script.js?v=20260829-404-tracking"></script>
+<script>
+(function () {
+  function reportShellz404() {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', 'shellz_404', {
+      page_path: window.location.pathname,
+      non_interaction: true
+    });
+  }
+  if (document.readyState === 'complete') reportShellz404();
+  else window.addEventListener('load', reportShellz404, { once: true });
+})();
+</script>
+</body></html>
